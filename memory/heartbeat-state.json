@@ -1,1 +1,5 @@
-{"lastHeartbeat": 1781719980, "lastChecks": {"email": null, "calendar": null, "weather": null}}
+{
+  "lastChecks": {
+    "heartbeat": 1740697140
+  }
+}
