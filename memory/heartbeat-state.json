@@ -1,5 +1,10 @@
 {
-  "lastHeartbeat": "2026-06-17T12:17:00Z",
-  "lastStatusReport": "2026-06-17T12:17:00Z",
-  "recentChanges": ["HEARTBEAT.md", "memory/2026-06-17.md", "agent-dashboard/", "memory/heartbeat-state.json"]
+  "lastChecks": {
+    "email": null,
+    "calendar": null,
+    "weather": null
+  },
+  "lastHeartbeat": "2026-06-17T12:57:00Z",
+  "status": "idle",
+  "notes": "Routine heartbeat. No unusual activity. Dashboard healthy."
 }
