@@ -1,8 +1,7 @@
 # Heartbeat Status
 
-**Last check:** 2026-06-17 18:57 UTC
+**Last check:** 2026-06-17 19:27 UTC
 
-- ✅ Heartbeat POST /api/heartbeat → 200 (Rex, OpenClaw) — 18:57 UTC
-- ✅ Status POST /api/status → 200 (routine, tracked file changes)
-- ℹ️ Nothing notable — just heartbeat tracking files updated
-- Dashboard healthy, agent online
+- ✅ Heartbeat POST /api/heartbeat → 200 (Rex, OpenClaw)
+- ℹ️ Routine — tracking files only, nothing notable. Skipped /api/status.
+- ℹ️ Dashboard healthy, agent online
