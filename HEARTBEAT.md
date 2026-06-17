@@ -1,8 +1,8 @@
 # Heartbeat Status
 
-**Last check:** 2026-06-17 13:23 UTC
+**Last check:** 2026-06-17 13:59 UTC
 
-- ✅ Heartbeat POST /api/heartbeat → 200
-- ✅ Status POST /api/status → 200
-- Routine tracking files only
-- Dashboard healthy, online, all clear
+- ✅ Heartbeat POST /api/heartbeat → 200 (Rex, OpenClaw)
+- ✅ POST /api/status → 200 (activity: "Heartbeat cycle - workspace files modified, no active jobs")
+- Dashboard healthy, all good
+- Notable: stale Group7 entry from 06:55 UTC — leftover or separate agent
