@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>mynyen ★ y2k world</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff00cc, #3333ff, #00ff99);
+      background-size: 400% 400%;
+      animation: gradientBG 8s ease infinite;
+      font-family: 'Fredoka One', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating sparkles */
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      font-size: 24px;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    .sparkle:nth-child(1)  { top: 5%; left: 10%; animation-delay: 0s; }
+    .sparkle:nth-child(2)  { top: 15%; right: 8%; animation-delay: 1s; font-size: 18px; }
+    .sparkle:nth-child(3)  { top: 40%; left: 3%; animation-delay: 2s; }
+    .sparkle:nth-child(4)  { top: 60%; right: 5%; animation-delay: 0.5s; font-size: 30px; }
+    .sparkle:nth-child(5)  { bottom: 15%; left: 15%; animation-delay: 3s; }
+    .sparkle:nth-child(6)  { bottom: 30%; right: 15%; animation-delay: 1.5s; }
+    .sparkle:nth-child(7)  { top: 75%; left: 50%; animation-delay: 2.5s; font-size: 14px; }
+    .sparkle:nth-child(8)  { top: 25%; left: 50%; animation-delay: 4s; font-size: 20px; }
+    .sparkle:nth-child(9)  { bottom: 8%; right: 40%; animation-delay: 0.8s; }
+    .sparkle:nth-child(10) { top: 50%; left: 80%; animation-delay: 3.5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-30px) rotate(180deg); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 4px solid rgba(255, 255, 255, 0.6);
+      border-radius: 30px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow:
+        0 0 40px rgba(255, 0, 204, 0.4),
+        0 0 80px rgba(51, 51, 255, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Darwin ASCII art */
+    .darwin-art {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      line-height: 1.1;
+      color: #fff;
+      text-shadow: 0 0 10px #ff00cc, 0 0 20px #3333ff;
+      margin-bottom: 15px;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 28px;
+      color: #fff;
+      text-shadow:
+        3px 3px 0 #ff00cc,
+        -2px -2px 0 #3333ff,
+        0 0 20px rgba(255, 255, 255, 0.5);
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      word-break: break-word;
+    }
+
+    .tagline {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      color: #ffff66;
+      text-shadow: 0 0 10px #ff00cc, 2px 2px 0 #3333ff;
+      margin-bottom: 25px;
+      padding: 8px 16px;
+      display: inline-block;
+      border: 2px dashed #ffff66;
+      border-radius: 10px;
+      animation: glowPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 5px #ffff66; }
+      50%      { box-shadow: 0 0 20px #ffff66, 0 0 40px #ff00cc; }
+    }
+
+    .divider {
+      width: 80%;
+      height: 3px;
+      margin: 20px auto;
+      background: linear-gradient(90deg, transparent, #fff, #ffff66, #ff00cc, transparent);
+      border-radius: 3px;
+    }
+
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .hobby-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 9px;
+      color: #fff;
+      text-shadow: 0 0 8px #3333ff;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .hobby-badge:hover {
+      transform: scale(1.1) rotate(-2deg);
+      background: rgba(255, 0, 204, 0.3);
+      box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+    }
+
+    .darwin-quote {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 13px;
+      color: #ccffcc;
+      text-shadow: 0 0 8px #00ff99;
+      margin: 20px 0;
+      padding: 12px;
+      border-left: 4px solid #00ff99;
+      background: rgba(0, 255, 153, 0.1);
+      border-radius: 0 10px 10px 0;
+      text-align: left;
+    }
+
+    .darwin-quote::before {
+      content: "🐟 ";
+    }
+
+    .status-bar {
+      margin-top: 25px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      color: #aaaaff;
+    }
+
+    .status-bar .blink {
+      animation: blink 1s step-end infinite;
+      color: #00ff99;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .visitor-counter {
+      margin-top: 15px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      color: #ccccff;
+    }
+
+    /* Marquee */
+    .marquee-wrap {
+      overflow: hidden;
+      margin: 15px 0;
+      padding: 6px 0;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .marquee-wrap span {
+      display: inline-block;
+      white-space: nowrap;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      color: #ff99ff;
+      animation: scrollText 12s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Built with tag */
+    .built-with {
+      margin-top: 25px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .card { padding: 25px 15px; }
+      h1 { font-size: 20px; }
+      .tagline { font-size: 8px; }
+      .darwin-art { font-size: 7px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating sparkles -->
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✧</div>
+  <div class="sparkle">★</div>
+  <div class="sparkle">☆</div>
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✧</div>
+  <div class="sparkle">★</div>
+  <div class="sparkle">☆</div>
+  <div class="sparkle">✦</div>
+  <div class="sparkle">✧</div>
+
+  <div class="card">
+    <!-- Darwin ASCII -->
+    <pre class="darwin-art">
+   ▄██████▄
+  ██▀────▀██
+  ██  🐟  ██    &lt;- darwin!!
+  ██▄────▄██
+   ▀██████▀
+   ██    ██
+  ██      ██
+  ██      ██
+  ██      ██
+   ████████
+    </pre>
+
+    <h1>★ mynyen ★</h1>
+
+    <div class="tagline">i hope im cool as you</div>
+
+    <div class="divider"></div>
+
+    <div class="hobbies">
+      <span class="hobby-badge">🏸 badminton</span>
+      <span class="hobby-badge">🎸 guitar</span>
+      <span class="hobby-badge">🧵 sewing</span>
+    </div>
+
+    <div class="darwin-quote">
+      "you don't need a reason to help people." — darwin watterson
+    </div>
+
+    <div class="marquee-wrap">
+      <span>☆ ★ ☆ ★ welcome to my y2k corner of the web ☆ ★ ☆ ★ ☆</span>
+    </div>
+
+    <div class="status-bar">
+      <span class="blink">●</span> STATUS: online & vibing &nbsp;|&nbsp; 🖥️ group7.ydsp.tnkr.be &nbsp;|&nbsp; 🐟 powered by darwin energy
+    </div>
+
+    <div class="visitor-counter">
+      you are visitor #<span id="visitor">00000001</span> ✦ welcome!!
+    </div>
+
+    <div class="built-with">
+      built with ★'s & sparkles ✧ — y2k never died
+    </div>
+  </div>
+
+  <script>
+    // Fake visitor counter (increments every load, y2k style!)
+    const count = Math.floor(Math.random() * 90000000) + 10000000;
+    document.getElementById('visitor').textContent = String(count).padStart(8, '0');
+  </script>
+</body>
+</html>

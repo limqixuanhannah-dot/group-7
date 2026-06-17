@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.env
+.credentials/
+credentials/
+openclaw.json
+**/node_modules/
+agent-dashboard/node_modules/
+.git-credentials

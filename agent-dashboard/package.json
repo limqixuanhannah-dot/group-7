@@ -1,0 +1,14 @@
+{
+  "name": "agent-dashboard",
+  "version": "1.0.0",
+  "description": "Live dashboard tracking agent activity, file changes, and status across platforms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "express": "^4.21.0"
+  }
+}

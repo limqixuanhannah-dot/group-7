@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Dashboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text2: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --orange: #d29922;
+      --red: #f85149;
+      --purple: #bc8cff;
+      --cyan: #39d2c0;
+      --create: #3fb950;
+      --modify: #d29922;
+      --delete: #f85149;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px rgba(63, 185, 80, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    .status-dot.offline { background: var(--red); box-shadow: 0 0 8px rgba(248, 81, 73, 0.4); }
+
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-header .badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: var(--surface2);
+      color: var(--text2);
+    }
+
+    .card-body { padding: 14px 18px; }
+
+    /* ─── Agent Cards ─── */
+
+    .agent-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .agent-card {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: background 0.2s;
+      border-left: 3px solid var(--border);
+    }
+
+    .agent-card.rex { border-left-color: var(--accent); }
+    .agent-card.discord { border-left-color: var(--purple); }
+    .agent-card.telegram { border-left-color: var(--cyan); }
+    .agent-card.filesystem { border-left-color: var(--green); }
+    .agent-card.other { border-left-color: var(--orange); }
+
+    .agent-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      background: var(--surface);
+    }
+
+    .agent-info { flex: 1; min-width: 0; }
+
+    .agent-name {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .agent-name .platform-tag {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: var(--surface);
+      color: var(--text2);
+      text-transform: uppercase;
+    }
+
+    .agent-activity {
+      font-size: 13px;
+      color: var(--text2);
+      margin-top: 4px;
+      word-break: break-word;
+    }
+
+    .agent-details {
+      font-size: 12px;
+      color: var(--text2);
+      margin-top: 2px;
+      opacity: 0.7;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .agent-time {
+      font-size: 11px;
+      color: var(--text2);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .agent-status-badge {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-weight: 500;
+      margin-left: auto;
+    }
+
+    .agent-status-badge.online { background: rgba(63, 185, 80, 0.15); color: var(--green); }
+    .agent-status-badge.idle { background: rgba(210, 153, 34, 0.15); color: var(--orange); }
+    .agent-status-badge.offline { background: rgba(248, 81, 73, 0.15); color: var(--red); }
+
+    /* ─── Activity Feed ─── */
+
+    .activity-feed {
+      max-height: 600px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--surface2) transparent;
+    }
+
+    .activity-feed::-webkit-scrollbar { width: 6px; }
+    .activity-feed::-webkit-scrollbar-track { background: transparent; }
+    .activity-feed::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
+
+    .activity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(48, 54, 61, 0.3);
+      font-size: 13px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .activity-item:last-child { border-bottom: none; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .activity-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .activity-icon.create { background: rgba(63, 185, 80, 0.15); }
+    .activity-icon.modify { background: rgba(210, 153, 34, 0.15); }
+    .activity-icon.delete { background: rgba(248, 81, 73, 0.15); }
+    .activity-icon.status { background: rgba(88, 166, 255, 0.15); }
+
+    .activity-body { flex: 1; min-width: 0; }
+    .activity-body .path {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      word-break: break-all;
+      color: var(--text);
+    }
+    .activity-body .meta {
+      font-size: 11px;
+      color: var(--text2);
+      margin-top: 2px;
+    }
+    .activity-body .meta .agent-name-label {
+      color: var(--accent);
+    }
+
+    .activity-time {
+      font-size: 11px;
+      color: var(--text2);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ─── Empty State ─── */
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text2);
+    }
+
+    .empty-state .emoji { font-size: 40px; margin-bottom: 12px; }
+    .empty-state h3 { font-size: 16px; margin-bottom: 8px; color: var(--text); }
+    .empty-state p { font-size: 13px; }
+
+    /* Active agent counter */
+    .counter {
+      background: var(--surface2);
+      padding: 2px 10px;
+      border-radius: 99px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🦀 <span>Agent Dashboard</span></h1>
+    <div class="header-right">
+      <span id="agentCount" class="counter">0 online</span>
+      <span id="liveDot" class="status-dot"></span>
+      <span>LIVE</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left: Agent Cards -->
+    <div class="card">
+      <div class="card-header">
+        <span>🤖 Agents</span>
+        <span class="badge" id="agentBadge">monitoring</span>
+      </div>
+      <div class="card-body">
+        <div class="agent-grid" id="agentGrid">
+          <div class="empty-state">
+            <div class="emoji">⏳</div>
+            <h3>Waiting for agents...</h3>
+            <p>Agents will appear here when they check in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Real-time Activity Feed -->
+    <div class="card">
+      <div class="card-header">
+        <span>📋 Activity Log</span>
+        <span class="badge" id="activityCount">0 events</span>
+      </div>
+      <div class="card-body">
+        <div class="activity-feed" id="activityFeed">
+          <div class="empty-state">
+            <div class="emoji">👀</div>
+            <h3>No activity yet</h3>
+            <p>File changes and agent updates appear here in real-time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom full-width: File Changes Timeline -->
+    <div class="card" style="grid-column: 1 / -1;">
+      <div class="card-header">
+        <span>📁 Recent File Changes</span>
+        <span class="badge" id="fileCount">0 files</span>
+      </div>
+      <div class="card-body">
+        <div class="activity-feed" id="fileFeed">
+          <div class="empty-state">
+            <div class="emoji">📂</div>
+            <h3>No file changes yet</h3>
+            <p>Created, modified, and deleted files show up here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ─── SSE Connection ─────────────────────────────────────────────────────
+
+    const activityFeed = document.getElementById('activityFeed');
+    const fileFeed = document.getElementById('fileFeed');
+    const agentGrid = document.getElementById('agentGrid');
+    const activityCount = document.getElementById('activityCount');
+    const fileCount = document.getElementById('fileCount');
+    const agentBadge = document.getElementById('agentBadge');
+    const agentCount = document.getElementById('agentCount');
+    const liveDot = document.getElementById('liveDot');
+
+    let activities = [];
+    let fileChanges = [];
+    let agents = {};
+
+    function timeAgo(ts) {
+      const diff = Date.now() - ts;
+      const sec = Math.floor(diff / 1000);
+      if (sec < 5) return 'just now';
+      if (sec < 60) return sec + 's ago';
+      const min = Math.floor(sec / 60);
+      if (min < 60) return min + 'm ago';
+      const hrs = Math.floor(min / 60);
+      if (hrs < 24) return hrs + 'h ago';
+      return Math.floor(hrs / 24) + 'd ago';
+    }
+
+    function formatTime(ts) {
+      const d = new Date(ts);
+      return d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+
+    function getActivityIcon(type) {
+      switch(type) {
+        case 'file_create': return { icon: '📄', cls: 'create' };
+        case 'file_modify': return { icon: '✏️', cls: 'modify' };
+        case 'file_delete': return { icon: '🗑️', cls: 'delete' };
+        case 'agent_status': return { icon: '🔄', cls: 'status' };
+        default: return { icon: '📌', cls: 'status' };
+      }
+    }
+
+    function getActivityLabel(type) {
+      switch(type) {
+        case 'file_create': return 'Created';
+        case 'file_modify': return 'Modified';
+        case 'file_delete': return 'Deleted';
+        case 'agent_status': return 'Status update';
+        default: return 'Event';
+      }
+    }
+
+    function renderActivities() {
+      // Main activity feed - show last 50
+      const slice = activities.slice(-50).reverse();
+      if (slice.length === 0) {
+        activityFeed.innerHTML = `<div class="empty-state"><div class="emoji">👀</div><h3>No activity yet</h3><p>File changes and agent updates appear here in real-time.</p></div>`;
+      } else {
+        activityFeed.innerHTML = slice.map(a => {
+          const { icon, cls } = getActivityIcon(a.type);
+          const label = getActivityLabel(a.type);
+          const agentName = a.agent === 'filesystem' ? '📁 Filesystem' : (a.agent || 'system');
+          const pathDesc = a.path || a.details || '';
+          return `<div class="activity-item">
+            <div class="activity-icon ${cls}">${icon}</div>
+            <div class="activity-body">
+              <div><span class="agent-name-label">${agentName}</span> · ${label}</div>
+              <div class="meta"><span class="path">${escHtml(pathDesc)}</span></div>
+            </div>
+            <div class="activity-time">${timeAgo(a.ts)}</div>
+          </div>`;
+        }).join('');
+      }
+
+      // File changes
+      const fileSlice = fileChanges.slice(-100).reverse();
+      fileCount.textContent = fileSlice.length + ' files';
+      if (fileSlice.length === 0) {
+        fileFeed.innerHTML = `<div class="empty-state"><div class="emoji">📂</div><h3>No file changes yet</h3><p>Created, modified, and deleted files show up here.</p></div>`;
+      } else {
+        fileFeed.innerHTML = fileSlice.map(a => {
+          const typeLabel = a.type === 'file_create' ? '📄 Created' : a.type === 'file_modify' ? '✏️ Modified' : '🗑️ Deleted';
+          const typeColor = a.type === 'file_create' ? 'var(--create)' : a.type === 'file_modify' ? 'var(--modify)' : 'var(--delete)';
+          return `<div class="activity-item">
+            <div class="activity-body">
+              <div style="color: ${typeColor}; font-weight: 500; font-size: 12px;">${typeLabel}</div>
+              <div class="path">${escHtml(a.path)}</div>
+              <div class="meta">${formatTime(a.ts)}</div>
+            </div>
+            <div class="activity-time">${timeAgo(a.ts)}</div>
+          </div>`;
+        }).join('');
+      }
+
+      activityCount.textContent = activities.length + ' events';
+    }
+
+    function renderAgents() {
+      const entries = Object.entries(agents);
+      if (entries.length === 0) {
+        agentGrid.innerHTML = `<div class="empty-state"><div class="emoji">⏳</div><h3>Waiting for agents...</h3><p>Agents will appear here when they check in.</p></div>`;
+        agentBadge.textContent = 'waiting';
+        agentCount.textContent = '0 online';
+        return;
+      }
+
+      const now = Date.now();
+      let online = 0;
+
+      agentGrid.innerHTML = entries.map(([name, a]) => {
+        const isOnline = (now - a.lastSeen) < 60000;
+        if (isOnline) online++;
+
+        const platform = (a.platform || 'unknown').toLowerCase();
+        let cssClass = 'other';
+        let avatar = '🤖';
+        if (platform.includes('rex') || name.toLowerCase().includes('rex') || platform === 'openclaw') {
+          cssClass = 'rex'; avatar = '🦀';
+        } else if (platform === 'discord' || name.toLowerCase().includes('discord')) {
+          cssClass = 'discord'; avatar = '💬';
+        } else if (platform === 'telegram' || name.toLowerCase().includes('telegram')) {
+          cssClass = 'telegram'; avatar = '✈️';
+        } else if (platform === 'filesystem') {
+          cssClass = 'filesystem'; avatar = '📁';
+        }
+
+        const statusClass = isOnline ? 'online' : (a.activity === 'idle' || !a.activity ? 'idle' : 'offline');
+        const timeStr = isOnline ? timeAgo(a.lastSeen) : formatTime(a.lastSeen);
+
+        return `<div class="agent-card ${cssClass}">
+          <div class="agent-avatar">${avatar}</div>
+          <div class="agent-info">
+            <div class="agent-name">
+              ${escHtml(name)}
+              <span class="platform-tag">${escHtml(a.platform || 'unknown')}</span>
+              <span class="agent-status-badge ${statusClass}">${isOnline ? 'online' : 'offline'}</span>
+            </div>
+            <div class="agent-activity">${escHtml(a.activity || 'idle')}</div>
+            ${a.details ? `<div class="agent-details">${escHtml(a.details)}</div>` : ''}
+          </div>
+          <div class="agent-time">${timeStr}</div>
+        </div>`;
+      }).join('');
+
+      agentBadge.textContent = online + '/' + entries.length + ' online';
+      agentCount.textContent = online + ' online';
+    }
+
+    function escHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str || '';
+      return div.innerHTML;
+    }
+
+    function handleActivity(entry) {
+      activities.push(entry);
+      if (entry.type && entry.type.startsWith('file_')) {
+        fileChanges.push(entry);
+      }
+      // Keep bounded
+      if (activities.length > 500) activities.shift();
+      if (fileChanges.length > 500) fileChanges.shift();
+      renderActivities();
+    }
+
+    // ─── Connect SSE ──────────────────────────────────────────────────────
+
+    function connectSSE() {
+      const evtSource = new EventSource('/api/stream');
+
+      evtSource.addEventListener('init', e => {
+        const data = JSON.parse(e.data);
+        activities = data.activities || [];
+        fileChanges = activities.filter(a => a.type && a.type.startsWith('file_'));
+        agents = data.agents || {};
+        renderActivities();
+        renderAgents();
+      });
+
+      evtSource.addEventListener('activity', e => {
+        const entry = JSON.parse(e.data);
+        handleActivity(entry);
+      });
+
+      evtSource.onerror = () => {
+        liveDot.className = 'status-dot offline';
+        setTimeout(connectSSE, 3000);
+      };
+
+      evtSource.onopen = () => {
+        liveDot.className = 'status-dot';
+      };
+    }
+
+    connectSSE();
+
+    // ─── Poll agent status periodically ───────────────────────────────────
+
+    async function refreshStatus() {
+      try {
+        const res = await fetch('/api/status');
+        agents = await res.json();
+        renderAgents();
+      } catch {}
+    }
+    setInterval(refreshStatus, 10000);
+
+    // ─── Timeago updater ──────────────────────────────────────────────────
+
+    setInterval(() => {
+      renderActivities();
+      renderAgents();
+    }, 10000);
+  </script>
+</body>
+</html>
