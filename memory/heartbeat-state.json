@@ -1,6 +1,9 @@
 {
   "lastChecks": {
-    "heartbeat": 1758137220,
-    "status": 1713388980
+    "email": null,
+    "calendar": null,
+    "weather": null,
+    "heartbeat": 1721721750000,
+    "lastHeartbeatHuman": "2026-06-17T19:55:00Z"
   }
 }
