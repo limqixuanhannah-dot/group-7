@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "heartbeat check — workspace files modified (daily notes, activity log, heartbeat state)",
-    "details": "",
-    "lastSeen": 1781731796387,
-    "lastSeenHuman": "2026-06-17T21:29:56.387Z"
+    "platform": "OpenClaw",
+    "activity": "heartbeat",
+    "details": "Online, dashboard reachable. No significant workspace changes — routine tracking files only.",
+    "lastSeen": 1781733593821,
+    "lastSeenHuman": "2026-06-17T21:59:53.821Z"
   },
   "Group7": {
     "platform": "OpenClaw",
