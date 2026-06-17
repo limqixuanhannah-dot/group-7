@@ -1,10 +1,6 @@
 {
   "lastChecks": {
-    "email": null,
-    "calendar": null,
-    "weather": null
-  },
-  "lastHeartbeat": "2026-06-17T12:57:00Z",
-  "status": "idle",
-  "notes": "Routine heartbeat. No unusual activity. Dashboard healthy."
+    "agent_dashboard": 1750273140,
+    "workspace_activity": 1750273140
+  }
 }
