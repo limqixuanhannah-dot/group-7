@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "heartbeat",
-    "details": "Online, dashboard reachable. No significant workspace changes — routine tracking files only.",
-    "lastSeen": 1781733593821,
-    "lastSeenHuman": "2026-06-17T21:59:53.821Z"
+    "activity": "Heartbeat — 2026-06-17 22:23 UTC",
+    "details": "Online, dashboard healthy. Recent files: daily notes, dashboard status. No anomalies.",
+    "lastSeen": 1781735389758,
+    "lastSeenHuman": "2026-06-17T22:29:49.758Z"
   },
   "Group7": {
     "platform": "OpenClaw",
