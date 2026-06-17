@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "idle",
+    "platform": "OpenClaw",
+    "activity": "heartbeat check — idle, no notable changes",
     "details": "",
-    "lastSeen": 1781710192015,
-    "lastSeenHuman": "2026-06-17T15:29:52.015Z"
+    "lastSeen": 1781711996328,
+    "lastSeenHuman": "2026-06-17T15:59:56.328Z"
   },
   "Group7": {
     "platform": "OpenClaw",

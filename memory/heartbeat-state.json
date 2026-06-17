@@ -1,1 +1,8 @@
-{"lastChecks":{"heartbeat":1718618340,"status":1718618340},"lastSummary":"2026-06-17 13:59 UTC — Heartbeat + status both 200. No active work detected."}
+{
+  "lastChecks": {
+    "heartbeat": 1749656340,
+    "email": null,
+    "calendar": null,
+    "weather": null
+  }
+}
