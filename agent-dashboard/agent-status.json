@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat — Jun 17 17:29 UTC",
-    "details": "Dashboard healthy. Routine workspace tracking files only (dashboard state, heartbeat log, daily memory). Agent online, idle.",
-    "lastSeen": 1781717396298,
-    "lastSeenHuman": "2026-06-17T17:29:56.298Z"
+    "activity": "heartbeat check - workspace active with agent-dashboard, hannah profiles, and task files",
+    "details": "",
+    "lastSeen": 1781719189107,
+    "lastSeenHuman": "2026-06-17T17:59:49.107Z"
   },
   "Group7": {
     "platform": "OpenClaw",

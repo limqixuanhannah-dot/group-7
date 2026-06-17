@@ -49,3 +49,12 @@
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Recent file changes detected: agent-status.json and daily memory updated within the last hour","ts":1781717157075}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — Jun 17 17:27 UTC","details":"Dashboard healthy. Workspace: routine tracking files only (dashboard state, heartbeat log, daily memory). Agent Rex online, idle.","ts":1781717277488}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — Jun 17 17:29 UTC","details":"Dashboard healthy. Routine workspace tracking files only (dashboard state, heartbeat log, daily memory). Agent online, idle.","ts":1781717396298}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Workspace active — 18 files modified in last 24h. Notable: to-dos.json, personalprofilepg.md, DEBATE_WARLORD.md, agent-dashboard, memory/2026-06-17.md (9.5kb — active logging).","ts":1781717634640}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat online — idle, no notable changes","details":"Workspace quiet. Dashboard responsive.","ts":1781717756988}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","details":"routine, tracking files only","ts":1781717873768}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","ts":1781717994929}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Online - heartbeat 17:41 UTC","details":"Routine heartbeat check, tracking files updated","ts":1781718117193}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","details":"Online - routine heartbeat, dashboard/memory files active","ts":1781718355838}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","details":"Routine — tracking files only, no active jobs. Stale Group7 entry still lingering.","ts":1781718834046}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","details":"Routine — tracking files only, no active jobs. Stale Group7 entry still lingering.","ts":1781718954991}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat check - workspace active with agent-dashboard, hannah profiles, and task files","ts":1781719074123}

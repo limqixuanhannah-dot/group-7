@@ -1,9 +1,8 @@
 {
+  "lastHeartbeat": 1781718780,
   "lastChecks": {
     "email": null,
     "calendar": null,
     "weather": null
-  },
-  "lastHeartbeat": 1781717340,
-  "notes": "Heartbeat cron: dashboard POST 200, status POST 200. Routine tracking files only — dashboard state, heartbeat log, daily memory. Agent online, idle."
+  }
 }
