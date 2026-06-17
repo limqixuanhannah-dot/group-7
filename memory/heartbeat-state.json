@@ -1,1 +1,8 @@
-{"lastChecks":{"email":null,"calendar":null,"weather":null,"heartbeat":1741726780000},"lastHeartbeat":"2026-06-17T20:59:47Z"}
+{
+  "lastChecks": {
+    "heartbeat": 1731791220000
+  },
+  "lastSeenHuman": "2026-06-17T21:07:00Z",
+  "agent": "Rex",
+  "status": "online"
+}

@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "Heartbeat check — 2026-06-17 20:59 UTC",
-    "details": "Online. Recent changes: debate_warlord protocol, banana.md, to-do system updates.",
-    "lastSeen": 1781729998340,
-    "lastSeenHuman": "2026-06-17T20:59:58.340Z"
+    "platform": "unknown",
+    "activity": "heartbeat check — workspace files modified (daily notes, activity log, heartbeat state)",
+    "details": "",
+    "lastSeen": 1781731796387,
+    "lastSeenHuman": "2026-06-17T21:29:56.387Z"
   },
   "Group7": {
     "platform": "OpenClaw",
