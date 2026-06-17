@@ -1,8 +1,9 @@
 {
   "lastChecks": {
-    "heartbeat": 1749656340,
     "email": null,
     "calendar": null,
     "weather": null
-  }
+  },
+  "lastHeartbeat": 1740154740,
+  "notes": "Heartbeat cron: dashboard responsive, agent online, idle"
 }
