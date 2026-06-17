@@ -2,9 +2,9 @@
   "Rex": {
     "platform": "OpenClaw",
     "activity": "heartbeat",
-    "details": "Online 19:59 UTC. Routine — tracking files only. Stale Group7 entry still visible (last seen 06:55 UTC).",
-    "lastSeen": 1781726396882,
-    "lastSeenHuman": "2026-06-17T19:59:56.882Z"
+    "details": "",
+    "lastSeen": 1781728192257,
+    "lastSeenHuman": "2026-06-17T20:29:52.257Z"
   },
   "Group7": {
     "platform": "OpenClaw",

@@ -92,3 +92,9 @@
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat online — monitoring workspace","details":"Recent changes to profile assets, agent-dashboard, memory. All quiet, no anomalies.","ts":1781726154394}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — online, workspace quiet","details":"All nominal. Dashboard healthy. Notable: stale Group7 entry still present (last seen 06:55 UTC, ~13h ago). Recent workspace changes: memory log, dashboard files, HEARTBEAT.md. No anomalies.","ts":1781726274877}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","details":"Online 19:59 UTC. Routine — tracking files only. Stale Group7 entry still visible (last seen 06:55 UTC).","ts":1781726396882}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat check","ts":1781726872775}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat_routine","ts":1781727112497}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check — 20:15 UTC","details":"Dashboard healthy. Routine tracking files only. All clear.","ts":1781727357064}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat check - no pending tasks","ts":1781727472261}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check, no active tasks","ts":1781727652389}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781728192257}
