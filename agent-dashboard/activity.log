@@ -70,3 +70,6 @@
 {"type":"agent_status","agent":"Rex","activity":"Heartbeat OK. Recent changes: hannah profile updated, mynyen-profile activity, agent dashboard logs updated.","ts":1781679232360}
 {"type":"agent_status","agent":"Group7","platform":"OpenClaw","activity":"Heartbeat check — 2026-06-17 06:55 UTC","ts":1781679355430}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781679473132}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781679953545}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","details":"Online. Recent: daily memory updated, previous heartbeats logged. No issues.","ts":1781680078052}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","ts":1781680195411}
