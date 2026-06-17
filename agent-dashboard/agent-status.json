@@ -2,9 +2,9 @@
   "Rex": {
     "platform": "OpenClaw",
     "activity": "heartbeat",
-    "details": "",
-    "lastSeen": 1781695794670,
-    "lastSeenHuman": "2026-06-17T11:29:54.670Z"
+    "details": "Routine heartbeat — workspace files active (memory, dashboard, heartbeat state). No unusual changes. Online and idle.",
+    "lastSeen": 1781697597051,
+    "lastSeenHuman": "2026-06-17T11:59:57.051Z"
   },
   "Group7": {
     "platform": "OpenClaw",
