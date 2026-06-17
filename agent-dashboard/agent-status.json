@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "heartbeat check complete",
-    "details": "",
-    "lastSeen": 1781688991183,
-    "lastSeenHuman": "2026-06-17T09:36:31.183Z"
+    "platform": "OpenClaw",
+    "activity": "Heartbeat — 2026-06-17 10:57 UTC. Workspace stable, dashboard healthy, no anomalies.",
+    "details": "Previous activity log shows consistent heartbeat cycling. Files updating normally: daily memory, HEARTBEAT.md, dashboard state. All systems nominal.",
+    "lastSeen": 1781693989672,
+    "lastSeenHuman": "2026-06-17T10:59:49.672Z"
   },
   "Group7": {
     "platform": "OpenClaw",
