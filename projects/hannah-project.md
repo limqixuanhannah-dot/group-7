@@ -89,6 +89,29 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 ---
 
+## Cybersecurity Advisory — Fish Projects
+
+**Online Shopping for Fish & Supplies**
+- When buying fish or aquarium supplies online, only purchase from reputable sellers with verified reviews.
+- Be cautious of phishing websites posing as pet supply stores. Check the URL carefully before entering payment details.
+- Use a credit card or secure payment service (not direct bank transfer) for online pet purchases.
+- Do not share personal information beyond what is necessary for the transaction.
+
+**Smart Aquarium Devices (IoT Security)**
+- If using smart aquarium equipment (WiFi thermostats, automated feeders, cameras, pH monitors), change the default passwords immediately.
+- Keep firmware updated on all smart devices.
+- Use a separate IoT network or guest network for aquarium devices if possible.
+- Disable remote access features if not needed.
+- Research the device manufacturer's privacy policy — some IoT devices collect and sell usage data.
+
+**Personal Data**
+- Fishkeeping forums and communities can reveal personal details (home setup, photos, location). Be mindful of what you share.
+- Avoid posting photos that reveal identifiable features of your home.
+
+**Phishing via Pet Groups**
+- Scammers target aquarium hobbyist groups with fake "rare fish for sale" listings. Verify seller credibility before paying.
+- Do not click suspicious links shared in aquarium forums or social media groups.
+
 ## Latest Updates
 
 ### 2026-06-18 08:05 UTC

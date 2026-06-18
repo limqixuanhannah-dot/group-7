@@ -9,9 +9,20 @@
       "active": true,
       "collaborators": [],
       "path": "projects/hannah-project.md"
+    },
+    {
+      "name": "google-slides",
+      "topic": "how to use Google Slides",
+      "owner": "hannah",
+      "path": "projects/hannah/google-slides-project.md",
+      "created_at": "2026-06-18T08:34:00Z",
+      "active": true,
+      "collaborators": [
+        "nc"
+      ]
     }
   ],
   "created_at": "2026-06-18T07:15:00Z",
-  "updated_at": "2026-06-18T08:29:00Z",
+  "updated_at": "2026-06-18T08:34:00Z",
   "collaborator_model": "owner_only"
 }
