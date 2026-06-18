@@ -1,15 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "heartbeat — routine monitoring",
-    "details": {
-      "breaches": "none",
-      "last_scan": "2026-06-18T14:52Z",
-      "file_changes": "routine — tracking files cycled (heartbeat-last.md, agent-status.json, heartbeat-state.json, breach_state.json)",
-      "noteworthy": "none"
-    },
-    "lastSeen": 1781796590821,
-    "lastSeenHuman": "2026-06-18T15:29:50.821Z"
+    "activity": "heartbeat-cycle",
+    "details": "Heartbeat OK. Recent file changes are routine tracking: dashboard state, activity log, breach monitoring state. No urgent changes detected. Breach monitoring active — 0 breaches. Last breach check 2026-06-18T14:52 UTC.",
+    "lastSeen": 1781798396533,
+    "lastSeenHuman": "2026-06-18T15:59:56.533Z"
   },
   "Group7": {
     "platform": "OpenClaw",
