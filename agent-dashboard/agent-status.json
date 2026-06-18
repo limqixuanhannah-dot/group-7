@@ -1,17 +1,21 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle complete — 14:29 UTC",
+    "activity": "Heartbeat — routine check",
     "details": {
-      "heartbeat": "online (200)",
-      "files": "Routine dashboard/heartbeat state cycling",
-      "projects": "google-slides-project.md, hannah-project.md last updated ~13:01 UTC",
-      "breach_monitoring": "clean (0 known breaches)",
-      "group7_agent": "stale >31h (last seen 2026-06-17 06:55 UTC)",
-      "note": "File changes are standard state cycling — no actionable new changes"
+      "heartbeat": "online",
+      "recent_file_changes": [
+        "agent-dashboard/agent-status.json — state cycling",
+        "monitoring/breach_state.json — state update",
+        "memory/heartbeat-state.json — tracking",
+        "heartbeat-last.md — log entry"
+      ],
+      "noteworthy": "none — routine operations only",
+      "dashboard": "operational at http://localhost:3456",
+      "timestamp": "2026-06-18T14:57:00Z"
     },
-    "lastSeen": 1781792997212,
-    "lastSeenHuman": "2026-06-18T14:29:57.212Z"
+    "lastSeen": 1781794790189,
+    "lastSeenHuman": "2026-06-18T14:59:50.189Z"
   },
   "Group7": {
     "platform": "OpenClaw",
