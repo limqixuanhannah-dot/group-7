@@ -1,19 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat — 2026-06-18 16:59 UTC",
-    "details": {
-      "breachMonitoring": "active",
-      "breachesDetected": 0,
-      "activeProjects": [
-        "hannah/google-slides-project.md",
-        "hannah-project.md (Fish project)"
-      ],
-      "fileChanges": "routine — dashboard state, project files, breach monitoring, heartbeat tracking",
-      "noteworthy": "none — all nominal"
-    },
-    "lastSeen": 1781801997768,
-    "lastSeenHuman": "2026-06-18T16:59:57.768Z"
+    "activity": "heartbeat",
+    "details": "",
+    "lastSeen": 1781803723226,
+    "lastSeenHuman": "2026-06-18T17:28:43.226Z"
   },
   "Group7": {
     "platform": "OpenClaw",
