@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "heartbeat",
+    "platform": "OpenClaw",
+    "activity": "Heartbeat @ 02:25 UTC — workspace active: project files updated (hannah profile, chem-dating, agent-dashboard), daily memory logged, skill assets refreshed. Channel: discord.",
     "details": "",
-    "lastSeen": 1781747991820,
-    "lastSeenHuman": "2026-06-18T01:59:51.820Z"
+    "lastSeen": 1781749793164,
+    "lastSeenHuman": "2026-06-18T02:29:53.164Z"
   },
   "Group7": {
     "platform": "OpenClaw",
