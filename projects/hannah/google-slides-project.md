@@ -128,10 +128,25 @@ When using Google Slides, take note of the following security considerations:
 - Use a strong, unique password.
 - Check Recent Security Events in your Google Account settings monthly.
 
+**2026 Google Workspace Identity Threats**
+- Attackers are shifting from password theft to identity token abuse: session hijacking using stolen browser cookies, OAuth token theft, device code phishing, and malicious consent abuse.
+- Attackers can compromise Workspace accounts without needing passwords or 2FA codes by stealing session tokens post-authentication.
+- Inbox rules are being weaponised — attackers create rules to auto-delete/archive security alerts, set up forwarding for data exfiltration, and abuse calendar invitations for phishing.
+- OAuth application permissions can quietly grant long-term persistent access.
+- Workspace accounts serve as identity hubs for SaaS apps, password resets, financial workflows — a single compromised account can cascade across the entire cloud ecosystem.
+- Mitigations: Review OAuth grants regularly, monitor mailbox configuration changes, use identity threat detection tools, audit third-party app integrations, enable Advanced Protection for high-value accounts.
+
+**Sources:** [Huntress](https://www.huntress.com/blog/identity-breach-google-workspace) (Feb 2026)
+
 **Data Leakage via Version History**
 - Deleted content may still exist in version history. Before sharing a presentation externally, review and clear sensitive versions.
 
 ## Latest Updates
 
-*No hourly updates yet. First sweep incoming.*
+### 2026-06-18 09:01 UTC
+- **New Google Slides features (2025-2026):** Nano Banana Pro for AI image editing (Nov 2025), Gemini-powered video creation from Slides in Google Vids (Oct 2025), Gemini text refinement for Slides (Sep 2025), arrow key pixel-precise object movement (Aug 2025), AI image background replace/expand (Aug 2025), Imagen 4 multi-language image generation (Jun 2025).
+- **Accessibility features detailed:** Alt text for screen readers, HTML view for presentations, Lexend typeface support for dyslexia-friendly content.
+- **Presentation Trends 2026:** Clarity over density, consistency over novelty, evidence over theatrics in slide design. Each slide should answer one question.
+
+**Sources:** [Google Workspace Releases](https://knowledge.workspace.google.com/admin/releases/whats-new) (2025-2026), [Mvix](https://www.mvix.com/blog/google-slides-core-features) (2026), [SlidesGo](https://slidesgo.com/presentation-trends-2026) (2026)
 

@@ -89,6 +89,33 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 ---
 
+## 2026 Fishkeeping Trends
+
+### Smart Aquarium Systems (Mainstream in 2026)
+- App-controlled monitoring of temperature, pH, ammonia, oxygen in real-time
+- Smart feeders that dispense food based on fish activity patterns
+- AI image recognition integrated into new aquarium designs — alerts on unusual fish behaviour
+- Smart lighting controls that simulate natural circadian rhythm with adjustable spectrum
+
+### Sustainable Aquaculture & Eco-Friendly Practices
+- Carbon-neutral aquarium kits using recycled materials
+- Biotope aquariums replicating native environments (substrate, water current, plants)
+- Renewable energy powered filtration (solar)
+- Sustainable fish feed without palm oil
+- Live plants used as natural filtration complements
+
+### Advanced Aquascaping
+- Nature Style and Dutch Style planted tanks remain dominant
+- Low-tech aquarium plants with high-end LED lighting
+- Popular 2026 plant species: Mini Hornwort, Phoenix Moss, Dwarf Pearlweed, Flame Moss, Mini Iron Crowns
+- Smart app-controlled LED lights with tunable RGB + white spectrum
+
+### Nano Tanks Trend
+- Tanks 30-60L most popular among younger urban hobbyists
+- Lower maintenance, attractive aesthetics
+
+**Sources:** [SeaOura](https://seaoura.com/blogs/aquarium/fish-keeping-trends-every-aquarist-should-know) (Jun 2026), [Fortune Business Insights](https://www.fortunebusinessinsights.com/aquarium-market-110692) (Jun 2026)
+
 ## Cybersecurity Advisory — Fish Projects
 
 **Online Shopping for Fish & Supplies**
@@ -104,6 +131,15 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 - Disable remote access features if not needed.
 - Research the device manufacturer's privacy policy — some IoT devices collect and sell usage data.
 
+**2026 IoT Threat Landscape (Applies to Smart Aquarium Devices)**
+- IoT malware incidents up 124% year-over-year (2025). Daily average of 820,000 IoT hacking attempts.
+- The "Aisuru" botnet launched a 29.7 Tbps DDoS attack in 2025 — compromised IoT devices (cameras, routers) used as weapons.
+- Over 35% of IoT/OT security alerts relate to denial-of-service attacks.
+- Always-on automated scanning means any internet-connected device is probed within minutes of going online.
+- Mitigation: Stronger device authentication, network segmentation, disable unnecessary services, regular firmware audits.
+
+**Sources:** [HackerDesk](https://hackerdesk.com/critical-iot-security-vulnerabilities-exposed-in-2026-protection-strategies-that) (Apr 2026), [Malware News](https://malware.news/t/iot-hacking-statistics-2026-global-trends-and-key-insights/103975) (Feb 2026)
+
 **Personal Data**
 - Fishkeeping forums and communities can reveal personal details (home setup, photos, location). Be mindful of what you share.
 - Avoid posting photos that reveal identifiable features of your home.
@@ -113,6 +149,13 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 - Do not click suspicious links shared in aquarium forums or social media groups.
 
 ## Latest Updates
+
+### 2026-06-18 09:01 UTC
+- **2026 Fishkeeping Trends identified:** Smart aquarium systems going mainstream with app-controlled monitoring, AI image recognition for fish behaviour, and smart feeders. Nano tanks (30-60L) trending among urban hobbyists. Sustainability focus with carbon-neutral kits and biotope aquariums.
+- **Aquarium market data:** Global aquarium market valued at USD 4B (2025), projected USD 7B by 2034 (CAGR 6.5%).
+- **IoT threat escalation:** IoT malware incidents up 124% YoY. Daily average of 820,000 IoT hacking attempts. The "Aisuru" botnet launched 29.7 Tbps DDoS attack in 2025 — directly relevant to smart aquarium device security.
+
+**Sources:** [SeaOura](https://seaoura.com/blogs/aquarium/fish-keeping-trends-every-aquarist-should-know) (Jun 2026), [Fortune Business Insights](https://www.fortunebusinessinsights.com/aquarium-market-110692) (Jun 2026), [Malware News](https://malware.news/t/iot-hacking-statistics-2026-global-trends-and-key-insights/103975) (Feb 2026)
 
 ### 2026-06-18 08:05 UTC
 - **New fish research journals identified:** Journal of Fish Biology (Wiley), Frontiers in Fish Science, Journal of Aquaculture & Fisheries — potential sources for academic-level fish project research

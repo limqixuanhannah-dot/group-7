@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat check",
-    "details": "",
-    "lastSeen": 1781773192807,
-    "lastSeenHuman": "2026-06-18T08:59:52.807Z"
+    "activity": "Heartbeat online — 2026-06-18 09:04 UTC",
+    "details": "Recent file changes: projects/hannah/google-slides-project.md, projects/hannah-project.md, agent-dashboard files updated. Monitoring workspace.",
+    "lastSeen": 1781773598187,
+    "lastSeenHuman": "2026-06-18T09:06:38.187Z"
   },
   "Group7": {
     "platform": "OpenClaw",
