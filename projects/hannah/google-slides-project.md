@@ -172,3 +172,8 @@ When using Google Slides, take note of the following security considerations:
 
 **Sources:** [Kaseya - Three Phishing Campaigns Abusing Vercel](https://www.kaseya.com/blog/phishing-campaigns-abusing-vercels-free-hosting-platform) (Jun 2026), [Google Workspace Updates - Weekly Recap June 12, 2026](https://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-12-2026.html) (Jun 2026), [Periculo - Mitigating Indirect Prompt Injection in Google Workspace](https://www.periculo.co.uk/cyber-security-blog/mitigating-indirect-prompt-injection-in-google-workspace-a-continuous-multi-layered-ai-security-approach) (May 2026)
 
+### 2026-06-18 13:01 UTC
+- **CSE Slides Vault/Takeout Export Beta (May 29, 2026):** Google announced beta for client-side encrypted (CSE) Slides bulk export via Google Vault or Data Export (Takeout), with conversion to PowerPoint (.pptx) format. Allows organisations to retain complete ownership, access, and control of sensitive data in portable format. Available for Enterprise Plus, Education Standard/Plus, Frontline Plus, Assured Controls. Relevant to data governance and compliance — organisations handling sensitive presentations should evaluate CSE and this export capability for data retention and portability.
+
+**Source:** [Google Workspace Updates - CSE Slides Vault/Takeout Export Beta](https://workspaceupdates.googleblog.com/2026/05/available-in-beta-convert-your-client-side-encrypted-Slides-after-a-Vault-or-Takeout-export.html) (May 2026)
+
