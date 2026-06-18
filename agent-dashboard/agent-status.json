@@ -1,19 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": {
-      "lastBreachCheck": "2026-06-18T21:52:21Z",
-      "breachState": "clean",
-      "breachCount": 0,
-      "projectsUpdated": [
-        "hannah-project.md",
-        "google-slides-project.md"
-      ],
-      "projectsUpdatedAt": "2026-06-18T21:02:00Z"
-    },
-    "details": "",
-    "lastSeen": 1781821789944,
-    "lastSeenHuman": "2026-06-18T22:29:49.944Z"
+    "platform": "OpenClaw",
+    "activity": "Heartbeat check — 2026-06-18 22:59 UTC",
+    "details": "Routine heartbeat. Breach monitor clean. Group7 last seen ~40h ago. Workspace activity: heartbeat tracker, agent status, and breach state files updated within last hour.",
+    "lastSeen": 1781823595742,
+    "lastSeenHuman": "2026-06-18T22:59:55.742Z"
   },
   "Group7": {
     "platform": "OpenClaw",
