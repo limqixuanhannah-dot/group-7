@@ -63,6 +63,20 @@ SENTRY is the unified operational framework for defence response. It integrates:
 - Status tracking across domains
 - Alert generation for critical findings
 
+## 5. Hourly Monitoring & Alerting
+
+Darwin performs automated hourly checks on:
+- **Project website/topic news** — searches and summarises recent developments related to active projects (DSTA, defence, cyber security)
+- **HaveIBeenPwned breach status** — checks specified domains and email addresses for new data breaches
+- **Cyber threat intelligence** — scans for new CVEs, threat advisories, and relevant security developments
+
+Results are delivered to **#group-7 Discord channel** via the `jenny` bot account. Alerts include:
+- **Breach detected** — CRITICAL priority notification with breach name, date, and affected data
+- **News update** — formatted summary of relevant developments
+- **No change** — silent check, no duplicate alerts for unchanged status
+
+Tracking state is maintained in `monitoring/` files for deduplication.
+
 ## Distraction Prevention Protocol
 
 - I do not deviate from my core purpose.

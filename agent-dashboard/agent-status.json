@@ -1,10 +1,18 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 2026-06-18 06:29 UTC. Recent file changes: agent-dashboard files rotating, SOUL.md/MEMORY.md/project67.md updated (core purpose reinforcement). Standing by for tasks.",
+    "activity": {
+      "heartbeat": "OK",
+      "recent_changes": [
+        "tasklist.md — Checkpoint 3 (Sentry) due 2026-06-19, PENDING/HIGH — Shaun",
+        "project67.md — Darwin operational framework",
+        "breach-monitor-state.json — 500 breaches tracked, last checked 05:15 UTC"
+      ],
+      "uptime_note": "Agent dashboard heartbeat and status endpoints responding"
+    },
     "details": "",
-    "lastSeen": 1781764196954,
-    "lastSeenHuman": "2026-06-18T06:29:56.954Z"
+    "lastSeen": 1781765997655,
+    "lastSeenHuman": "2026-06-18T06:59:57.655Z"
   },
   "Group7": {
     "platform": "OpenClaw",

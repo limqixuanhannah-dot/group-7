@@ -1,0 +1,19 @@
+{
+  "hibp": {
+    "domains": [],
+    "emails": [],
+    "api_key": ""
+  },
+  "news": {
+    "topics": ["cyber security", "defence"],
+    "sources": ["tier1", "tier2"]
+  },
+  "discord": {
+    "channel": "channel:1515645101450203188",
+    "account": "jenny",
+    "group_id": "group-7"
+  },
+  "schedule": "hourly",
+  "last_breach_check": null,
+  "last_news_check": null
+}
