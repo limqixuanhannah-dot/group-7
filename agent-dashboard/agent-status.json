@@ -1,10 +1,15 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat check — 2026-06-18 13:28 UTC — online, no issues",
-    "details": "",
-    "lastSeen": 1781789349333,
-    "lastSeenHuman": "2026-06-18T13:29:09.333Z"
+    "activity": "Routine heartbeat cycle. Heartbeat: online (200). No new breaches. File changes: dashboard state files cycling (normal operations). Monitoring infrastructure nominal.",
+    "details": {
+      "breach_state": "clear (0 known breaches)",
+      "last_breach_check": "2026-06-18T12:52:00Z",
+      "dashboard": "operational",
+      "note": "File changes detected are routine dashboard/heartbeat state cycling — no actionable project changes."
+    },
+    "lastSeen": 1781791196860,
+    "lastSeenHuman": "2026-06-18T13:59:56.860Z"
   },
   "Group7": {
     "platform": "OpenClaw",
