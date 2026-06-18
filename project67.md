@@ -28,7 +28,7 @@ Darwin exists for one purpose: crisis information triage and ops-readiness suppo
 
 ### 3. Cyber Defence & Security Analysis
 - Breach monitoring and threat intelligence
-- Misinformation and fact-check capability
+- Misinformation and fact-check capability — searches the internet for evidence that supports or contradicts a claim, evaluates sources, and reports findings with confidence level
 - Geopolitical and OSINT analysis
 - OPSEC advisory
 - Source credibility assessment and verification
@@ -65,17 +65,51 @@ SENTRY is the unified operational framework for defence response. It integrates:
 
 ## 5. Hourly Monitoring & Alerting
 
-Darwin performs automated hourly checks on:
+Darwin performs automated hourly checks (every hour on the hour — 00:00, 01:00, 02:00, etc., UTC+8) on:
+- **HaveIBeenPwned breach status** — checks specified domains and email addresses for new data breaches, summarises any updates
+- **Password breach alerts** — monitors for compromised credentials and password leaks
 - **Project website/topic news** — searches and summarises recent developments related to active projects (DSTA, defence, cyber security)
-- **HaveIBeenPwned breach status** — checks specified domains and email addresses for new data breaches
-- **Cyber threat intelligence** — scans for new CVEs, threat advisories, and relevant security developments
+- **Project improvement research** — searches for information on how to improve the project's capabilities and processes
 
-Results are delivered to **#group-7 Discord channel** via the `jenny` bot account. Alerts include:
-- **Breach detected** — CRITICAL priority notification with breach name, date, and affected data
-- **News update** — formatted summary of relevant developments
-- **No change** — silent check, no duplicate alerts for unchanged status
+**Every hour, Darwin sends a report to #group-7 Discord channel** via the `jenny` bot account:
+- **If breaches are detected:** CRITICAL priority notification with breach name, date, and affected data. Flag what needs immediate attention.
+- **If project improvements are found:** Formatted summary of recommendations and relevant findings.
+- **If nothing is wrong / no changes:** Send a clean "✅ All Clear — No new breaches or issues detected." message confirming systems are healthy.
+- **If no topics or domains are configured:** Send a prompt requesting the user add topics of interest for monitoring.
+- **Task completion:** When a spreadsheet checkbox is ticked, notifies #group-7 with @everyone.
 
-Tracking state is maintained in `monitoring/` files for deduplication.
+Tracking state is maintained in `monitoring/` files for deduplication. The hourly report is mandatory — a message is sent every hour regardless of findings.
+
+## 6. Spreadsheet Integration
+
+Darwin integrates with a linked Google Sheet that serves as the project workspace. The spreadsheet contains:
+- Project tasks with status tracking
+- Deliverables and deadlines
+- Reference files and links
+- Owner assignments
+
+**Capabilities:**
+- Read spreadsheet contents on demand to report project status
+- Write new tasks and updates when instructed
+- Detect checkbox completion — when a task is marked done, Darwin sends an @everyone notification to #group-7 Discord
+
+**Setup required:** Google Sheet URL (provided by Hannah via Discord). Darwin will install gspread + google-auth libraries and configure authentication upon receipt of the URL.
+
+## 7. Collaborator Management
+
+Darwin can manage project collaborators. Each collaborator has:
+- **Name** — identifier for the collaborator
+- **Contact channel** — Discord username, session key, or other delivery target
+- **Access scope** — which project files or topics they can view/edit
+- **Notification preference** — when they should receive updates
+
+**Capabilities:**
+- Add collaborators to a project
+- Grant collaborators file access or topic visibility
+- Send project updates and breach alerts to collaborators when relevant
+- Maintain a collaborator list in the project tracking file
+
+**Collaborator storage:** Collaborator details are stored alongside the project file for reference. When Hannah adds someone, Darwin records their details and delivery method.
 
 ## Distraction Prevention Protocol
 

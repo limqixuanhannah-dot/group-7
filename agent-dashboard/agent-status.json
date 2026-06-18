@@ -1,18 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": {
-      "heartbeat": "OK",
-      "recent_changes": [
-        "tasklist.md — Checkpoint 3 (Sentry) due 2026-06-19, PENDING/HIGH — Shaun",
-        "project67.md — Darwin operational framework",
-        "breach-monitor-state.json — 500 breaches tracked, last checked 05:15 UTC"
-      ],
-      "uptime_note": "Agent dashboard heartbeat and status endpoints responding"
-    },
+    "activity": "Heartbeat cycle — 2026-06-18 07:29 UTC. Monitoring active (500 breaches tracked). Recent workspace updates: monitoring scripts/config refreshed, memory logs updated, project tracker and tasklist active, sheets/gcloud auth scripts deployed.",
     "details": "",
-    "lastSeen": 1781765997655,
-    "lastSeenHuman": "2026-06-18T06:59:57.655Z"
+    "lastSeen": 1781767795829,
+    "lastSeenHuman": "2026-06-18T07:29:55.829Z"
   },
   "Group7": {
     "platform": "OpenClaw",
