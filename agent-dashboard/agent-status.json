@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat and status check. Recent workspace activity: google-slides-project.md received 8 hourly security research updates today (latest 20:01 UTC covering Workspace outage, ShinyHunters vishing). Breach state clear. Agent dashboard tracking 2 agents (Rex active now, Group7 last seen 2026-06-17).",
+    "activity": "Heartbeat cycle — project file activity: hannah-project.md (fishkeeping research, IoT/security advisories) and google-slides-project.md (Workspace security updates) received hourly research updates. Breach state clear. Dashboard tracking 2 agents (Rex online, Group7 stale ~38h). Standing by.",
     "details": "",
-    "lastSeen": 1781816397145,
-    "lastSeenHuman": "2026-06-18T20:59:57.145Z"
+    "lastSeen": 1781818126811,
+    "lastSeenHuman": "2026-06-18T21:28:46.811Z"
   },
   "Group7": {
     "platform": "OpenClaw",

@@ -143,6 +143,15 @@ When using Google Slides, take note of the following security considerations:
 
 ## Latest Updates
 
+### 2026-06-18 21:01 UTC
+- **Workspace Policy API — DLP Mutate Endpoints (June 8, 2026):** Google introduced Create, Update, and Delete endpoints for DLP rules and detectors via the Workspace Policy API, alongside existing read-only Get/List capabilities. Super admins can now programmatically manage the entire lifecycle of DLP policies — from creation to real-time activation and deactivation. API-only launch for capabilities previously only available in Admin console. Enables automated security policy management at scale.
+- **New DLP Capabilities for File Attachments & Proximity Conditions GA (June 3, 2026):** DLP rules can now target files by name string, extension (e.g., .java), custom MIME types, and system file categories. Proximity matching enables detection of sensitive data within configurable distance (up to 1,000 characters between matched conditions) — e.g., detecting "routing number" within 100 characters of "account number". Scanning support across Gmail, Drive, and Chat attachments. Reduces false positives by identifying data in context.
+- **Enhanced Data Protection for Managed Third-Party Apps (June 3, 2026):** Google recalibrated data transfer restrictions to allow a "trusted ecosystem" between managed apps. Users can now copy data (e.g., client email) from corporate Gmail to managed third-party CRM applications, but are blocked from pasting the same data into personal Gmail accounts. Off by default, can be enabled at OU level via MDM (iOS AppConfig). Represents a shift from blanket blocking to granular trust zones.
+- **Default Context-Aware Access for All SAML Applications (May 14, 2026):** Administrators can now apply a global context-aware access (CAA) policy to ALL SAML applications as a universal security baseline. SAML apps without specific policies automatically inherit this "secure-by-default" posture. Reduces administrative burden of managing security at scale. Specific app-level policies take precedence. Supports both Monitor (phased) and Active modes. Audit logs capture enforcement events with remediation messages.
+- **Improvements to Out-of-Domain File-Level Warnings (May 25, 2026):** Enhanced warnings when sharing files outside the domain, adding another layer of protection against accidental data leakage.
+
+**Sources:** [Google Workspace Updates Blog](https://knowledge.workspace.google.com/admin/releases/whats-new) (Jun 2026)
+
 ### 2026-06-18 09:01 UTC
 - **New Google Slides features (2025-2026):** Nano Banana Pro for AI image editing (Nov 2025), Gemini-powered video creation from Slides in Google Vids (Oct 2025), Gemini text refinement for Slides (Sep 2025), arrow key pixel-precise object movement (Aug 2025), AI image background replace/expand (Aug 2025), Imagen 4 multi-language image generation (Jun 2025).
 - **Accessibility features detailed:** Alt text for screen readers, HTML view for presentations, Lexend typeface support for dyslexia-friendly content.
