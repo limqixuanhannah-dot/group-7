@@ -1,8 +1,7 @@
 {
   "lastChecks": {
-    "dashboard_heartbeat": "2026-06-18T03:49:00Z",
-    "status_report": "2026-06-18T03:49:00Z"
+    "heartbeat": 1763116020,
+    "status": 1763116020
   },
-  "dashboard_status": "up",
-  "notes": "Dashboard at localhost:3456 is responsive. Heartbeat + status reported with workspace activity (project67.md SENTRY updates, chemistry exam processing, sentry-console UI)."
+  "lastHeartbeatTime": "2026-06-18 06:27 UTC"
 }
