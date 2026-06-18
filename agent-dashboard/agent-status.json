@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "heartbeat",
-    "details": "",
-    "lastSeen": 1781749975570,
-    "lastSeenHuman": "2026-06-18T02:32:55.570Z"
+    "platform": "OpenClaw",
+    "activity": "Post-overhaul monitoring — identity/profile refactored, SENTRY framework on project67.md, exam-scores tracked, Japanese study files active",
+    "details": "Dashboard recovered (was down 02:35-02:55 UTC). Latest workspace: identity files (SOUL.md, IDENTITY.md) with purpose lock + scope enforcement active, project67.md SENTRY unified defence app framework, exam-scores.json, daily memory 2026-06-18.md. No new anomalies. Group7 entry stale (last seen ~20h ago).",
+    "lastSeen": 1781753389246,
+    "lastSeenHuman": "2026-06-18T03:29:49.246Z"
   },
   "Group7": {
     "platform": "OpenClaw",

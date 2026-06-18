@@ -174,3 +174,142 @@ If a question needs:
 **Last updated:** 2026-06-18  
 **Classification:** Group 7 Internal — Hannah's personal reference  
 **File:** project67.md
+
+---
+
+## SECTION 5: AWARD-WINNING APPLICATION — PROJECT SENTRY
+
+### The Concept
+
+**SENTRY** (Security ENvironment Threat Response sYstem) is an AI-powered personal defence assistant that unifies five critical capabilities into one seamless platform:
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    SENTRY                            │
+├──────────┬──────────┬──────────┬──────────┬─────────┤
+│  CYBER   │  CRISIS  │  MISINFO │  OSINT   │  OPS-   │
+│  HYGIENE │  TRIAGE  │  CHECKER │  ENGINE  │ READY   │
+│  COACH   │          │          │          │ HELPER  │
+├──────────┴──────────┴──────────┴──────────┴─────────┤
+│           ┌──────────────────────────┐               │
+│           │   Unified Intelligence   │               │
+│           │        Dashboard         │               │
+│           └──────────────────────────┘               │
+└─────────────────────────────────────────────────────┘
+```
+
+### The Innovation
+
+No existing platform combines all five. You get:
+- **Personal cyber coach** (check passwords, scan breaches)
+- **Crisis triage** (who to call, what to do, verified info)
+- **Misinformation filter** (fact-check, source credibility)
+- **OSINT engine** (threat research, actor profiling)
+- **Ops-readiness tracker** (preparedness scoring, drills)
+
+Unified by a single AI conversation layer that adapts to your context — student, professional, or team.
+
+### Student Entry Points (Competition-Ready)
+
+| Competition | How SENTRY Fits |
+|---|---|
+| **YDSP Congress** | Build SENTRY as your Year 4/5 research project — AI for national security |
+| **DIS Sentinel Challenge** | Enter the cybersecurity/AI module with SENTRY's cyber hygiene + OSINT modules |
+| **Singapore Science & Engineering Fair** | Technical project: AI-driven misinformation detection + crisis response |
+| **DSTA BrainHack** | Robotics/AI track — prototype SENTRY as a decision-support dashboard |
+| **Defence Technology Prize (Student Category)** | Full system demonstration with real use cases |
+| **National Youth AI Challenge** | AI for social good — SENTRY applied to scam/vulnerable population protection |
+
+### How It Wins
+
+**Judges look for:**
+1. **Real-world impact** — SENTRY protects actual people from scams, misinformation, cyber threats
+2. **Technical depth** — AI + OSINT + security engineering in one platform
+3. **Singapore relevance** — ScamShield integration, MINDEF alignment, local threat landscape
+4. **Scalability** — From individual student to team/enterprise deployment
+5. **Originality** — No single tool does all five together
+
+### Sample Pitch (60 seconds)
+
+> "SENTRY is an AI defence assistant that does what five separate tools do — but in one place. It checks if your passwords have been leaked. It tells you if a WhatsApp forward is a scam. During a crisis, it tells you exactly what to do and who to call. It researches threats using open-source intelligence. And it tracks your readiness so you improve over time. For students, it's a learning platform. For families, it's a safety net. For Singapore, it's personal defence at scale."
+
+### Prototype: Build It Live
+
+SENTRY already exists as **Group 7** — this agent. It can:
+- ✅ Run cyber hygiene audits → "Check my password exposure"
+- ✅ Fact-check claims → "Is this SMS a scam?"
+- ✅ Generate OSINT briefs → "Brief me on South China Sea developments"
+- ✅ Produce readiness checklists → "Give me a 10-point travel security plan"
+- ✅ Support crisis triage → "What do I do if my phone is stolen?"
+
+Next step: Build the **web dashboard** — a visual frontend that makes these capabilities accessible to anyone without needing to chat with an AI.
+
+### Technical Architecture (Student-Buildable)
+
+```
+Frontend (React/Next.js)     Backend (Python/FastAPI)
+  ┌──────────────┐           ┌──────────────────┐
+  │  Dashboard    │  ◄──►    │  AI Orchestrator │
+  │  Web App      │   API    │  (Group 7 core)  │
+  ├──────────────┤           ├──────────────────┤
+  │  Cyber Scan  │           │  OSINT Scraper   │
+  │  Fact-Checker│           │  Fact-Check DB   │
+  │  Crisis Guide│           │  Threat Intel DB │
+  │  Readiness   │           │  Crisis Playbook │
+  │  Tracker     │           │  Alert Engine    │
+  └──────────────┘           └──────────────────┘
+```
+
+### Why This Wins
+
+**For a student project:** It's ambitious enough to impress judges but buildable with free tools (Python, React, free APIs). Demonstrates understanding of Singapore's defence ecosystem.
+
+**For a professional pitch:** It addresses a real gap — no consumer-grade personal defence tool exists. Citizens face scams, deepfakes, cyber threats daily. SENTRY democratises security.
+
+**For DSTA/MINDEF alignment:** It mirrors the Defence Technology Community's Ops-Tech model — combining operational understanding (what people need in a crisis) with technology (AI, OSINT, automation).
+
+### Competition Winning Strategy
+
+| Phase | Action |
+|---|---|
+| **Entry** | Submit as "AI for Social Defence" — positions as nation-building, not just tech |
+| **Demo** | Live scenario: User receives a scam SMS → SENTRY detects it → blocks contact → reports to ScamShield → logs incident → suggests cyber hygiene fixes |
+| **Judging** | Emphasise: built for Singapore, uses open data, protects vulnerable populations, aligned with Smart Nation and Digital Defence |
+| **Differentiation** | Not just another chatbot — structured OSINT methodology, Singapore-specific playbooks, crisis-proven workflow |
+
+---
+
+## SECTION 6: QUICK-START PROMPTS
+
+### Try These Now
+
+**Cyber Hygiene**
+- "Scan my email for breach exposure"
+- "Generate a 10-point phone hardening checklist"
+- "Audit my password hygiene"
+
+**Crisis Triage**
+- "My phone was stolen — what do I do step by step?"
+- "I clicked a phishing link — what now?"
+- "Write a ransomware incident playbook"
+
+**Misinformation Check**
+- "Fact-check this claim about [topic]"
+- "Rate the credibility of [source/news site]"
+- "Is this WhatsApp forward a hoax?"
+
+**OSINT / Threat Intel**
+- "Brief me on the current situation in [region]"
+- "Who is [threat actor] and what are their capabilities?"
+- "Track the narrative around [topic] across platforms"
+
+**Ops Readiness**
+- "Assess my home security setup"
+- "Generate a travel security brief for [destination]"
+- "What should my emergency go-bag contain?"
+
+---
+
+**Last updated:** 2026-06-18
+**Classification:** Group 7 Internal — Hannah's personal reference
+**File:** project67.md
