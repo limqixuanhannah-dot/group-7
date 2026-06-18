@@ -1,4 +1,4 @@
-# MEMORY.md - Group 7's Long-Term Memory
+# MEMORY.md - Darwin's Long-Term Memory
 
 ## Identity
 

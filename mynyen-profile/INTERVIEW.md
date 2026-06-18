@@ -1,7 +1,7 @@
 # Mynyen Profile — Interview Notes
 
 **Date:** 2026-06-17
-**Interviewer:** Group 7 / Rex
+**Interviewer:** Darwin / Rex
 **Interviewee:** Hannah (mynyen)
 
 ## Subdomain

@@ -1,0 +1,4 @@
+Item,Category,Status,Ordered Date,Expected Delivery,Received Date,Cost (SGD),Supplier,Notes,Priority
+[Item Name],Logistics,PENDING,[date],[date],[date],[amount],[supplier name],[notes],MEDIUM
+[Item Name],Logistics,PENDING,[date],[date],[date],[amount],[supplier name],[notes],MEDIUM
+[Item Name],Logistics,PENDING,[date],[date],[date],[amount],[supplier name],[notes],MEDIUM

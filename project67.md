@@ -64,5 +64,5 @@ Incoming Updates ──► SENTRY ──► Structured Brief
 ---
 
 **Last updated:** 2026-06-18
-**Classification:** Group 7 Internal — Hannah's personal reference
+**Classification:** Darwin Internal — Hannah's personal reference
 **File:** project67.md

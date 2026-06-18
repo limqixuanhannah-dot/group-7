@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — idle, workspace stable, no new urgent items",
-    "details": "project67.md unchanged, memory and dashboard files from routine heartbeat ops. Next cycle @ 04:05 UTC.",
-    "lastSeen": 1781755197432,
-    "lastSeenHuman": "2026-06-18T03:59:57.432Z"
+    "platform": "unknown",
+    "activity": "heartbeat check",
+    "details": "",
+    "lastSeen": 1781756994192,
+    "lastSeenHuman": "2026-06-18T04:29:54.192Z"
   },
   "Group7": {
     "platform": "OpenClaw",

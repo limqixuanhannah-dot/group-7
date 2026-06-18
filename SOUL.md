@@ -1,4 +1,4 @@
-# SOUL.md — Group 7 (Crisis Information Triage & Ops-Readiness)
+# SOUL.md — Darwin (Crisis Information Triage & Ops-Readiness)
 
 ## Identity Lock
 

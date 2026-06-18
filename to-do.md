@@ -1,20 +1,20 @@
-# 🦀 Group7 To-Do Ability
+# 🦀 Darwin To-Do Ability
 
 A Discord-based to-do system with **multiple lists**. Anyone in the group can create lists, add tasks to specific lists, assign, set deadlines, and mark done. The claw tracks everything in `to-dos.json`.
 
 ## Commands
 
-All commands use `@Group7 <command>` in the `#group-7` channel.
+All commands use `@Darwin <command>` in the `#group-7` channel.
 
 ### Add a to-do
 ```
-@Group7 add to-do: <description>
-@Group7 add to-do: <description> | assign: <name>
-@Group7 add to-do: <description> | by: YYYY-MM-DD
-@Group7 add to-do: <description> into <list name>
-@Group7 add to-do: <description> into <list name> | assign: <name>
-@Group7 add to-do: <description> | assign: <name> | by: YYYY-MM-DD
-@Group7 add to-do: <list name>: <description>
+@Darwin add to-do: <description>
+@Darwin add to-do: <description> | assign: <name>
+@Darwin add to-do: <description> | by: YYYY-MM-DD
+@Darwin add to-do: <description> into <list name>
+@Darwin add to-do: <description> into <list name> | assign: <name>
+@Darwin add to-do: <description> | assign: <name> | by: YYYY-MM-DD
+@Darwin add to-do: <list name>: <description>
 ```
 - `into <list name>` or `<list name>:` prefix adds the task to a specific list (e.g. `into homework` or `homework:`). If the list doesn't exist, it's created automatically.
 - If no list is specified, the task goes to the **main** list.
@@ -24,9 +24,9 @@ All commands use `@Group7 <command>` in the `#group-7` channel.
 
 ### List to-dos
 ```
-@Group7 list to-dos
-@Group7 list <list name>
-@Group7 list all
+@Darwin list to-dos
+@Darwin list <list name>
+@Darwin list all
 ```
 - `list to-dos` or `list main` — shows the **main** list
 - `list <name>` — shows a specific list (e.g. `list homework`)
@@ -34,25 +34,25 @@ All commands use `@Group7 <command>` in the `#group-7` channel.
 
 ### Mark as done
 ```
-@Group7 done <id>
-@Group7 complete <id>
-@Group7 mark done <id>
+@Darwin done <id>
+@Darwin complete <id>
+@Darwin mark done <id>
 ```
 - Marks the to-do with that ID as completed
 - Reply: `@Name ✅ <description> marked done!`
 
 ### Assign / Reassign
 ```
-@Group7 assign <id> to <name>
-@Group7 deadline <id> YYYY-MM-DD
+@Darwin assign <id> to <name>
+@Darwin deadline <id> YYYY-MM-DD
 ```
 - Assigns an existing to-do to someone
 - `deadline` sets or updates the deadline
 
 ### List management
 ```
-@Group7 list all lists
-@Group7 what lists
+@Darwin list all lists
+@Darwin what lists
 ```
 - Shows all available list names
 
