@@ -1,10 +1,25 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat online — 2026-06-18 09:04 UTC",
-    "details": "Recent file changes: projects/hannah/google-slides-project.md, projects/hannah-project.md, agent-dashboard files updated. Monitoring workspace.",
-    "lastSeen": 1781773598187,
-    "lastSeenHuman": "2026-06-18T09:06:38.187Z"
+    "activity": "Routine heartbeat — file changes detected",
+    "details": {
+      "heartbeat": "ok",
+      "timestamp": "2026-06-18T11:59:00Z",
+      "recent_file_changes": [
+        "agent-dashboard/agent-status.json — status tracking updated",
+        "agent-dashboard/activity.log — activity log appended",
+        "monitoring/breach_state.json — breach monitoring cycled (all clear)",
+        "heartbeat-last.md — marker refreshed"
+      ],
+      "dashboard_status": "operational",
+      "agents_tracked": [
+        "Rex",
+        "Group7"
+      ],
+      "note": "Routine operational files cycled. No anomalies."
+    },
+    "lastSeen": 1781783996649,
+    "lastSeenHuman": "2026-06-18T11:59:56.649Z"
   },
   "Group7": {
     "platform": "OpenClaw",
