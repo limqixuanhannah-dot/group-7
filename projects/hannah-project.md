@@ -157,6 +157,15 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 **Sources:** [SeaOura](https://seaoura.com/blogs/aquarium/fish-keeping-trends-every-aquarist-should-know) (Jun 2026), [Fortune Business Insights](https://www.fortunebusinessinsights.com/aquarium-market-110692) (Jun 2026), [Malware News](https://malware.news/t/iot-hacking-statistics-2026-global-trends-and-key-insights/103975) (Feb 2026)
 
+### 2026-06-18 10:01 UTC
+- **Comprehensive Ornamental Fish Market Data (Multiple Research Firms):** Global ornamental fish market valued at $6.41B (2024) projected to $12.61B by 2033 (Straits Research, CAGR 7.8%). IMARC Group estimates $7.1B (2025) to $12.8B by 2034 (CAGR 6.51%). Total aquarium market including equipment: $14.63B (2024) projected to $25.47B by 2033. US ornamental fish market alone expected $2.83B by 2030 (CAGR 9.1%). Europe leads with 39.8% market share. Asia-Pacific fastest-growing region.
+- **US Pet Fish Ownership Statistics:** 9.6 million US households own freshwater fish — fish is the third most popular pet in America. 700 million people keep aquariums worldwide. 11.5% of US households have freshwater tanks. Planted tank setups jumped 35%. Self-cleaning aquarium technology driving novice adoption.
+- **Market Growth Drivers:** Psychological benefits of fish viewing (happiness, relaxation, anxiety reduction). Millennial interest in colorful fish and luxury aquarium lifestyle. Urban apartment living favouring fish over larger pets. Demand for rare species (Arowana, Discus, Flowerhorn) up 20% year-over-year.
+- **IoT Security Regulatory Update:** EU Cyber Resilience Act (CRA) reporting obligations begin September 2026. CISA CPG 2.0 now unifies IT, IoT, and OT security goals. BadBox 2.0 supply chain malware has compromised more than 10 million devices globally. Average IoT security incident costs $330,000.
+- **IoT Threat Landscape:** 21.1 billion connected IoT devices globally (2025), projected to exceed 25 billion by 2026. Three-pillar defense framework: device security (hardened firmware, secure boot), network layer (segmentation/VLANs, NDR monitoring), cloud/data security (API security, TLS 1.3 encryption).
+
+**Sources:** [Aquarium Lab](https://aquariumlab.co/articles/aquarium-fishkeeping-statistics-2026) (Apr 2026), [IMARC Group](https://www.imarcgroup.com/ornamental-fish-market) (2025), [Straits Research](https://straitsresearch.com) (2024), [Gitnux](https://gitnux.org/ornamental-fish-industry-statistics/) (Feb 2026), [Grand View Research](https://www.marketresearch.com/Grand-View-Research-v4060/Ornamental-Fish-Size-Share-Trends-38710586) (Oct 2024), [Vectra AI](https://www.vectra.ai/topics/iot-security) (2026)
+
 ### 2026-06-18 08:05 UTC
 - **New fish research journals identified:** Journal of Fish Biology (Wiley), Frontiers in Fish Science, Journal of Aquaculture & Fisheries — potential sources for academic-level fish project research
 - **2026 care guide available:** Pet Magazine UK published a 2026 Fish Care Guide covering tank setup, feeding, maintenance — more current than the guides in the initial load
