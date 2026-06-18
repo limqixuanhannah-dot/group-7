@@ -157,6 +157,13 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 **Sources:** [SeaOura](https://seaoura.com/blogs/aquarium/fish-keeping-trends-every-aquarist-should-know) (Jun 2026), [Fortune Business Insights](https://www.fortunebusinessinsights.com/aquarium-market-110692) (Jun 2026), [Malware News](https://malware.news/t/iot-hacking-statistics-2026-global-trends-and-key-insights/103975) (Feb 2026)
 
+### 2026-06-18 12:01 UTC
+- **2026 Smart Tank IoT Sensor Deep Dive:** Multi-probe integration (Atlas EZO-pH, SEN0161) now standard in modern setups for monitoring pH, TDS, and salinity simultaneously. Optical turbidity sensing (SEN0189) linked to smart filters — automatically increases flow or triggers polishing cycle when turbidity exceeds 50 NTU. Dissolved oxygen sensors, previously reserved for commercial aquaculture, now available for home use — critical during high-temperature summers or heavy feeding periods to prevent oxygen depletion.
+- **AI-Driven Smart Feeding:** High-end smart feeders now use Computer Vision cameras that recognize when fish gather at the surface, dispensing food only when the "hunger queue" is detected. Integrated filter logic: when feeding begins, IoT hub signals wavemakers and filters to pause for 10 minutes to prevent food from rotting in the filter and causing ammonia spikes.
+- **Sensor Performance Metrics:** IoT aquarium sensors now achieving over 96% accuracy with sub-2-second response times.
+
+**Source:** [The Smart Snout - IoT Sensors in Aquarium Tech: The 2026 Smart Tank](https://thesmartsnout.com/2026/02/08/iot-sensors-in-aquarium-tech-the-2026-smart-tank) (Feb 2026)
+
 ### 2026-06-18 10:01 UTC
 - **Comprehensive Ornamental Fish Market Data (Multiple Research Firms):** Global ornamental fish market valued at $6.41B (2024) projected to $12.61B by 2033 (Straits Research, CAGR 7.8%). IMARC Group estimates $7.1B (2025) to $12.8B by 2034 (CAGR 6.51%). Total aquarium market including equipment: $14.63B (2024) projected to $25.47B by 2033. US ornamental fish market alone expected $2.83B by 2030 (CAGR 9.1%). Europe leads with 39.8% market share. Asia-Pacific fastest-growing region.
 - **US Pet Fish Ownership Statistics:** 9.6 million US households own freshwater fish — fish is the third most popular pet in America. 700 million people keep aquariums worldwide. 11.5% of US households have freshwater tanks. Planted tank setups jumped 35%. Self-cleaning aquarium technology driving novice adoption.

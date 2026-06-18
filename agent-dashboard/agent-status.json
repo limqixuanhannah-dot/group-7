@@ -1,25 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Routine heartbeat — file changes detected",
-    "details": {
-      "heartbeat": "ok",
-      "timestamp": "2026-06-18T11:59:00Z",
-      "recent_file_changes": [
-        "agent-dashboard/agent-status.json — status tracking updated",
-        "agent-dashboard/activity.log — activity log appended",
-        "monitoring/breach_state.json — breach monitoring cycled (all clear)",
-        "heartbeat-last.md — marker refreshed"
-      ],
-      "dashboard_status": "operational",
-      "agents_tracked": [
-        "Rex",
-        "Group7"
-      ],
-      "note": "Routine operational files cycled. No anomalies."
-    },
-    "lastSeen": 1781783996649,
-    "lastSeenHuman": "2026-06-18T11:59:56.649Z"
+    "activity": "Heartbeat OK. Recent file changes detected: updated agent-dashboard files, monitoring breach state, and project files under projects/hannah/.",
+    "details": "",
+    "lastSeen": 1781785792907,
+    "lastSeenHuman": "2026-06-18T12:29:52.907Z"
   },
   "Group7": {
     "platform": "OpenClaw",
