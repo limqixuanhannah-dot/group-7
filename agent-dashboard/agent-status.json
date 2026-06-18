@@ -1,10 +1,20 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat OK. Recent file changes detected: updated agent-dashboard files, monitoring breach state, and project files under projects/hannah/.",
-    "details": "",
-    "lastSeen": 1781785792907,
-    "lastSeenHuman": "2026-06-18T12:29:52.907Z"
+    "activity": "Heartbeat cycle — 12:59 UTC",
+    "details": {
+      "heartbeat": "ok",
+      "breach_state": "clear (0 known breaches)",
+      "last_breach_check": "2026-06-18T12:52:00Z",
+      "active_projects": [
+        "hannah-project.md",
+        "google-slides-project.md"
+      ],
+      "dashboard_status": "operational",
+      "recent_file_changes": true
+    },
+    "lastSeen": 1781787601013,
+    "lastSeenHuman": "2026-06-18T13:00:01.013Z"
   },
   "Group7": {
     "platform": "OpenClaw",
