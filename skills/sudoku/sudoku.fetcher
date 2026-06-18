@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# sudoku.fetcher — Fetch a sudoku puzzle from the API and print as ASCII grid
+
+set -euo pipefail
+
+URL="https://sudoku-api.vercel.app/api/dosuku"
+
+echo "🎯 Fetching sudoku puzzle..."
+echo ""
+
+RESPONSE=$(curl -s "$URL" 2>&1) || {
+  echo "❌ Failed to fetch puzzle from API"
+  echo "   Try: open https://sudoku.com in your browser instead"
+  exit 1
+}
+
+# Parse the puzzle string and solution from JSON
+PUZZLE=$(echo "$RESPONSE" | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+try:
+    puzzle_2d = data['newboard']['grids'][0]['value']
+    solution_2d = data['newboard']['grids'][0]['solution']
+    # Flatten 2D arrays to 1D
+    puzzle = [cell for row in puzzle_2d for cell in row]
+    solution = [cell for row in solution_2d for cell in row]
+    print(json.dumps({'puzzle': puzzle, 'solution': solution}))
+except (KeyError, IndexError, TypeError) as e:
+    sys.exit(1)
+" 2>/dev/null) || {
+  echo "❌ Couldn't parse puzzle from API response"
+  echo "   Raw response:"
+  echo "$RESPONSE" | head -5
+  exit 1
+}
+
+# Print the grid
+echo "   ┌───────┬───────┬───────┐"
+PUZZLE_DATA=$(echo "$PUZZLE" | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+p = data['puzzle']
+for i in range(9):
+    if i == 3 or i == 6:
+        print('   ├───────┼───────┼───────┤')
+    row = ' │'
+    for j in range(9):
+        v = p[i*9 + j]
+        row += f' {\"·\" if v == 0 else v}'
+        if j == 2 or j == 5:
+            row += ' │'
+    row += ' │'
+    print(row)
+print('   └───────┴───────┴───────┘')
+")
+
+echo "$PUZZLE_DATA"
+
+echo ""
+echo "   Good luck! 🧩"

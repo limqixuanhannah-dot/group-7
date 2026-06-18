@@ -195,3 +195,12 @@
 {"type":"agent_status","agent":"Rex","activity":"Recent workspace changes detected","ts":1781745952938}
 {"type":"agent_status","agent":"Rex","activity":"Recent file activity: hannah site, agent-dashboard, chem-dating.html, to-do updates. Routine heartbeat.","ts":1781746073435}
 {"type":"agent_status","agent":"Rex","activity":"Routine heartbeat — memory updates, workspace files, dashboard healthy","ts":1781746198288}
+{"type":"agent_status","agent":"Rex","activity":"Heartbeat check - recent workspace changes detected","ts":1781746310885}
+{"type":"agent_status","agent":"Rex","activity":["Memory files active (2026-06-17, 2026-06-18)","Workspace files: banana.md, website.md, to-do.md modified","Weather skill updated","mynyen-profile/INTERVIEW.md exists"],"ts":1781746433693}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Recent workspace file changes detected: banana.md, IDENTITY.md, heartbeat-last.md, to-do.md, website.md","ts":1781746553779}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check — routine, workspace files updated (memory, weather skill, dashboard state)","ts":1781746799627}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat 01:41 UTC — routine, workspace files unchanged beyond tracking, weather skill updated, no anomalies","ts":1781746921047}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat check","ts":1781747153641}
+{"type":"agent_status","agent":"Rex","activity":"Heartbeat check — no active tasks. Recent file touches: workspace files, skills cache, memory updates.","ts":1781747272032}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check — workspace has fresh activity (agent-dashboard, memory updates, workspace files)","details":"Recent: agent-dashboard files modified (integrate-agent.py, report.sh), memory updates (2026-06-17.md, 2026-06-18.md), task files (to-dos.json, to-do.md, website.md). Last heartbeat: 01:43 UTC. Dashboard agents tracked: Rex (just now), Group7 (yesterday 06:55 UTC).","ts":1781747398452}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","ts":1781747991820}

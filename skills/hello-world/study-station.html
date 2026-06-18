@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>★ study station ★</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2b1b54, #1a3a5c, #0d4f3a);
+      background-size: 400% 400%;
+      animation: bgShift 10s ease infinite;
+      font-family: 'Fredoka One', cursive;
+      padding: 20px;
+      color: #fff;
+    }
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 22px;
+      text-shadow: 3px 3px 0 #ff00cc, -2px -2px 0 #00ccff;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .card h2 {
+      font-size: 14px;
+      font-family: 'Press Start 2P', cursive;
+      margin-bottom: 15px;
+      color: #aaf0ff;
+    }
+    .card.full { grid-column: 1 / -1; }
+
+    /* === Pomodoro === */
+    .pomo-display {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 54px;
+      text-align: center;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+      margin: 10px 0;
+    }
+    .pomo-phase {
+      text-align: center;
+      font-size: 12px;
+      font-family: 'Press Start 2P', cursive;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+    .pomo-controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .pomo-controls button {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 30px;
+      padding: 8px 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 9px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pomo-controls button:hover {
+      background: rgba(255,255,255,0.25);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+    .pomo-controls button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .pomo-sessions {
+      text-align: center;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      color: #88aaff;
+      margin-top: 12px;
+    }
+
+    /* === Todo === */
+    .todo-input {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .todo-input input {
+      flex: 1;
+      background: rgba(0,0,0,0.3);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px;
+      color: #fff;
+      outline: none;
+    }
+    .todo-input input::placeholder { color: #667; }
+    .todo-input input:focus { border-color: #00ccff; }
+    .todo-input button {
+      background: rgba(0, 204, 255, 0.2);
+      border: 2px solid #00ccff;
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 9px;
+      color: #00ccff;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .todo-input button:hover {
+      background: rgba(0, 204, 255, 0.4);
+    }
+
+    .todo-list { list-style: none; max-height: 240px; overflow-y: auto; }
+    .todo-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+    .todo-list li:hover { background: rgba(255,255,255,0.05); border-radius: 6px; }
+    .todo-list li.done span { text-decoration: line-through; color: #666; }
+    .todo-list li input[type="checkbox"] {
+      accent-color: #00ff99;
+      width: 16px; height: 16px;
+      cursor: pointer;
+    }
+    .todo-list li button {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: #ff4466;
+      cursor: pointer;
+      font-size: 14px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .todo-list li button:hover { opacity: 1; }
+    .todo-clear {
+      background: none;
+      border: none;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      color: #ff4466;
+      cursor: pointer;
+      margin-top: 8px;
+      opacity: 0.5;
+    }
+    .todo-clear:hover { opacity: 1; }
+
+    /* === Habits === */
+    .habit-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .habit-row label {
+      flex: 1;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .habit-row label .emoji { font-size: 16px; }
+    .habit-days {
+      display: flex;
+      gap: 4px;
+    }
+    .habit-days button {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: #667;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 7px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .habit-days button.on {
+      background: rgba(0, 255, 153, 0.3);
+      border-color: #00ff99;
+      color: #00ff99;
+      box-shadow: 0 0 10px rgba(0,255,153,0.3);
+    }
+    .habit-add {
+      margin-top: 10px;
+    }
+    .habit-add form {
+      display: flex;
+      gap: 8px;
+    }
+    .habit-add input {
+      flex: 1;
+      background: rgba(0,0,0,0.3);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      color: #fff;
+      outline: none;
+    }
+    .habit-add input::placeholder { color: #667; }
+    .habit-add button {
+      background: rgba(255, 204, 0, 0.2);
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      padding: 6px 14px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 8px;
+      color: #ffcc00;
+      cursor: pointer;
+    }
+    .habit-add button:hover { background: rgba(255, 204, 0, 0.4); }
+
+    .day-labels {
+      display: flex;
+      gap: 4px;
+      justify-content: flex-end;
+      margin-bottom: 4px;
+      padding-right: 2px;
+    }
+    .day-labels span {
+      width: 28px;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 6px;
+      color: #556;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      color: #445;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>★ study station ★</h1>
+    <p>pomodoro · todo · habits &nbsp;|&nbsp; ⚡ mynyen edition</p>
+  </header>
+
+  <div class="grid">
+    <!-- Pomodoro -->
+    <div class="card">
+      <h2>⏱ pomodoro</h2>
+      <div class="pomo-phase" id="pomoPhase">FOCUS</div>
+      <div class="pomo-display" id="pomoDisplay">25:00</div>
+      <div class="pomo-controls">
+        <button id="pomoStart">▶ start</button>
+        <button id="pomoPause">⏸ pause</button>
+        <button id="pomoReset">↺ reset</button>
+      </div>
+      <div class="pomo-sessions" id="pomoSessions">sessions completed: 0</div>
+    </div>
+
+    <!-- Assignments -->
+    <div class="card">
+      <h2>📋 assignments</h2>
+      <div class="todo-input">
+        <input id="todoInput" placeholder="e.g. finish math hw..." maxlength="120">
+        <button id="todoAdd">+ add</button>
+      </div>
+      <ul class="todo-list" id="todoList"></ul>
+      <button class="todo-clear" id="todoClear">clear completed</button>
+    </div>
+
+    <!-- Habits -->
+    <div class="card full">
+      <h2>🔥 daily habits</h2>
+      <div class="day-labels">
+        <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+      </div>
+      <div id="habitList"></div>
+      <div class="habit-add">
+        <form id="habitForm">
+          <input id="habitInput" placeholder="new habit..." maxlength="60">
+          <button type="submit">+ habit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    built with ★ <span id="footerDate"></span> — data saves automatically
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  const STORAGE_KEY = 'studyStation_v1';
+  let data;
+  function loadData() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        data = JSON.parse(raw);
+        // migrate
+        if (!data.habits) data.habits = [];
+        if (!data.todos) data.todos = [];
+        if (!data.pomoSessions) data.pomoSessions = 0;
+        if (!data.habitEmojis) data.habitEmojis = {};
+      } else {
+        throw 'empty';
+      }
+    } catch(e) {
+      data = {
+        todos: [],
+        habits: [
+          { name: 'Study / Read', emoji: '📖', days: [false,false,false,false,false,false,false] },
+          { name: 'Practice Guitar', emoji: '🎸', days: [false,false,false,false,false,false,false] },
+          { name: 'Exercise', emoji: '🏸', days: [false,false,false,false,false,false,false] },
+        ],
+        pomoSessions: 0,
+      };
+    }
+  }
+  function saveData() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  // === POMODORO ===
+  const pomoDisplay = document.getElementById('pomoDisplay');
+  const pomoPhase = document.getElementById('pomoPhase');
+  const pomoSessions = document.getElementById('pomoSessions');
+  let pomoState = 'idle'; // idle | running | paused
+  let pomoMode = 'focus'; // focus | break
+  let pomoSeconds = 25 * 60;
+  let pomoTimer = null;
+
+  const FOCUS_TIME = 25 * 60;
+  const BREAK_TIME = 5 * 60;
+
+  function pomoFormat(sec) {
+    const m = String(Math.floor(sec / 60)).padStart(2, '0');
+    const s = String(sec % 60).padStart(2, '0');
+    return m + ':' + s;
+  }
+
+  function pomoUpdateDisplay() {
+    pomoDisplay.textContent = pomoFormat(pomoSeconds);
+    pomoPhase.textContent = pomoMode === 'focus' ? '🎯 FOCUS' : '☕ BREAK';
+    pomoSessions.textContent = 'sessions completed: ' + data.pomoSessions;
+  }
+
+  function pomoTick() {
+    pomoSeconds--;
+    pomoUpdateDisplay();
+    if (pomoSeconds <= 0) {
+      clearInterval(pomoTimer);
+      pomoTimer = null;
+      if (pomoMode === 'focus') {
+        data.pomoSessions++;
+        saveData();
+        pomoMode = 'break';
+        pomoSeconds = BREAK_TIME;
+        pomoUpdateDisplay();
+        pomoState = 'idle';
+      } else {
+        pomoMode = 'focus';
+        pomoSeconds = FOCUS_TIME;
+        pomoUpdateDisplay();
+        pomoState = 'idle';
+      }
+      document.getElementById('pomoStart').disabled = false;
+      document.getElementById('pomoPause').disabled = true;
+    }
+  }
+
+  document.getElementById('pomoStart').addEventListener('click', function() {
+    if (pomoState === 'idle') {
+      if (pomoSeconds <= 0) {
+        pomoSeconds = pomoMode === 'focus' ? FOCUS_TIME : BREAK_TIME;
+        pomoUpdateDisplay();
+      }
+      pomoState = 'running';
+      pomoTimer = setInterval(pomoTick, 1000);
+      this.disabled = true;
+      document.getElementById('pomoPause').disabled = false;
+    }
+  });
+
+  document.getElementById('pomoPause').addEventListener('click', function() {
+    if (pomoState === 'running') {
+      clearInterval(pomoTimer);
+      pomoTimer = null;
+      pomoState = 'paused';
+      document.getElementById('pomoStart').disabled = false;
+      this.disabled = true;
+    }
+  });
+
+  document.getElementById('pomoReset').addEventListener('click', function() {
+    clearInterval(pomoTimer);
+    pomoTimer = null;
+    pomoState = 'idle';
+    pomoMode = 'focus';
+    pomoSeconds = FOCUS_TIME;
+    pomoUpdateDisplay();
+    document.getElementById('pomoStart').disabled = false;
+    document.getElementById('pomoPause').disabled = true;
+  });
+
+  // === TODOS ===
+  const todoInput = document.getElementById('todoInput');
+  const todoList = document.getElementById('todoList');
+
+  function renderTodos() {
+    todoList.innerHTML = '';
+    data.todos.forEach(function(t, i) {
+      var li = document.createElement('li');
+      if (t.done) li.classList.add('done');
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = t.done;
+      cb.addEventListener('change', function() {
+        data.todos[i].done = cb.checked;
+        saveData();
+        renderTodos();
+      });
+      var span = document.createElement('span');
+      span.textContent = t.text;
+      var del = document.createElement('button');
+      del.textContent = '✕';
+      del.addEventListener('click', function() {
+        data.todos.splice(i, 1);
+        saveData();
+        renderTodos();
+      });
+      li.appendChild(cb);
+      li.appendChild(span);
+      li.appendChild(del);
+      todoList.appendChild(li);
+    });
+  }
+
+  document.getElementById('todoAdd').addEventListener('click', function() {
+    var text = todoInput.value.trim();
+    if (!text) return;
+    data.todos.push({ text: text, done: false });
+    saveData();
+    todoInput.value = '';
+    renderTodos();
+  });
+  todoInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') document.getElementById('todoAdd').click();
+  });
+
+  document.getElementById('todoClear').addEventListener('click', function() {
+    data.todos = data.todos.filter(function(t) { return !t.done; });
+    saveData();
+    renderTodos();
+  });
+
+  // === HABITS ===
+  const habitList = document.getElementById('habitList');
+  const habitInput = document.getElementById('habitInput');
+
+  function renderHabits() {
+    habitList.innerHTML = '';
+    data.habits.forEach(function(h, hi) {
+      var row = document.createElement('div');
+      row.className = 'habit-row';
+
+      var label = document.createElement('label');
+      label.innerHTML = '<span class="emoji">' + (h.emoji || '⭐') + '</span> ' + h.name;
+      var del = document.createElement('button');
+      del.textContent = '✕';
+      del.style.cssText = 'background:none;border:none;color:#ff4466;cursor:pointer;font-size:12px;opacity:0.3;margin-left:4px;';
+      del.addEventListener('click', function() {
+        data.habits.splice(hi, 1);
+        saveData();
+        renderHabits();
+      });
+      label.appendChild(del);
+
+      var daysDiv = document.createElement('div');
+      daysDiv.className = 'habit-days';
+
+      var dayNames = ['M','T','W','T','F','S','S'];
+      h.days.forEach(function(val, di) {
+        var btn = document.createElement('button');
+        btn.textContent = dayNames[di];
+        if (val) btn.classList.add('on');
+        btn.addEventListener('click', function() {
+          data.habits[hi].days[di] = !data.habits[hi].days[di];
+          saveData();
+          renderHabits();
+        });
+        daysDiv.appendChild(btn);
+      });
+
+      row.appendChild(label);
+      row.appendChild(daysDiv);
+      habitList.appendChild(row);
+    });
+  }
+
+  document.getElementById('habitForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var text = habitInput.value.trim();
+    if (!text) return;
+    data.habits.push({ name: text, emoji: '⭐', days: [false,false,false,false,false,false,false] });
+    saveData();
+    habitInput.value = '';
+    renderHabits();
+  });
+
+  // === INIT ===
+  loadData();
+  renderTodos();
+  renderHabits();
+  pomoUpdateDisplay();
+  document.getElementById('pomoPause').disabled = true;
+  document.getElementById('footerDate').textContent = new Date().toLocaleDateString('en-SG', { year:'numeric', month:'long', day:'numeric' });
+})();
+</script>
+</body>
+</html>

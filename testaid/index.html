@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TestAid — Find Your Weak Spots</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0d1a;--surface:#12142a;--card:#1a1d3a;--border:rgba(99,102,241,0.15);--primary:#6366f1;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;--text:#e2e8f0;--muted:rgba(255,255,255,0.4)}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+nav{padding:16px 24px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px}.logo span{color:var(--primary)}
+.container{max-width:900px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:6px}h1 span{color:var(--primary)}
+.subtitle{color:var(--muted);font-size:14px;margin-bottom:30px}
+.upload-zone{border:2px dashed var(--border);border-radius:16px;padding:50px 24px;text-align:center;cursor:pointer;transition:0.3s;background:var(--card);position:relative}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--primary);background:rgba(99,102,241,0.05)}
+.upload-zone .icon{font-size:48px;margin-bottom:12px}
+.upload-zone .label{font-size:15px;font-weight:600}
+.upload-zone .hint{font-size:12px;color:var(--muted);margin-top:6px}
+.upload-zone input[type=file]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.format-info{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+.sample-toggle{text-align:center;margin-top:16px}
+.sample-toggle button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:8px 18px;border-radius:10px;font-family:'Inter',sans-serif;font-size:12px;cursor:pointer;transition:0.3s}
+.sample-toggle button:hover{border-color:var(--primary);color:var(--text)}
+.manual-area{margin-top:16px;display:none}
+.manual-area.show{display:block}
+.manual-area textarea{width:100%;height:200px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;color:var(--text);font-family:monospace;font-size:13px;resize:vertical}
+.manual-area textarea:focus{outline:none;border-color:var(--primary)}
+.manual-area .btn-row{display:flex;gap:10px;margin-top:10px;justify-content:center}
+.manual-area button{background:var(--primary);border:none;color:#fff;padding:10px 24px;border-radius:10px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;cursor:pointer;transition:0.3s}
+.manual-area button:hover{opacity:0.9;transform:scale(1.02)}
+.manual-area button.secondary{background:transparent;border:1px solid var(--border);color:var(--muted)}
+.format-badges{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.format-badge{font-size:10px;padding:3px 10px;border-radius:6px;background:rgba(99,102,241,0.1);color:var(--primary);border:1px solid rgba(99,102,241,0.2)}
+.results{display:none;margin-top:40px}.results.show{display:block}
+.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:30px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.stat-card .stat-num{font-size:32px;font-weight:800}
+.stat-card .stat-label{font-size:12px;color:var(--muted);margin-top:4px}
+.section-title{font-size:18px;font-weight:700;margin:24px 0 14px}
+.topic-list{display:flex;flex-direction:column;gap:12px}
+.topic-row{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px}
+.topic-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.topic-name{font-weight:600;font-size:14px}.topic-sub{font-size:12px;color:var(--muted)}
+.topic-score{font-size:13px;font-weight:700}
+.topic-bar-bg{height:6px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.topic-bar{height:100%;border-radius:4px;transition:width 0.8s ease}
+.topic-bar.strong{background:var(--green)}.topic-bar.ok{background:var(--amber)}.topic-bar.weak{background:var(--red)}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.rec-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px}
+.rec-card .rec-icon{font-size:28px;margin-bottom:8px}
+.rec-card h4{font-size:14px;font-weight:700;margin-bottom:6px}
+.rec-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.rec-card ul{margin-top:8px;list-style:none}
+.rec-card ul li{font-size:12px;color:var(--text);padding:4px 0;padding-left:16px;position:relative}
+.rec-card ul li::before{content:'\2192';position:absolute;left:0;color:var(--primary)}
+.weak-tag{display:inline-block;background:rgba(239,68,68,0.12);color:var(--red);font-size:10px;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:2px}
+.strong-tag{display:inline-block;background:rgba(34,197,94,0.12);color:var(--green);font-size:10px;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:2px}
+.next-steps{background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(99,102,241,0.02));border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:20px}
+.next-steps h3{font-size:15px;margin-bottom:12px}
+.next-steps ol{padding-left:20px}
+.next-steps ol li{font-size:13px;padding:6px 0;color:rgba(255,255,255,0.8);line-height:1.5}
+.next-steps ol li::marker{color:var(--primary);font-weight:700}
+.reset-btn{margin-top:24px;text-align:center}
+.reset-btn button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:10px;font-family:'Inter',sans-serif;font-size:13px;cursor:pointer;transition:0.3s}
+.reset-btn button:hover{border-color:var(--primary);color:var(--text)}
+.error-msg{display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--red);margin-top:12px}
+.error-msg.show{display:block}
+.format-examples{display:none;margin-top:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.format-examples.show{display:block}
+.format-examples h4{font-size:13px;margin-bottom:8px}
+.format-examples pre{background:rgba(0,0,0,0.3);border-radius:8px;padding:12px;font-size:11px;overflow-x:auto;margin-bottom:12px}
+.format-examples .close-examples{float:right;background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:600px){.container{padding:24px 16px}.summary-cards{grid-template-columns:1fr 1fr}.rec-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="logo"><span>Test</span>Aid</div><div style="font-size:12px;color:var(--muted);">📊 Find your weak spots</div></nav>
+<div class="container">
+<h1>Analyze Your <span>Test Paper</span></h1>
+<p class="subtitle">Upload a scored test, and I'll tell you where to focus next.</p>
+<div class="upload-zone" id="uploadZone">
+<input type="file" id="fileInput" accept=".json,.csv,.txt">
+<div class="icon">📄</div>
+<div class="label">Drop your test file here or click to browse</div>
+<div class="hint">Supports JSON, CSV, or plain text formats</div>
+</div>
+<div class="sample-toggle">
+<button id="sampleBtn">📋 Load sample data</button>
+<button id="manualToggle" style="margin-left:8px;">✏️ Manual entry</button>
+</div>
+<div class="manual-area" id="manualArea">
+<textarea id="manualInput" placeholder='Paste JSON here...&#10;&#10;[&#10;  {"q":1,"topic":"Algebra","subtopic":"Equations","score":2,"total":2},&#10;  {"q":2,"topic":"Geometry","subtopic":"Circles","score":1,"total":3}&#10;]'></textarea>
+<div class="btn-row"><button id="manualParseBtn">▶ Analyze</button><button class="secondary" id="manualClearBtn">Clear</button></div>
+</div>
+<div class="format-examples" id="formatExamples">
+<button class="close-examples" id="closeExamples">✖</button>
+<h4>JSON:</h4>
+<pre>[{"q":1,"topic":"Algebra","score":2,"total":2},{"q":2,"topic":"Geometry","score":1,"total":3}]</pre>
+<h4>CSV:</h4>
+<pre>q,topic,score,total
+1,Algebra,2,2
+2,Geometry,1,3</pre>
+<h4>TXT:</h4>
+<pre>Algebra | 2/2
+Geometry | 1/3</pre>
+</div>
+<div class="error-msg" id="errorMsg"></div>
+<div class="results" id="results">
+<div class="summary-cards" id="summaryCards"></div>
+<div class="section-title">📊 Topic Breakdown</div>
+<div class="topic-list" id="topicList"></div>
+<div class="section-title">🎯 Practice Recommendations</div>
+<div class="rec-grid" id="recGrid"></div>
+<div class="section-title">📈 Suggested Next Steps</div>
+<div class="next-steps" id="nextSteps"></div>
+<div class="reset-btn"><button id="resetBtn">🔄 Analyze another paper</button></div>
+</div>
+</div>
+<footer>TestAid — Turn every mistake into a lesson. Built for Hannah 📚</footer>
+<script>
+const SAMPLE = [
+  {q:1,topic:"Algebraic Expressions",subtopic:"Expanding Brackets",score:2,total:2},
+  {q:2,topic:"Algebraic Expressions",subtopic:"Factorisation",score:1,total:3},
+  {q:3,topic:"Algebraic Expressions",subtopic:"Factorisation",score:0,total:3},
+  {q:4,topic:"Algebraic Expressions",subtopic:"Algebraic Fractions",score:1,total:4},
+  {q:5,topic:"Trigonometry",subtopic:"Sine Rule",score:3,total:4},
+  {q:6,topic:"Trigonometry",subtopic:"Cosine Rule",score:1,total:3},
+  {q:7,topic:"Trigonometry",subtopic:"Bearings",score:0,total:3},
+  {q:8,topic:"Geometry",subtopic:"Circle Theorems",score:3,total:5},
+  {q:9,topic:"Geometry",subtopic:"Angles",score:4,total:4},
+  {q:10,topic:"Geometry",subtopic:"Similarity",score:2,total:5},
+  {q:11,topic:"Statistics",subtopic:"Mean/Median/Mode",score:3,total:3},
+  {q:12,topic:"Statistics",subtopic:"Probability",score:2,total:4},
+  {q:13,topic:"Graphs",subtopic:"Linear Graphs",score:4,total:4},
+  {q:14,topic:"Graphs",subtopic:"Quadratic Graphs",score:1,total:3},
+  {q:15,topic:"Number Patterns",subtopic:"Sequences",score:2,total:4}
+];
+const RECS={
+  "Algebraic Expressions":{icon:"💡",practices:"Khan Academy — Polynomials & Factoring",resources:["Practice expanding & factorising quadratics","Algebraic fractions worksheets","Focus on difference of squares"]},
+  "Trigonometry":{icon:"📟",practices:"Sine & Cosine Rule — Corbett Maths",resources:["Drill sine and cosine rule mixed problems","Practice bearing diagrams","Ambiguous case for sine rule"]},
+  "Geometry":{icon:"🟠",practices:"Circle Theorems & Similarity",resources:["Memorise all 8 circle theorems","Similarity proofs","Angle chasing exercises"]},
+  "Statistics":{icon:"📊",practices:"Statistics & Probability — O-Level",resources:["Mean/median/mode from tables","Probability tree diagrams","Without replacement problems"]},
+  "Graphs":{icon:"📈",practices:"Graphing — Linear & Quadratic",resources:["Plotting quadratic graphs","Gradient and intercept","Graph transformations"]},
+  "Number Patterns":{icon:"🔢",practices:"Sequences & Patterns",resources:["nth term linear sequences","Quadratic sequences","Pattern recognition"]}
+};
+const STEPS=[
+  {max:50,steps:["🔍 Focus on ONE weak topic — don't try everything at once","📖 Review textbook for lowest topic first","✏️ 5 basic questions daily until confident","📺 YouTube explainer videos for wrong concepts","📝 Retry same paper after 1 week"]},
+  {max:70,steps:["🎯 Target your 2 weakest topics — aim for 70%+","📝 Wrong answer journal — write why you got it wrong","⏱ Practice timed questions","📺 Watch worked solutions","📚 Mixed-topic revision papers"]},
+  {max:85,steps:["🚀 Polish weak spots — close to mastery!","🧩 Focus on highest-mark questions dropped","⏱ Practice under exam timing","🔗 Connect topics (algebra + geometry)","📝 Past year papers"]},
+  {max:100,steps:["🏆 Great! Now challenge harder","📈 Try advanced questions on strong topics","👩‍🏫 Teach a friend — solidifies knowledge","📝 Full past papers with strict timing","🎯 Find those 1-2 dropped marks"]}
+];
+const $=id=>document.getElementById(id);
+const fi=$('fileInput'),uz=$('uploadZone'),res=$('results'),sc=$('summaryCards'),tl=$('topicList'),rg=$('recGrid'),ns=$('nextSteps'),em=$('errorMsg'),rb=$('resetBtn'),sb=$('sampleBtn'),mt=$('manualToggle'),ma=$('manualArea'),mi=$('manualInput'),mp=$('manualParseBtn'),mc=$('manualClearBtn');
+function pJ(t){const d=JSON.parse(t);if(!Array.isArray(d))throw Error('Must be array');d.forEach((x,i)=>{if(typeof x.score!='number'||typeof x.total!='number'||!x.topic)throw Error('Q#'+(i+1)+' needs topic,score,total')});return d}
+function pC(t){const ls=t.trim().split('\n'),h=ls[0].split(',').map(x=>x.trim().toLowerCase()),qi=h.indexOf('q'),ti=h.indexOf('topic'),si=h.indexOf('subtopic'),sci=h.indexOf('score'),toti=h.indexOf('total');if(ti<0||sci<0||toti<0)throw Error('CSV needs topic,score,total columns');return ls.slice(1).filter(l=>l.trim()).map((l,i)=>{const c=l.split(',').map(x=>x.trim());const r={q:qi>=0?parseInt(c[qi])||i+1:i+1,topic:c[ti],subtopic:si>=0?c[si]:'',score:parseFloat(c[sci]),total:parseFloat(c[toti])};if(isNaN(r.score)||isNaN(r.total))throw Error('Line '+(i+2)+' bad');return r})}
+function pS(t){return t.trim().split('\n').filter(l=>l.trim()).map((l,i)=>{const p=l.split('|').map(x=>x.trim());if(p.length<2)throw Error('Line '+(i+1)+' needs topic | score/total');const st=p[1].split('/').map(x=>parseFloat(x.trim()));if(st.length<2||isNaN(st[0])||isNaN(st[1]))throw Error('Line '+(i+1)+' score/total like 2/4');return{q:i+1,topic:p[0],subtopic:p[2]||'',score:st[0],total:st[1]}})}
+function pD(text,fn){if(fn&&fn.endsWith('.json'))return pJ(text);if(fn&&fn.endsWith('.csv'))return pC(text);const tr=text.trim();if(tr.startsWith('['))return pJ(text);if(tr.includes('\n')&&tr.includes(',')){if(tr.split('\n')[0].includes('topic')&&tr.split('\n')[0].includes('score'))return pC(text)}if(tr.includes('|')&&tr.includes('/'))return pS(text);throw Error("Can't detect format")}
+function analyze(d){const tQ=d.length,tS=d.reduce((s,x)=>s+x.score,0),tP=d.reduce((s,x)=>s+x.total,0),o=tP>0?Math.round(tS/tP*100):0;const topics={};d.forEach(x=>{if(!topics[x.topic])topics[x.topic]={name:x.topic,score:0,total:0,qs:[],subtopics:{}};topics[x.topic].score+=x.score;topics[x.topic].total+=x.total;topics[x.topic].qs.push(x);if(x.subtopic){if(!topics[x.topic].subtopics[x.subtopic])topics[x.topic].subtopics[x.subtopic]={score:0,total:0};topics[x.topic].subtopics[x.subtopic].score+=x.score;topics[x.topic].subtopics[x.subtopic].total+=x.total}});Object.values(topics).forEach(t=>{t.pct=t.total>0?Math.round(t.score/t.total*100):0;t.status=t.pct>=80?'strong':t.pct>=50?'ok':'weak'});const sT=Object.values(topics).sort((a,b)=>a.pct-b.pct),wT=sT.filter(t=>t.pct<50),okT=sT.filter(t=>t.pct>=50&&t.pct<80),stT=sT.filter(t=>t.pct>=80);return{totalQ:tQ,totalScore:tS,totalPossible:tP,overallPct:o,sortedTopics:sT,weakTopics:wT,okTopics:okT,strongTopics:stT}}
+function render(d){em.classList.remove('show');const s=analyze(d);res.classList.add('show');const ov=s.overallPct;
+sc.innerHTML='<div class="stat-card"><div class="stat-num" style="color:'+(ov>=70?'var(--green)':ov>=50?'var(--amber)':'var(--red)')+'">'+ov+'%</div><div class="stat-label">Overall Score</div></div><div class="stat-card"><div class="stat-num">'+s.totalQ+'</div><div class="stat-label">Questions</div></div><div class="stat-card"><div class="stat-num" style="color:var(--green)">'+s.strongTopics.length+'</div><div class="stat-label">Strong Topics</div></div><div class="stat-card"><div class="stat-num" style="color:'+(s.weakTopics.length>0?'var(--red)':'var(--green)')+'">'+s.weakTopics.length+'</div><div class="stat-label">Weak Topics</div></div>';
+tl.innerHTML=s.sortedTopics.map(t=>{const bc=t.status;const sn=Object.entries(t.subtopics).filter(([_,st])=>st.total>0).map(([n,st])=>'<span class="'+(Math.round(st.score/st.total*100)<50?'weak-tag':'strong-tag')+'">'+n+': '+st.score+'/'+st.total+'</span>').join(' ');return'<div class="topic-row"><div class="topic-header"><div><div class="topic-name">'+t.name+'</div><div class="topic-sub">'+t.qs.length+'q · '+t.total+' marks</div></div><div class="topic-score" style="color:'+(bc==='strong'?'var(--green)':bc==='ok'?'var(--amber)':'var(--red)')+'">'+t.score+'/'+t.total+' ('+t.pct+'%)</div></div><div class="topic-bar-bg"><div class="topic-bar '+bc+'" style="width:'+t.pct+'%"></div></div>'+(sn?'<div style="margin-top:8px;">'+sn+'</div>':'')+'</div>'}).join('');
+const allR=[...s.weakTopics,...s.okTopics].slice(0,6);if(allR.length===0&&s.strongTopics.length>0)allR.push(...s.strongTopics.slice(0,2));
+rg.innerHTML=allR.map(t=>{const r=RECS[t.name]||{icon:'📚',practices:'General revision',resources:['Review textbook','Practice worksheets']};return'<div class="rec-card"><div class="rec-icon">'+(r.icon||'📚')+'</div><h4 style="color:'+(t.pct<50?'var(--red)':'var(--amber)')+'">'+t.name+'</h4><p>'+r.practices+'</p><ul>'+r.resources.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>'}).join('')||'<p style="color:var(--muted);text-align:center;padding:20px;">All topics strong! Try harder problems.</p>';
+const step=STEPS.find(x=>ov<x.max)||STEPS[STEPS.length-1];ns.innerHTML='<h3>💡 Your Action Plan</h3><ol>'+step.steps.map(x=>'<li>'+x+'</li>').join('')+'</ol>';res.scrollIntoView({behavior:'smooth',block:'start'})}
+fi.addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{render(pD(ev.target.result,f.name))}catch(e){em.textContent=e.message;em.classList.add('show')}};r.readAsText(f)});
+uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('dragover')});uz.addEventListener('dragleave',()=>{uz.classList.remove('dragover')});uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('dragover');const f=e.dataTransfer.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{render(pD(ev.target.result,f.name))}catch(e){em.textContent=e.message;em.classList.add('show')}};r.readAsText(f)});
+sb.addEventListener('click',()=>{try{render(SAMPLE)}catch(e){em.textContent=e.message;em.classList.add('show')}});
+mt.addEventListener('click',()=>{ma.classList.toggle('show')});
+mp.addEventListener('click',()=>{try{const d=JSON.parse(mi.value);render(d)}catch(e){em.textContent=e.message;em.classList.add('show')}});
+mc.addEventListener('click',()=>{mi.value=''});
+rb.addEventListener('click',()=>{res.classList.remove('show');em.classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
