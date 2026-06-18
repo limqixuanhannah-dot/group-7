@@ -6,5 +6,12 @@
     "3": { "Biology": null, "Chemistry": null, "Physics": null, "Mathematics": null, "Additional Mathematics": null, "Chinese": null, "English": null, "Geography": null },
     "4": { "Biology": null, "Chemistry": null, "Physics": null, "Mathematics": null, "Additional Mathematics": null, "Chinese": null, "English": null, "Geography": null }
   },
-  "maxScore": 100
+  "maxScore": 100,
+  "gradeBoundaries": {
+    "A": { "min": 70, "max": 100 },
+    "B": { "min": 60, "max": 69 },
+    "C": { "min": 50, "max": 59 },
+    "D": { "min": 40, "max": 49 },
+    "F": { "min": 0, "max": 39 }
+  }
 }

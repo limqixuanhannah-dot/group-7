@@ -210,3 +210,5 @@
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","details":"02:13 UTC — workspace: skill files updated (weather, sudoku, timetable, exam-calc), daily memory, routine tracking. No anomalies.","ts":1781748835931}
 {"type":"agent_status","agent":"Rex","activity":"heartbeat","ts":1781749492607}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat @ 02:25 UTC — workspace active: project files updated (hannah profile, chem-dating, agent-dashboard), daily memory logged, skill assets refreshed. Channel: discord.","ts":1781749559860}
+{"type":"agent_status","agent":"Rex","activity":"routine","ts":1781749869023}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat","ts":1781749975571}

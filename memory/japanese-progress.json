@@ -1,0 +1,50 @@
+{
+  "start_date": "2026-06-18",
+  "level": "N4",
+  "current_day": 1,
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-06-18",
+      "listening": {
+        "dialogue": "山田さん、明日の会議は何時からですか。\n３時からです。でも、田中さんは２時に来ます。\nわかりました。資料はもう準備しましたか。\nはい、昨日コピーしました。あ、そうだ。新しいお客さんが来ますから、椅子をもう三つ用意してください。\nかしこまりました。",
+        "questions": [
+          {"q": "What time does the meeting start?", "options": ["2:00", "3:00", "4:00"], "answer": "3:00"},
+          {"q": "Who is coming at 2pm?", "options": ["A new client", "Tanaka-san", "Yamada-san"], "answer": "Tanaka-san"},
+          {"q": "Why do they need 3 more chairs?", "options": ["The room is bigger", "A new client is coming", "Tanaka brought guests"], "answer": "A new client is coming"}
+        ],
+        "user_answers": ["3:00", "Tanaka-san", "A new client is coming"],
+        "correct": [true, true, true],
+        "score": "3/3"
+      },
+      "sentences": [
+        {"jp": "電車が遅れていたので、遅刻しました。", "romaji": "Densha ga okurete ita node, chikoku shimashita.", "en": "I was late because the train was delayed."},
+        {"jp": "このアプリの使い方を教えてください。", "romaji": "Kono apuri no tsukaikata wo oshiete kudasai.", "en": "Please teach me how to use this app."},
+        {"jp": "漢字を書くのが上手になりたいです。", "romaji": "Kanji wo kaku no ga jouzu ni naritai desu.", "en": "I want to get good at writing kanji."}
+      ],
+      "sentences_correct": null,
+      "sentences_score": null,
+      "vocab": [
+        {"word": "予定", "reading": "よてい", "meaning": "plan/schedule"},
+        {"word": "経験", "reading": "けいけん", "meaning": "experience"},
+        {"word": "必要", "reading": "ひつよう", "meaning": "necessary"},
+        {"word": "弾く", "reading": "ひく", "meaning": "to play (instrument)"},
+        {"word": "掛ける", "reading": "かける", "meaning": "to hang / to put on (glasses)"},
+        {"word": "駐車場", "reading": "ちゅうしゃじょう", "meaning": "parking lot"},
+        {"word": "天気予報", "reading": "てんきよほう", "meaning": "weather forecast"},
+        {"word": "間に合う", "reading": "まにあう", "meaning": "to be in time"},
+        {"word": "台所", "reading": "だいどころ", "meaning": "kitchen"},
+        {"word": "忘れ物", "reading": "わすれもの", "meaning": "lost item"}
+      ],
+      "vocab_correct": null,
+      "vocab_score": null,
+      "answered": true,
+      "weaknesses": ["sentences not attempted", "vocab not attempted"],
+      "strengths": ["listening comprehension"]
+    }
+  ],
+  "cumulative_weaknesses": [],
+  "cumulative_strengths": ["listening comprehension"],
+  "vocab_seen": ["予定", "経験", "必要", "弾く", "掛ける", "駐車場", "天気予報", "間に合う", "台所", "忘れ物"],
+  "sentences_seen": ["電車が遅れていたので、遅刻しました。", "このアプリの使い方を教えてください。", "漢字を書くのが上手になりたいです。"]
+}
