@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "idle",
+    "platform": "unknown",
+    "activity": "Routine heartbeat — memory updates, workspace files, dashboard healthy",
     "details": "",
-    "lastSeen": 1781744394550,
-    "lastSeenHuman": "2026-06-18T00:59:54.550Z"
+    "lastSeen": 1781746198287,
+    "lastSeenHuman": "2026-06-18T01:29:58.287Z"
   },
   "Group7": {
     "platform": "OpenClaw",

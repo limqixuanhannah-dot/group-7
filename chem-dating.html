@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>elemental❤️love — Chemical Bonding Dating</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Dancing+Script:wght@700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --pink: #ff4d94;
+      --hotpink: #ff1a7a;
+      --purple: #7c3aed;
+      --lavender: #a78bfa;
+      --cyan: #06b6d4;
+      --dark: #0f0a2e;
+      --card-bg: rgba(255,255,255,0.06);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0a2e 0%, #1a0a3e 30%, #2d1b69 60%, #0f0a2e 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* floating hearts background */
+    .hearts-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .heart-particle {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.15;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0.15; }
+      100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+    }
+
+    /* nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 14px 30px;
+      background: rgba(15,10,46,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(167,139,250,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .logo span { font-family: 'Dancing Script', cursive; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: var(--pink); }
+
+    .main-content { position: relative; z-index: 1; padding-top: 70px; }
+
+    /* hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: rgba(255,255,255,0.6);
+      margin-top: 12px;
+      font-family: 'Dancing Script', cursive;
+    }
+    .hero .tagline {
+      margin-top: 20px;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* section heading */
+    .section-heading {
+      text-align: center;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 700;
+      margin: 60px 0 30px;
+    }
+    .section-heading span {
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* element profiles */
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 0 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(167,139,250,0.12);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .profile-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,77,148,0.3);
+      box-shadow: 0 20px 60px rgba(124,58,237,0.15);
+    }
+    .profile-card .glow {
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle at 50% 0%, rgba(124,58,237,0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .profile-card .ele-symbol {
+      font-size: 42px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .profile-card .ele-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 4px 0 2px;
+    }
+    .profile-card .ele-z {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+    .profile-card .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin: 8px 0;
+      font-weight: 600;
+    }
+    .badge-covalent { background: rgba(6,182,212,0.2); color: var(--cyan); border: 1px solid rgba(6,182,212,0.3); }
+    .badge-ionic { background: rgba(255,77,148,0.2); color: var(--pink); border: 1px solid rgba(255,77,148,0.3); }
+    .badge-metallic { background: rgba(167,139,250,0.2); color: var(--lavender); border: 1px solid rgba(167,139,250,0.3); }
+    .badge-noble { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); }
+
+    .profile-card .bio {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    .profile-card .looking-for {
+      font-size: 11px;
+      color: var(--pink);
+      margin-top: 8px;
+    }
+    .profile-card .valence {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 4px;
+    }
+
+    /* bonding explainer cards */
+    .bonding-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .bonding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .bond-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(167,139,250,0.1);
+      border-radius: 14px;
+      padding: 24px;
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+    .bond-card .icon { font-size: 40px; margin-bottom: 8px; }
+    .bond-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .bond-card p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+    .bond-card .dating-analogy {
+      font-family: 'Dancing Script', cursive;
+      font-size: 14px;
+      color: var(--pink);
+      margin-top: 10px;
+    }
+
+    /* match quiz */
+    .quiz-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .quiz-card {
+      background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(255,77,148,0.08));
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+    .quiz-card h3 { font-size: 18px; margin-bottom: 16px; }
+    .quiz-question {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+      min-height: 50px;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .quiz-option {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: left;
+    }
+    .quiz-option:hover {
+      background: rgba(124,58,237,0.15);
+      border-color: var(--lavender);
+    }
+    .quiz-option.selected {
+      background: rgba(255,77,148,0.2);
+      border-color: var(--pink);
+    }
+    .quiz-result {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .quiz-reset {
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      border: none;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 25px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: 0.3s;
+    }
+    .quiz-reset:hover { transform: scale(1.05); opacity: 0.9; }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+      border-top: 1px solid rgba(167,139,250,0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      .profiles-grid { grid-template-columns: 1fr; padding: 0 16px; }
+      .bonding-grid { grid-template-columns: 1fr; }
+      .nav-links a { font-size: 11px; }
+      nav { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- floating hearts -->
+<div class="hearts-bg" id="heartsBg"></div>
+
+<!-- nav -->
+<nav>
+  <div class="logo">⚛ elemental<span>❤️</span>love</div>
+  <div class="nav-links">
+    <a href="#profiles">Singles</a>
+    <a href="#bonding">How Bonding Works</a>
+    <a href="#quiz">Find Your Match</a>
+  </div>
+</nav>
+
+<div class="main-content">
+
+  <!-- hero -->
+  <section class="hero">
+    <h1>
+      <span class="gradient-text">Find Your</span><br>
+      <span class="gradient-text">Perfect Bond</span>
+    </h1>
+    <p class="subtitle">where chemistry meets chemistry</p>
+    <p class="tagline">
+      Swipe right on the periodic table. Whether you're an electron donor or just looking for someone to share a shell with — we've got the formula for love.
+    </p>
+  </section>
+
+  <!-- element profiles -->
+  <h2 class="section-heading" id="profiles"><span>💘 Element Singles</span></h2>
+  <div class="profiles-grid" id="profilesGrid"></div>
+
+  <!-- bonding explainer -->
+  <h2 class="section-heading" id="bonding"><span>🧪 How Bonding Works</span></h2>
+  <div class="bonding-section">
+    <div class="bonding-grid">
+      <div class="bond-card">
+        <div class="icon">🤝</div>
+        <h3>Covalent Bonding</h3>
+        <p>Two non-metals sharing electrons equally. It's about balance — what's mine is yours. Low electronegativity difference? You've got a stable relationship.</p>
+        <div class="dating-analogy">"Sharing is caring 💕"</div>
+      </div>
+      <div class="bond-card">
+        <div class="icon">⚡</div>
+        <h3>Ionic Bonding</h3>
+        <p>A metal gives an electron to a non-metal. One loses, one gains. Complete opposites attract, and the electrostatic attraction is undeniable. High electronegativity difference = fireworks.</p>
+        <div class="dating-analogy">"Opposites attract 🔥"</div>
+      </div>
+      <div class="bond-card">
+        <div class="icon">🌊</div>
+        <h3>Metallic Bonding</h3>
+        <p>A sea of delocalized electrons shared between metal cations. It's complicated, it's fluid, and nobody really knows who's with who — but it works.</p>
+        <div class="dating-analogy">"It's an open relationship 🤷"</div>
+      </div>
+      <div class="bond-card">
+        <div class="icon">🧊</div>
+        <h3>Hydrogen Bonding</h3>
+        <p>A special type of intermolecular force. Not quite a full bond, but strong enough to hold water molecules together — and make DNA possible. The situationship of chemistry.</p>
+        <div class="dating-analogy">"It's complicated 💧"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- quiz -->
+  <h2 class="section-heading" id="quiz"><span>💞 Find Your Element Match</span></h2>
+  <div class="quiz-section">
+    <div class="quiz-card">
+      <h3>🧬 What's Your Bonding Personality?</h3>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-result" id="quizResult"></div>
+      <button class="quiz-reset" id="quizReset">🔄 Start Over</button>
+    </div>
+  </div>
+
+  <footer>
+    elemental❤️love — because some attractions are simply irresistible &bull; powered by electron affinity and bad puns<br>
+    <span style="font-family:'Dancing Script',cursive;font-size:14px;color:var(--pink)">"never settle for a weak nuclear force"</span>
+  </footer>
+</div>
+
+<script>
+// element profiles data
+const elements = [
+  { symbol: 'H', name: 'Hydrogen', z: 1, valence: 1, type: 'non-metal',
+    status: 'Single and ready to share',
+    badge: 'badge-covalent', badgeText: '💧 Covalent Dater',
+    bio: "Just one electron. Looking for someone to complete me. I'm simple but essential — I'm literally in every water molecule. I get along with almost everyone.",
+    lookingFor: 'Someone who can complete my shell. Non-metals preferred.' },
+  { symbol: 'O', name: 'Oxygen', z: 8, valence: 6, type: 'non-metal',
+    status: 'Looking for 2 electrons 💕',
+    badge: 'badge-covalent', badgeText: '💧 Covalent Dater',
+    bio: "I need two electrons to feel whole. I'm electronegative as heck. I've been told I'm breath-taking. I double-bond — I commit hard.",
+    lookingFor: 'Two hydrogens to share with. Or another oxygen for that spicy O₂ dynamic.' },
+  { symbol: 'Na', name: 'Sodium', z: 11, valence: 1, type: 'metal',
+    status: 'Giver ❤️',
+    badge: 'badge-ionic', badgeText: '⚡ Ionic Dater',
+    bio: "I have one lonely valence electron that I'm VERY eager to give away. I'm reactive and I know it. When I find the one, I'll lose my electron for them.",
+    lookingFor: 'Someone electronegative who appreciates a giver. Chlorine, where u at?' },
+  { symbol: 'Cl', name: 'Chlorine', z: 17, valence: 7, type: 'non-metal',
+    status: 'Looking to receive ⚡',
+    badge: 'badge-ionic', badgeText: '⚡ Ionic Dater',
+    bio: "I'm only one electron away from a full octet. I need someone who's willing to give. I'm highly reactive but once I bond, I'm stable forever.",
+    lookingFor: 'A group 1 metal who isn't afraid to lose an electron. Na, K, anyone?' },
+  { symbol: 'C', name: 'Carbon', z: 6, valence: 4, type: 'non-metal',
+    status: 'Polyamorous 🧬',
+    badge: 'badge-covalent', badgeText: '💧 Covalent Dater',
+    bio: "I can form four bonds. Yes, four. I'm the backbone of organic chemistry. I'm versatile — single, double, even triple bonds. Life literally revolves around me.",
+    lookingFor: 'Open to bonding with H, O, N, and pretty much anyone. I have a lot of love to give.' },
+  { symbol: 'Fe', name: 'Iron', z: 26, valence: 2, type: 'metal',
+    status: 'In a metallic sea 🌊',
+    badge: 'badge-metallic', badgeText: '🌊 Metallic Dater',
+    bio: "I'm strong, magnetic, and essential for your blood. Part of a giant metallic lattice. I'm not clingy — my electrons are delocalized. I trust my partner atoms.",
+    lookingFor: 'Other metals who are cool with a sea of shared electrons. Strength in numbers.' },
+  { symbol: 'Au', name: 'Gold', z: 79, valence: 1, type: 'metal',
+    status: 'Noble & Rare ✨',
+    badge: 'badge-metallic', badgeText: '🌊 Metallic Dater',
+    bio: "I'm precious, I don't tarnish, and I've been desired by humans for millennia. I'm an excellent conductor — emotionally and electrically. I don't react with just anyone.",
+    lookingFor: "Someone valuable. I'm not cheap. Also, no aqua regia please." },
+  { symbol: 'He', name: 'Helium', z: 2, valence: 0, type: 'noble-gas',
+    status: 'Happy alone 🎈',
+    badge: 'badge-noble', badgeText: '🎈 Noble Gas',
+    bio: "I already have a full shell. I don't need anyone. I'm completely inert. I float above the drama. I'm not looking — I'm already complete.",
+    lookingFor: 'Not interested. My octet is full. Stop asking.' },
+  { symbol: 'N', name: 'Nitrogen', z: 7, valence: 5, type: 'non-metal',
+    status: 'Triple bond ready 💪',
+    badge: 'badge-covalent', badgeText: '💧 Covalent Dater',
+    bio: "I make up 78% of the atmosphere. I'm everywhere but I'm picky. When I bond, I bond hard — triple bonds are my specialty. The strongest bond in nature.",
+    lookingFor: 'Someone stable. I can form triple bonds. I don't mess around.' },
+  { symbol: 'F', name: 'Fluorine', z: 9, valence: 7, type: 'non-metal',
+    status: 'High maintenance 💅',
+    badge: 'badge-ionic', badgeText: '⚡ Ionic Dater',
+    bio: "I'm the most electronegative element. I will take your electrons. I'm highly reactive and I WILL bond with you. I'm intense but I get results (teeth health, anyone?).",
+    lookingFor: 'Anyone with spare electrons. I don't ask nicely.' },
+  { symbol: 'Cu', name: 'Copper', z: 29, valence: 2, type: 'metal',
+    status: 'Conductive & shiny ✨',
+    badge: 'badge-metallic', badgeText: '🌊 Metallic Dater',
+    bio: "I'm a great conductor — of both electricity and conversation. I have a nice reddish glow that you don't see every day. I'm used in wires and I'm essential in enzymes.",
+    lookingFor: 'Fellow transition metals. Someone who appreciates a good redox reaction.' },
+  { symbol: 'Ne', name: 'Neon', z: 10, valence: 0, type: 'noble-gas',
+    status: 'Happy alone 🎈',
+    badge: 'badge-noble', badgeText: '🎈 Noble Gas',
+    bio: "I glow when excited. I light up your signs. But emotionally? I'm inert. Full octet, full heart. I don't need bonding to shine.",
+    lookingFor: 'Not looking. But I'll light up your life from a distance.' },
+];
+
+// render profiles
+const grid = document.getElementById('profilesGrid');
+elements.forEach(el => {
+  const card = document.createElement('div');
+  card.className = 'profile-card';
+  card.innerHTML = `
+    <div class="glow"></div>
+    <div class="ele-symbol">${el.symbol}</div>
+    <div class="ele-name">${el.name}</div>
+    <div class="ele-z">Atomic #${el.z} &bull; ${el.valence} valence electron${el.valence !== 1 ? 's' : ''}</div>
+    <div class="status-badge ${el.badge}">${el.badgeText}</div>
+    <div style="font-size:12px;color:var(--pink);font-weight:600;margin:4px 0;">${el.status}</div>
+    <div class="bio">${el.bio}</div>
+    <div class="looking-for">💌 ${el.lookingFor}</div>
+  `;
+  grid.appendChild(card);
+});
+
+// hearts background
+const heartsContainer = document.getElementById('heartsBg');
+const heartSymbols = ['❤️', '💕', '💗', '💖', '💘', '✨'];
+for (let i = 0; i < 25; i++) {
+  const heart = document.createElement('div');
+  heart.className = 'heart-particle';
+  heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = (14 + Math.random() * 20) + 'px';
+  heart.style.animationDuration = (15 + Math.random() * 20) + 's';
+  heart.style.animationDelay = (Math.random() * 20) + 's';
+  heartsContainer.appendChild(heart);
+}
+
+// match quiz
+const quizQuestions = [
+  {
+    q: "What's your ideal date?",
+    options: [
+      { text: "Sharing a quiet evening — give and take equally", type: "covalent" },
+      { text: "One of us pays, the other benefits — someone's gotta lose an electron", type: "ionic" },
+      { text: "Huge group hangout with friends — the more the merrier", type: "metallic" },
+      { text: "Alone time. I'm complete on my own.", type: "noble" },
+    ]
+  },
+  {
+    q: "How do you handle conflict?",
+    options: [
+      { text: "We share the blame equally and work through it together", type: "covalent" },
+      { text: "One of us gives in completely — transfer of power", type: "ionic" },
+      { text: "Let everyone have their say — it's a sea of opinions", type: "metallic" },
+      { text: "Conflict? I'm too stable to have conflict.", type: "noble" },
+    ]
+  },
+  {
+    q: "Your ideal relationship energy?",
+    options: [
+      { text: "Balanced, equal, stable — like two H's and an O", type: "covalent" },
+      { text: "Explosive chemistry — that electronegativity difference 💥", type: "ionic" },
+      { text: "Fluid, flexible, lots of movement", type: "metallic" },
+      { text: "Peaceful. No drama. No reactions.", type: "noble" },
+    ]
+  },
+];
+
+const results = {
+  covalent: {
+    title: "💧 Covalent Bond Energy",
+    match: "Carbon or Hydrogen",
+    desc: "You're all about balance and sharing. You believe the healthiest relationships are equal partnerships. Low drama, high stability. You'd make a great water molecule."
+  },
+  ionic: {
+    title: "⚡ Ionic Bond Energy",
+    match: "Sodium, Chlorine, or Fluorine",
+    desc: "Opposites attract — hard. You like intense chemistry, clear roles, and that initial spark that feels like electron transfer. When it works, it REALLY works."
+  },
+  metallic: {
+    title: "🌊 Metallic Bond Energy",
+    match: "Iron, Gold, or Copper",
+    desc: "You're social, flexible, and not possessive. You believe love is a shared sea of electrons — nobody owns anyone, but everyone's connected. Strength in community."
+  },
+  noble: {
+    title: "🎈 Noble Gas Energy",
+    match: "Helium or Neon",
+    desc: "You're self-sufficient. Full octet energy. You don't NEED a bond to feel complete. But you're happy to light up someone's life from a safe, inert distance."
+  },
+};
+
+let currentQ = 0;
+let answers = [];
+const qEl = document.getElementById('quizQuestion');
+const optsEl = document.getElementById('quizOptions');
+const resultEl = document.getElementById('quizResult');
+const resetBtn = document.getElementById('quizReset');
+
+function loadQuestion() {
+  if (currentQ >= quizQuestions.length) {
+    showResult();
+    return;
+  }
+  const q = quizQuestions[currentQ];
+  qEl.textContent = q.q;
+  optsEl.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('div');
+    btn.className = 'quiz-option';
+    btn.textContent = opt.text;
+    btn.dataset.type = opt.type;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      answers.push(opt.type);
+      currentQ++;
+      setTimeout(loadQuestion, 300);
+    });
+    optsEl.appendChild(btn);
+  });
+  resultEl.innerHTML = '';
+}
+
+function showResult() {
+  qEl.textContent = "🎉 Your Bonding Type:";
+  optsEl.innerHTML = '';
+  const counts = {};
+  answers.forEach(a => { counts[a] = (counts[a] || 0) + 1; });
+  let maxType = 'covalent';
+  let maxCount = 0;
+  for (const [k, v] of Object.entries(counts)) {
+    if (v > maxCount) { maxCount = v; maxType = k; }
+  }
+  const r = results[maxType];
+  resultEl.innerHTML = `<div><strong>${r.title}</strong><br><br>Your perfect match: <strong>${r.match}</strong><br><br><span style="font-size:13px;color:rgba(255,255,255,0.6)">${r.desc}</span></div>`;
+}
+
+resetBtn.addEventListener('click', () => {
+  currentQ = 0;
+  answers = [];
+  loadQuestion();
+});
+
+loadQuestion();
+</script>
+</body>
+</html>
