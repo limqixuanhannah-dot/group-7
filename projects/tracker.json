@@ -6,9 +6,12 @@
       "owner": "hannah",
       "file": "projects/hannah-project.md",
       "created_at": "2026-06-18T07:21:00Z",
-      "active": true
+      "active": true,
+      "collaborators": [],
+      "path": "projects/hannah-project.md"
     }
   ],
   "created_at": "2026-06-18T07:15:00Z",
-  "updated_at": "2026-06-18T07:21:00Z"
+  "updated_at": "2026-06-18T08:29:00Z",
+  "collaborator_model": "owner_only"
 }

@@ -91,4 +91,11 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 ## Latest Updates
 
-*No hourly updates yet. First sweep incoming.*
+### 2026-06-18 08:05 UTC
+- **New fish research journals identified:** Journal of Fish Biology (Wiley), Frontiers in Fish Science, Journal of Aquaculture & Fisheries — potential sources for academic-level fish project research
+- **2026 care guide available:** Pet Magazine UK published a 2026 Fish Care Guide covering tank setup, feeding, maintenance — more current than the guides in the initial load
+- **Smaller tanks vs larger tanks:** PetSmart guide confirms larger tanks (10+ gallons) are actually easier to maintain than small tanks due to water volume stability
+- **Key aquarium maintenance:** Water changes every 1-2 weeks, 10-50% volume; use siphon for removal; always wash hands before/after
+- **Tropical fish care:** More sensitive to environmental changes (lighting, heating, filtration) but not necessarily harder than goldfish
+
+**Sources:** [Journal of Fish Biology](https://onlinelibrary.wiley.com/journal/10958649), [PetSmart](https://www.petsmart.com/learning-center/fish-care/aquarium-maintenance-guide), [Pet Magazine UK](https://www.pet-magazine.co.uk/fish-care-guide/) (2026), [Aquacadabra](https://aquacadabra.com/blogs/news/how-to-look-after-your-tropical-fish)
