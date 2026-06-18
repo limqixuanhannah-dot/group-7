@@ -174,3 +174,9 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 - **Tropical fish care:** More sensitive to environmental changes (lighting, heating, filtration) but not necessarily harder than goldfish
 
 **Sources:** [Journal of Fish Biology](https://onlinelibrary.wiley.com/journal/10958649), [PetSmart](https://www.petsmart.com/learning-center/fish-care/aquarium-maintenance-guide), [Pet Magazine UK](https://www.pet-magazine.co.uk/fish-care-guide/) (2026), [Aquacadabra](https://aquacadabra.com/blogs/news/how-to-look-after-your-tropical-fish)
+
+### 2026-06-18 11:01 UTC
+- **Smart Aquarium API Hijacking Case Study:** Security researcher demonstrated remote hijacking of smart fish tanks via broken API authorization. Smart aquarium devices (temperature monitors, auto-feeders, pH sensors) exposed via cloud APIs with broken object-level authorization — allowing attacker to remotely alter temperature, feeding schedules, and monitoring settings across any device. Manufacturer prioritized time-to-market over security, leaving default credentials and no input validation. Highlights systemic failure in IoT device security where consumer IoT devices lack basic security controls standard in enterprise software.
+- **IoT security mid-2026 briefing:** EU Cyber Resilience Act (CRA) reporting obligations begin September 2026 — directly applies to smart aquarium device manufacturers. BadBox 2.0 resurgence. Spring 2026 router CVE wave affecting consumer IoT devices. The convergence of IT and OT means attacks on consumer IoT (smart aquariums) serve as testing grounds for more destructive campaigns.
+
+**Source:** [UndercodeTesting - Aquarium API Hijacking](https://undercodetesting.com/aquarium-chaos-how-broken-api-let-me-hijack-smart-fish-tanks-remotely) (Jun 2026), [SecureIoT House - State of IoT Security Mid-2026](https://secureiot.house/iot-security-mid-2026-state-of-play-where-we-stand) (Jun 2026)
