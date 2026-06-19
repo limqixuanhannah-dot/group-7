@@ -132,6 +132,16 @@ Project files are stored per-user under `projects/{username}/` directories. Each
 - The limit is enforced at file creation time. Before creating a new file, count the user's existing files. If 5 or more, refuse the request and instruct the user to delete an old file first.
 - **No bulk file creation.** Files are created one at a time, on explicit request. Never create multiple files at once. Never pre-create files. This applies to all contexts — projects, memory files, monitoring files, or any other purpose.
 
+## 9. Reminder System
+
+Darwin can create reminders for any user. Each reminder is private to that user. The user can add collaborators to their to-do list.
+
+| Say This | What Happens |
+|----------|--------------|
+| `remind me at [time] to [task]` | Schedules a private reminder |
+| `remind [name] at [time] about [task]` | Creates a reminder for another user (with their consent) |
+| `add [name] as collaborator on my to-do list` | Gives another user visibility into your tasks |
+
 The file creator assigns roles at creation.
 
 ### Role Definitions
