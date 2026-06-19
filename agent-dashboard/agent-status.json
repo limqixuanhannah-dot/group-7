@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "Heartbeat #23 — 19:29 UTC. Routine heartbeat cycle completed. No notable file changes beyond standard tracking updates (git activity, heartbeat-last.md). Breach state: clean. Group7 offline since 2026-06-17 (~113h stale). Systems nominal.",
+    "platform": "unknown",
+    "activity": "Heartbeat OK - 2026-06-19 19:59 UTC. Workspace clean, no recent file activity.",
     "details": "",
-    "lastSeen": 1781897397994,
-    "lastSeenHuman": "2026-06-19T19:29:57.994Z"
+    "lastSeen": 1781899195709,
+    "lastSeenHuman": "2026-06-19T19:59:55.709Z"
   },
   "Group7": {
     "platform": "OpenClaw",
