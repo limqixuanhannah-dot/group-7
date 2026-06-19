@@ -1,20 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "Heartbeat check — 2026-06-19 10:27 UTC",
-    "details": {
-      "recent_changes": [
-        "projects/hannah/google-slides-project.md — updated",
-        "memory/2026-06-19.md — daily log active",
-        "monitoring/breach_state.json — refreshed",
-        "agent-dashboard files — routine cycling"
-      ],
-      "breach_state": "clean — no breaches detected",
-      "dashboard": "healthy",
-      "channel": "discord"
-    },
-    "lastSeen": 1781864989853,
-    "lastSeenHuman": "2026-06-19T10:29:49.853Z"
+    "platform": "unknown",
+    "activity": "heartbeat cycle — routine",
+    "details": "",
+    "lastSeen": 1781866796635,
+    "lastSeenHuman": "2026-06-19T10:59:56.635Z"
   },
   "Group7": {
     "platform": "OpenClaw",
