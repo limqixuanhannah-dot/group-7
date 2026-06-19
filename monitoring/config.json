@@ -5,8 +5,14 @@
     "api_key": ""
   },
   "news": {
-    "topics": ["cyber security", "defence"],
-    "sources": ["tier1", "tier2"]
+    "topics": [
+      "cyber security",
+      "defence"
+    ],
+    "sources": [
+      "tier1",
+      "tier2"
+    ]
   },
   "discord": {
     "channel": "channel:1515645101450203188",
@@ -18,6 +24,6 @@
     "max_age_days": 7,
     "enabled": true
   },
-  "last_breach_check": null,
-  "last_news_check": null
+  "last_breach_check": "2026-06-19T16:52:48.526562Z",
+  "last_news_check": "2026-06-19T16:52:48.526562Z"
 }
