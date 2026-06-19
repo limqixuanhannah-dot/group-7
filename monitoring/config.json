@@ -14,6 +14,10 @@
     "group_id": "group-7"
   },
   "schedule": "hourly",
+  "recency": {
+    "max_age_days": 7,
+    "enabled": true
+  },
   "last_breach_check": null,
   "last_news_check": null
 }

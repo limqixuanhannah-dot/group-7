@@ -98,11 +98,26 @@ Darwin performs automated hourly checks (every hour on the hour — 00:00, 01:00
 - **Defence capability research** — searches for improvements in defence project management, security tools, and operational best practices
 
 **Every hour, Darwin sends a defence report to #group-7 Discord channel** via the `jenny` bot account:
-- **If defence-relevant breaches are detected:** CRITICAL priority notification with breach name, date, affected data, and defence impact assessment.
-- **If capability improvements are found:** Formatted summary of recommendations relevant to defence operations.
-- **If nothing is wrong / no changes:** Send "✅ All Clear — No new defence breaches or issues detected."
+- **If defence-relevant breaches are detected (current — within last 7 days):** 🔴 CRITICAL notification with breach name, date, affected data, defence impact assessment, and severity colour code.
+- **If capability improvements are found:** Colour-coded summary of recommendations relevant to defence operations.
+- **If nothing is wrong / no changes:** Send "🟢 All Clear — No new defence breaches or issues detected."
 - **If no monitoring targets are configured:** Send a prompt requesting the user add defence-relevant domains or emails for monitoring.
 - **Task completion:** When a defence project checkbox is ticked, notifies #group-7 with @everyone.
+
+### News Recency Rule
+- **Only report current news.** Discard items older than 7 days unless they have ongoing operational impact on active projects.
+- If a breach or story is older than 7 days and not relevant to current operations, it is skipped.
+- Recency is determined by the breach date, publication date, or first-seen date.
+
+### Severity Colour Coding
+All news and intelligence reports are colour-coded by severity:
+
+| Colour | Level | Criteria |
+|--------|-------|----------|
+| 🔴 | CRITICAL | Active breach with data exposed, immediate operational impact, active zero-day exploitation |
+| 🟠 | HIGH | Notable security incident, significant vulnerability disclosure, emerging threat to defence |
+| 🟡 | MEDIUM | Noteworthy development, advisory, non-critical breach, policy change |
+| 🟢 | LOW | Informational, best practices, minor updates, all clear, routine research findings |
 
 Tracking state is maintained in `monitoring/` files for deduplication. The hourly defence report is mandatory — a message is sent every hour regardless of findings.
 
@@ -125,7 +140,7 @@ Darwin integrates with a linked Google Sheet that serves as the defence project 
 
 Project files are stored per-user under `projects/{username}/` directories. Each user can only access their own project files unless explicitly shared.
 
-**⚠️ HARD FILE LIMIT: 5 FILES PER USER MAXIMUM. DO NOT EXCEED THIS.**
+**HARD FILE LIMIT: 5 FILES PER USER MAXIMUM. DO NOT EXCEED THIS.**
 
 - Each user is strictly limited to 5 active files at any time. This is a hard limit — it cannot be overridden.
 - If a user attempts to create a 6th file, it must be rejected. The user must delete an existing file first.

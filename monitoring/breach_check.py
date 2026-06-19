@@ -10,7 +10,7 @@ import os
 import urllib.request
 import urllib.error
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.json")
 STATE_PATH = os.path.join(os.path.dirname(__file__), "breach_state.json")
@@ -118,25 +118,84 @@ def fetch_news(topics):
         pass
     return new_findings
 
-def format_discord_message(findings):
-    """Format findings for Discord #group-7."""
+def is_within_recency(breach_date_str, max_days=7):
+    """Check if a breach date is within the recency window."""
+    if not breach_date_str or breach_date_str == "unknown":
+        return True  # if date unknown, report it (better safe than sorry)
+    try:
+        breach_date = datetime.strptime(breach_date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        now = datetime.now(timezone.utc)
+        age = now - breach_date
+        return age.days <= max_days
+    except ValueError:
+        return True  # if we can't parse, report it
+
+
+def assess_severity(finding):
+    """Assign colour-coded severity to a finding.
+    Returns (colour_label, reason).
+    """
+    data_classes = finding.get("data_classes", [])
+    
+    # HIGH-SENSITIVITY data classes = RED
+    critical_data = {
+        "Passwords", "Password hashes", "Credit cards", "Financial data",
+        "Bank account numbers", "Payment history", "Government IDs",
+        "National ID", "Passport numbers", "Social Security numbers",
+        "Security questions and answers", "Phone numbers"
+    }
+    
+    if any(d in critical_data for d in data_classes):
+        return "🔴", "CRITICAL — sensitive data exposed (passwords, financial, or government IDs)"
+    
+    # MODERATE-SENSITIVITY = AMBER
+    if any(d in {"Email addresses", "IP addresses", "Physical addresses",
+                 "Names", "Dates of birth", "Usernames"} for d in data_classes):
+        return "🟠", "HIGH — personal identifiable information exposed"
+    
+    # Public website data or unknown = YELLOW
+    return "🟡", "MEDIUM — low-sensitivity or unspecified data exposure"
+
+
+def filter_by_recency(findings, max_days=7):
+    """Filter out findings older than max_days."""
+    filtered = []
+    for f in findings:
+        if is_within_recency(f.get("date", ""), max_days):
+            filtered.append(f)
+    return filtered
+
+
+def format_discord_message(findings, recency_days=7):
+    """Format findings for Discord #group-7 with colour-coded severity."""
     if not findings:
         return None
     
-    lines = []
-    has_breach = any(f["type"].startswith("breach") for f in findings)
+    # Apply recency filter
+    current = filter_by_recency(findings, recency_days)
+    if not current:
+        return None  # all findings were old, nothing to report
     
-    for f in findings:
+    lines = []
+    has_breach = any(f["type"].startswith("breach") for f in current)
+    
+    for f in current:
+        colour, severity_text = assess_severity(f)
+        
         if f["type"] == "breach_domain":
-            lines.append(f"**⚠️ BREACH DETECTED — {f['domain']}**")
+            lines.append(f"{colour} **BREACH DETECTED — {f['domain']}**")
+            lines.append(f"**Severity:** {severity_text}")
             lines.append(f"**Breach:** {f['title']}")
             lines.append(f"**Date:** {f['date']}")
             if f.get("data_classes"):
                 lines.append(f"**Data exposed:** {', '.join(f['data_classes'])}")
+            if f.get("description"):
+                lines.append(f"**Summary:** {f['description'][:300]}...")
             lines.append("")
         
         elif f["type"] == "breach_email":
-            lines.append(f"**⚠️ ACCOUNT BREACHED — {f['email']}**")
+            lines.append(f"{colour} **ACCOUNT BREACHED — {f['email']}**")
+            lines.append(f"**Severity:** {severity_text}")
             lines.append(f"**Breach:** {f['title']}")
             lines.append(f"**Date:** {f['date']}")
             if f.get("data_classes"):
@@ -146,7 +205,7 @@ def format_discord_message(findings):
     if not has_breach:
         return None
     
-    header = "**SENTRY Hourly Scan — BREACH ALERT**\n\n"
+    header = "SENTRY Hourly Scan — BREACH ALERT\n\n"
     return header + "\n".join(lines)
 
 def main():
@@ -172,18 +231,29 @@ def main():
     state["last_check"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
     
+    # Apply recency filter from config
+    recency_days = config.get("recency", {}).get("max_age_days", 7)
+    recency_enabled = config.get("recency", {}).get("enabled", True)
+    
+    if recency_enabled:
+        original_count = len(findings)
+        findings = filter_by_recency(findings, recency_days)
+        if original_count > len(findings):
+            print(f"  Filtered {original_count - len(findings)} old findings (>{recency_days} days)", file=sys.stderr)
+    
     # Output findings as JSON for the cron job to process
     result = {
         "timestamp": state["last_check"],
         "new_findings": findings,
         "total_monitored_domains": len(domain_targets),
-        "total_monitored_emails": len(email_targets)
+        "total_monitored_emails": len(email_targets),
+        "recency_filter_days": recency_days if recency_enabled else None
     }
     
     print(json.dumps(result, indent=2))
     
     # Also print formatted Discord message if there are findings
-    discord_msg = format_discord_message(findings)
+    discord_msg = format_discord_message(findings, recency_days)
     if discord_msg:
         print(f"\n---DISCORD_MESSAGE_START---\n{discord_msg}\n---DISCORD_MESSAGE_END---", file=sys.stderr)
 
