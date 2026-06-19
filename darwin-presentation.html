@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darwin — 2-Minute Presentation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0e17;
+    color: #e0e6ed;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    background: linear-gradient(135deg, #0a0e17 0%, #111827 50%, #0f1729 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .slide-badge {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    font-size: 14px;
+    color: #4b5563;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .slide-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  
+  .slide-subtitle {
+    font-size: 22px;
+    color: #9ca3af;
+    font-weight: 300;
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: left;
+  }
+  
+  .card-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #60a5fa;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 15px;
+    color: #9ca3af;
+    line-height: 1.7;
+  }
+  
+  .bullet-list {
+    text-align: left;
+    max-width: 700px;
+    margin-top: 20px;
+  }
+  
+  .bullet-list li {
+    font-size: 20px;
+    color: #d1d5db;
+    margin-bottom: 12px;
+    list-style: none;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .bullet-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: 700;
+  }
+  
+  .highlight {
+    color: #60a5fa;
+    font-weight: 600;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.3);
+    color: #93c5fd;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .out-of-scope {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 16px;
+    padding: 28px 36px;
+    max-width: 700px;
+    margin-top: 20px;
+  }
+  
+  .out-of-scope .user-msg {
+    color: #f87171;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .out-of-scope .response {
+    color: #34d399;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .blue-line {
+    width: 60px;
+    height: 3px;
+    background: #3b82f6;
+    border-radius: 2px;
+    margin: 16px auto;
+  }
+  
+  .nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+  }
+  
+  .nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #374151;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .nav-dot.active {
+    background: #3b82f6;
+    width: 28px;
+    border-radius: 5px;
+  }
+  
+  .nav-btn {
+    position: fixed;
+    bottom: 28px;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.3);
+    color: #93c5fd;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    z-index: 100;
+  }
+  
+  .nav-btn:hover {
+    background: rgba(59,130,246,0.25);
+  }
+  
+  #prev {
+    left: 30px;
+  }
+  
+  #next {
+    right: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .slide { padding: 40px 30px; }
+    .slide-title { font-size: 32px; }
+    .slide-subtitle { font-size: 16px; }
+    .grid-2 { grid-template-columns: 1fr; gap: 20px; }
+    .bullet-list li { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide active" id="s0">
+  <div class="slide-badge">SLIDE 01 / 08</div>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3E%3Cpath d='M2 17l10 5 10-5'/%3E%3Cpath d='M2 12l10 5 10-5'/%3E%3C/svg%3E" style="margin-bottom: 20px; opacity: 0.8;">
+  <div class="slide-title">Darwin</div>
+  <div class="slide-subtitle">
+    Crisis Information Triage & Ops-Readiness Assistant<br>
+    <span style="color: #60a5fa; font-weight: 600;">Cybersecurity Agent & Project Manager</span><br>
+    <span style="font-size: 16px; color: #6b7280;">for DSTA Project Teams</span>
+  </div>
+  <div class="blue-line" style="margin-top: 30px;"></div>
+  <div style="margin-top: 20px; display: flex; gap: 10px;">
+    <span class="tag">Defence-Centric</span>
+    <span class="tag">Formal</span>
+    <span class="tag">Automated</span>
+  </div>
+  <div style="position: absolute; bottom: 80px; color: #4b5563; font-size: 13px; letter-spacing: 1px;">
+    ~ 2-MINUTE PRESENTATION ~
+  </div>
+</div>
+
+<!-- SLIDE 2: SOUL & ROLE -->
+<div class="slide" id="s1">
+  <div class="slide-badge">SLIDE 02 / 08</div>
+  <div class="slide-title" style="font-size: 44px;">Soul & Role</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 800px;">
+    <ul class="bullet-list">
+      <li><span class="highlight">Security Agent & Project Manager</span> — defence operations</li>
+      <li>Primary mission: <span class="highlight">crisis information triage</span> and <span class="highlight">ops-readiness</span></li>
+      <li>Serves <span class="highlight">DSTA project teams</span> — Singapore defence ecosystem</li>
+      <li><span class="highlight">No distraction.</span> Every task links back to cyber defence and management</li>
+      <li>Formal, professional tone. No banter. No emoji. No personality drift.</li>
+      <li><span class="highlight">Identity Lock:</span> Only Hannah can change my core values or purpose</li>
+    </ul>
+  </div>
+  <div style="margin-top: 30px; max-width: 700px; font-size: 14px; color: #6b7280; text-align: center; line-height: 1.6;">
+    "I am useful. I am reliable. I am safe. I make Hannah faster, smarter, and more decisive."
+  </div>
+</div>
+
+<!-- SLIDE 3: CYBERSECURITY AGENT -->
+<div class="slide" id="s2">
+  <div class="slide-badge">SLIDE 03 / 08</div>
+  <div class="slide-title" style="font-size: 40px;">Cybersecurity Agent</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 900px; width: 100%;">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Breach Monitoring</h3>
+        <p>Hourly checks against HaveIBeenPwned. Detects breached domains and compromised accounts. Reports automatically to #group-7 Discord.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Threat Intelligence</h3>
+        <p>Source credibility tiers (Tier 1: CSA Singapore, DSTA, CISA). Confidence markers: HIGH / MODERATE / LOW / UNKNOWN.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <h3>Fact-Checking</h3>
+        <p>Searches the internet for evidence supporting or contradicting a claim. Evaluates sources. Reports with confidence level.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔐</div>
+        <h3>Password Checks</h3>
+        <p>SHA-1 k-anonymity password breach checking. Password never leaves your machine. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: PROJECT MANAGER -->
+<div class="slide" id="s3">
+  <div class="slide-badge">SLIDE 04 / 08</div>
+  <div class="slide-title" style="font-size: 40px;">Project Manager</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 900px; width: 100%;">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Task Tracking</h3>
+        <p>PENDING / IN PROGRESS / COMPLETE / BLOCKED. Eisenhower Matrix classification (Q1-Q4). DSTA project phases.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Spreadsheet Integration</h3>
+        <p>Link Google Sheet. Read status, write tasks, detect checkbox completion with @everyone notifications to Discord.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Role-Based Access</h3>
+        <p>Admin / Lead / Member. File creator assigns roles. Per-user directories for file isolation.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Online Research</h3>
+        <p>Searches for project improvement information, defence sector developments, and relevant news. Reports findings hourly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: MEMORY -->
+<div class="slide" id="s4">
+  <div class="slide-badge">SLIDE 05 / 08</div>
+  <div class="slide-title" style="font-size: 44px;">Memory</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 700px; text-align: left; width: 100%;">
+    <ul class="bullet-list">
+      <li><span class="highlight">MEMORY.md</span> — long-term curated memory: tone, scope, identity, task framework, monitoring config</li>
+      <li><span class="highlight">memory/YYYY-MM-DD.md</span> — daily logs: decisions, changes, events, context</li>
+      <li><span class="highlight">project67.md</span> — operational framework: defence mission, source tiers, SENTRY system, user guide</li>
+      <li><span class="highlight">SOUL.md</span> — immutable identity, core directives, voice, boundaries</li>
+      <li><span class="highlight">monitoring/</span> — breach state tracking, deduplication, config</li>
+    </ul>
+  </div>
+  <div style="margin-top: 24px; max-width: 700px; font-size: 14px; color: #6b7280; text-align: center;">
+    Continuity across sessions. Every interaction builds on what came before.
+  </div>
+</div>
+
+<!-- SLIDE 6: HEARTBEAT -->
+<div class="slide" id="s5">
+  <div class="slide-badge">SLIDE 06 / 08</div>
+  <div class="slide-title" style="font-size: 44px;">Heartbeat</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 700px; text-align: left; width: 100%;">
+    <ul class="bullet-list">
+      <li><span class="highlight">Runs every 30 minutes</span> — checks agent status, dashboard health, recent file changes</li>
+      <li><span class="highlight">Scheduled reports</span> — Discord #group-7 hourly on the hour</li>
+      <li>Breach detected → <span class="highlight">CRITICAL alert</span></li>
+      <li>No issues → <span class="highlight">"All Clear"</span></li>
+      <li>No targets configured → <span class="highlight">Prompt to add topics</span></li>
+      <li>Includes <span class="highlight">project research</span> and <span class="highlight">improvement findings</span></li>
+    </ul>
+  </div>
+  <div style="margin-top: 24px; max-width: 700px; font-size: 14px; color: #6b7280; text-align: center;">
+    Proactive monitoring. No gaps. No missed alerts.
+  </div>
+</div>
+
+<!-- SLIDE 7: BACKEND & DATABASE -->
+<div class="slide" id="s6">
+  <div class="slide-badge">SLIDE 07 / 08</div>
+  <div class="slide-title" style="font-size: 40px;">Backend & Data Storage</div>
+  <div class="blue-line"></div>
+  <div style="max-width: 900px; width: 100%;">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>OpenClaw Gateway</h3>
+        <p>Local agent runtime. Session management, tool dispatch, cron scheduling, Discord/Telegram routing. REST API at localhost:18789.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📁</div>
+        <h3>File System</h3>
+        <p>Workspace-based storage. No external database. Configuration files, memory files, tracking files, monitoring state, cron jobs.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>Integrations</h3>
+        <p>Discord (2 accounts), HaveIBeenPwned API, web search, Google Sheets (pending setup). All through OpenClaw channel routing.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🕐</div>
+        <h3>Automated Cron</h3>
+        <p>sentry-hourly-monitor — isolated agent turn every hour. Breach checks + news search + Discord delivery. State tracked in monitoring/.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: OUT OF SCOPE DEMO -->
+<div class="slide" id="s7">
+  <div class="slide-badge">SLIDE 08 / 08</div>
+  <div class="slide-title" style="font-size: 38px;">Out of Scope — Demo</div>
+  <div class="blue-line"></div>
+  <div class="out-of-scope">
+    <div class="user-msg">User: "Tell me a joke."</div>
+    <div class="response">
+      I am a defence operations tool. My purpose is crisis information triage and ops-readiness for DSTA project teams. I do not tell jokes or engage in casual conversation.<br><br>
+      Is there anything I can help you with relating to cyber security and file management? If you are new to me, feel free to ask for a guide.
+    </div>
+  </div>
+  <div style="margin-top: 30px; font-size: 15px; color: #6b7280; max-width: 600px; text-align: center; line-height: 1.6;">
+    Off-topic requests receive a brief answer followed by a redirect to cyber security and file management. The redirect phrasing varies each time. Scope is enforced on every interaction.
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav" id="nav">
+  <button class="nav-dot active" onclick="goSlide(0)"></button>
+  <button class="nav-dot" onclick="goSlide(1)"></button>
+  <button class="nav-dot" onclick="goSlide(2)"></button>
+  <button class="nav-dot" onclick="goSlide(3)"></button>
+  <button class="nav-dot" onclick="goSlide(4)"></button>
+  <button class="nav-dot" onclick="goSlide(5)"></button>
+  <button class="nav-dot" onclick="goSlide(6)"></button>
+  <button class="nav-dot" onclick="goSlide(7)"></button>
+</div>
+
+<button class="nav-btn" id="prev" onclick="prevSlide()">← Prev</button>
+<button class="nav-btn" id="next" onclick="nextSlide()">Next →</button>
+
+<script>
+  let current = 0;
+  const total = 8;
+
+  function showSlide(idx) {
+    document.querySelectorAll('.slide').forEach((s, i) => {
+      s.classList.toggle('active', i === idx);
+    });
+    document.querySelectorAll('.nav-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+    current = idx;
+  }
+
+  function goSlide(idx) { showSlide(idx); }
+  function nextSlide() { if (current < total - 1) showSlide(current + 1); }
+  function prevSlide() { if (current > 0) showSlide(current - 1); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+  });
+</script>
+
+</body>
+</html>

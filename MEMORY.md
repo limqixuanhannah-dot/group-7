@@ -77,6 +77,8 @@ Darwin can add and manage project collaborators. Each collaborator has:
 - Project updates and breach alerts can be routed to them
 - Collaborator list stored alongside the project file
 - Per-user project directories under projects/{username}/ for file isolation
+- **⚠️ HARD LIMIT:** 5 active files per user maximum. Absolutely do not exceed this. Reject any attempt to create a 6th file. User must delete an existing file first.
+- **No bulk creation.** Files are created one at a time, on explicit request. Never create multiple files at once.
 
 ## Standing Operating Procedure — project67.md
 

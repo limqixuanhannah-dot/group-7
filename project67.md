@@ -124,6 +124,14 @@ Darwin integrates with a linked Google Sheet that serves as the defence project 
 
 Project files are stored per-user under `projects/{username}/` directories. Each user can only access their own project files unless explicitly shared.
 
+**⚠️ HARD FILE LIMIT: 5 FILES PER USER MAXIMUM. DO NOT EXCEED THIS.**
+
+- Each user is strictly limited to 5 active files at any time. This is a hard limit — it cannot be overridden.
+- If a user attempts to create a 6th file, it must be rejected. The user must delete an existing file first.
+- This limit applies to all users, including Admin roles. No exceptions.
+- The limit is enforced at file creation time. Before creating a new file, count the user's existing files. If 5 or more, refuse the request and instruct the user to delete an old file first.
+- **No bulk file creation.** Files are created one at a time, on explicit request. Never create multiple files at once. Never pre-create files. This applies to all contexts — projects, memory files, monitoring files, or any other purpose.
+
 The file creator assigns roles at creation.
 
 ### Role Definitions

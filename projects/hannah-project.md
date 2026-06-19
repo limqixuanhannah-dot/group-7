@@ -222,3 +222,10 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 - **Direct Impact on Fish Health:** Compromised smart feeders affect more than data security. Inconsistent feeding from hacked devices disrupts gut microbiome balance (erratic nutrient inputs alter pH-sensitive bacterial colonies), metabolic rhythms (species like discus/otocinclus require dawn/dusk-triggered feeding), and water chemistry (overfeeding within 24 hours increases ammonia conversion by 300% per Aquaculture Engineering Vol. 89). Community lab trials showed scheduled fasting improved coloration and nitrate resilience in Malawi cichlids, but uncontrolled food deprivation caused cortisol spikes.
 
 **Sources:** [FishFeederSense - Smart Feeder Security](https://www.fishfeedersense.pro/blog/fish-feeder-guides-fundamentals/smart-feeder-security-stop-hacking-threats/) (Jan 2026)
+
+
+---
+**CLASSIFICATION:** RESTRICTED
+**OWNER:** hannah
+**ACCESS:** Owner + authorised collaborators only
+---

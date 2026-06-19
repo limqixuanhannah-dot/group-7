@@ -213,3 +213,10 @@ When using Google Slides, take note of the following security considerations:
 
 **Sources:** [CNET - Gemini Down](https://www.cnet.com/news-live/gemini-down-live-updates-google-workspaces-ai-errors/) (Jun 2026), [Rescana - ShinyHunters Vishing Attacks](https://www.rescana.com/post/shinyhunters-vishing-attacks-bypass-mfa-to-breach-okta-microsoft-365-and-google-workspace-saas-pla) (Feb 2026)
 
+
+
+---
+**CLASSIFICATION:** UNCLASSIFIED
+**OWNER:** hannah
+**ACCESS:** Owner + authorised collaborators only
+---

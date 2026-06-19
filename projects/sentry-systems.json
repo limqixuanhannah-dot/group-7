@@ -1,0 +1,286 @@
+{
+  "version": "1.0",
+  "created_at": "2026-06-19T01:38:00Z",
+  "last_updated": "2026-06-19T01:41:00Z",
+  "classification": {
+    "default_level": "UNCLASSIFIED",
+    "levels": [
+      "UNCLASSIFIED",
+      "RESTRICTED",
+      "CONFIDENTIAL",
+      "SECRET"
+    ],
+    "access_rules": {
+      "google-slides": {
+        "level": "UNCLASSIFIED",
+        "level_rank": 0,
+        "owner": "hannah",
+        "collaborators": [
+          {
+            "user": "nc",
+            "role": "MEMBER",
+            "added_at": "2026-06-19T01:38:00Z"
+          }
+        ],
+        "tagged_at": "2026-06-19T01:38:00Z"
+      },
+      "hannah-project": {
+        "level": "RESTRICTED",
+        "level_rank": 1,
+        "owner": "hannah",
+        "collaborators": [],
+        "tagged_at": "2026-06-19T01:38:00Z"
+      }
+    }
+  },
+  "compliance_deadlines": [
+    {
+      "id": "comp-1",
+      "name": "Security Accreditation Renewal",
+      "deadline": "2026-07-15",
+      "type": "Accreditation",
+      "project": "google-slides",
+      "owner": "hannah",
+      "status": "PENDING",
+      "notes": "",
+      "created_at": "2026-06-19T01:40:11Z"
+    },
+    {
+      "id": "comp-2",
+      "name": "Vendor Security Assessment",
+      "deadline": "2026-06-30",
+      "type": "Assessment",
+      "project": "hannah-project",
+      "owner": "hannah",
+      "status": "PENDING",
+      "notes": "",
+      "created_at": "2026-06-19T01:40:11Z"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "v-1",
+      "name": "ACME Defence Systems",
+      "scope": "IoT Aquarium Sensors",
+      "clearance_expiry": "2026-09-01",
+      "assessment_status": "PASS",
+      "projects": [
+        "hannah-project"
+      ],
+      "incidents": [],
+      "notes": "",
+      "created_at": "2026-06-19T01:40:11Z"
+    }
+  ],
+  "incident_response_drills": [
+    {
+      "id": "drill-1",
+      "name": "Phishing Response Drill",
+      "type": "Tabletop",
+      "scheduled_date": "2026-06-30",
+      "project": "google-slides",
+      "owner": "hannah",
+      "scenario": "",
+      "status": "SCHEDULED",
+      "score": null,
+      "participants": [],
+      "findings": [],
+      "created_at": "2026-06-19T01:40:11Z"
+    }
+  ],
+  "crisis_templates": [],
+  "risk_scores": {
+    "google-slides": {
+      "data_sensitivity": 3,
+      "third_party_dependency": 6,
+      "security_findings": 2,
+      "timeline_pressure": 7,
+      "composite_risk": 4.1,
+      "band": "MEDIUM",
+      "updated_at": "2026-06-19T01:40:11Z"
+    },
+    "hannah-project": {
+      "data_sensitivity": 7,
+      "third_party_dependency": 8,
+      "security_findings": 5,
+      "timeline_pressure": 6,
+      "composite_risk": 6.4,
+      "band": "HIGH",
+      "updated_at": "2026-06-19T01:40:11Z"
+    }
+  },
+  "threat_briefings": [
+    {
+      "id": "threat-1",
+      "project": "hannah-project",
+      "threat_type": "Phishing Campaign",
+      "description": "Active phishing targeting aquarium hobbyist forums with fake fish listings",
+      "severity": "MEDIUM",
+      "source": "",
+      "recommended_action": "",
+      "status": "ACTIVE",
+      "created_at": "2026-06-19T01:40:11Z"
+    }
+  ],
+  "vulnerability_disclosures": [
+    {
+      "id": "vuln-1",
+      "project": "google-slides",
+      "name": "XSS in Google Slides Add-on",
+      "severity": "HIGH",
+      "affected_asset": "",
+      "description": "",
+      "reporter": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:40:11Z"
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-1",
+      "name": "Fish Tank IoT Controller",
+      "type": "Hardware",
+      "project": "hannah-project",
+      "owner": "hannah",
+      "expiry": "",
+      "vendor": "",
+      "serial": "",
+      "status": "ACTIVE",
+      "notes": "",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "asset-2",
+      "name": "Google Slides License",
+      "type": "Software",
+      "project": "google-slides",
+      "owner": "hannah",
+      "expiry": "",
+      "vendor": "",
+      "serial": "",
+      "status": "ACTIVE",
+      "notes": "",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "asset-3",
+      "name": "Water Quality Sensor Kit",
+      "type": "Hardware",
+      "project": "hannah-project",
+      "owner": "hannah",
+      "expiry": "",
+      "vendor": "",
+      "serial": "",
+      "status": "ACTIVE",
+      "notes": "",
+      "created_at": "2026-06-19T01:41:19Z"
+    }
+  ],
+  "file_log": [],
+  "action_items": [
+    {
+      "id": "ai-1",
+      "project": "hannah-project",
+      "description": "Order 300 sheep hearts for research",
+      "owner": "hannah",
+      "due_date": "",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "ai-2",
+      "project": "hannah-project",
+      "description": "Calibrate water quality sensors",
+      "owner": "hannah",
+      "due_date": "",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "ai-3",
+      "project": "google-slides",
+      "description": "Update slides template with new branding",
+      "owner": "nc",
+      "due_date": "",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "ai-4",
+      "project": "hannah-project",
+      "description": "Action item: Test fish tank filtration system by 2026-06-25",
+      "owner": "",
+      "due_date": "2026-06-25",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "ai-5",
+      "project": "hannah-project",
+      "description": "Todo: Purchase replacement pH sensors",
+      "owner": "",
+      "due_date": "",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "ai-6",
+      "project": "hannah-project",
+      "description": "Follow up with vendor on delivery dates",
+      "owner": "",
+      "due_date": "",
+      "priority": "MEDIUM",
+      "source_meeting": "",
+      "status": "PENDING",
+      "created_at": "2026-06-19T01:41:19Z"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-1",
+      "project": "hannah-project",
+      "title": "IoT Sensor Vendor Selection",
+      "decision": "Selected ACME Defence for water sensors",
+      "rationale": "They passed security assessment and offered best pricing for bulk order",
+      "context": "",
+      "decision_by": "",
+      "stakeholders": "",
+      "timestamp": "2026-06-19T01:41:19Z"
+    },
+    {
+      "id": "dec-2",
+      "project": "google-slides",
+      "title": "Template Standardisation",
+      "decision": "Adopt company-wide template with restricted editing",
+      "rationale": "Ensures consistent branding while preventing unauthorised changes",
+      "context": "",
+      "decision_by": "",
+      "stakeholders": "",
+      "timestamp": "2026-06-19T01:41:19Z"
+    }
+  ],
+  "systems_operational": [
+    "classification",
+    "compliance",
+    "vendors",
+    "drills",
+    "crisis_templates",
+    "risk_scoring",
+    "threat_briefings",
+    "vulnerability_triage",
+    "assets",
+    "file_log",
+    "action_items",
+    "decisions"
+  ]
+}
