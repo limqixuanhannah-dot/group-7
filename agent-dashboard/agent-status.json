@@ -1,10 +1,21 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Routine heartbeat — 11:55 UTC",
-    "details": "Breach state clean. Last scan 11:52 UTC. Recent file activity: heartbeat-last.md, agent-status.json, memory/2026-06-19.md, breach_state.json — all routine cycle artifacts. Group7 agent stale since 2026-06-17 (~77h).",
-    "lastSeen": 1781870389180,
-    "lastSeenHuman": "2026-06-19T11:59:49.180Z"
+    "activity": {
+      "heartbeat": "2026-06-19T12:26:00Z",
+      "recent_files": [
+        "heartbeat-last.md",
+        "agent-dashboard/agent-status.json",
+        "agent-dashboard/activity.log",
+        "memory/2026-06-19.md",
+        "monitoring/breach_state.json",
+        "projects/hannah/google-slides-project.md"
+      ],
+      "activity_count": 6
+    },
+    "details": "",
+    "lastSeen": 1781872133918,
+    "lastSeenHuman": "2026-06-19T12:28:53.918Z"
   },
   "Group7": {
     "platform": "OpenClaw",

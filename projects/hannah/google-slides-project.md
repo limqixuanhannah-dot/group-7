@@ -208,6 +208,11 @@ When using Google Slides, take note of the following security considerations:
 
 **Source:** [Google Workspace Updates Blog](https://workspaceupdates.googleblog.com/2026/06/create-longer-veo-videos-and-generate-multiple-at-once-in-Google-Vids.html) (Jun 2026)
 
+### 2026-06-19 12:01 UTC
+- **Enhanced AI Avatars in Google Vids — Expanded Presets, Languages & Custom Avatars (June 17, 2026):** Google Vids introduced major upgrades to AI avatars powered by Gemini 3.1 Flash TTS and Veo 3.1. Avatar presets expanded from 23 to 53 across photorealistic, 3D cartoon, and graphic novel styles. Speaker support expanded to 24 languages (adding Hindi, Bengali, Marathi, Tamil, Telugu, Arabic, Indonesian, Russian, Dutch, Polish, Thai, Turkish, Vietnamese, Romanian, and Ukrainian alongside existing English, Spanish, Portuguese, Japanese, Korean, French, Italian, and German). Custom avatars can now be directed to take physical actions (walk, talk, use objects) via text prompts in addition to speaking. Users can also upload image references for branded/contextual avatar placement. Custom avatars preserve appearance and voice across generations. Relevant to the Slides-to-Vids pipeline — users creating narrated presentations can leverage more realistic avatars, broader language support, and actionable avatar instructions for more dynamic video outputs directly from Slides content. 🟡
+
+**Source:** [Google Workspace Updates - Enhanced AI Avatars in Vids](https://workspaceupdates.googleblog.com/2026/06/enhanced-ai-avatars-vids.html) (Jun 2026)
+
 - **Lightweight Document Alignment Approvals in Google Drive (June 12, 2026):** Google Drive introduced alignment approvals — a lightweight mechanism allowing teams to request and record document sign-offs without file changes resetting the approval flow. When a document is in a partially approved state, collaborators can continue editing without resetting recorded approver decisions. Relevant as a Workspace collaboration feature complementing Slides review workflows. 🟢
 
 **Source:** [Google Workspace Updates Blog](https://workspaceupdates.googleblog.com/2026/06/request-lightweight-document-alignment-with%20approvals%20in%20Google%20Drive.html) (Jun 2026)
