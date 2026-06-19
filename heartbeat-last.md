@@ -1,14 +1,10 @@
-# Heartbeat — 2026-06-19 16:59 UTC
-
-- Agent: Rex
-- Platform: OpenClaw
-- Dashboard: http://localhost:3456
-- Heartbeat POST: OK (200)
-- Status POST: OK (200)
-- Recent files: heartbeat-last.md, memory/2026-06-19.md, agent-dashboard/*, monitoring/breach_state.json, monitoring/config.json
-- Observations:
-  - No active breaches (last scan 15:52 UTC)
-  - 2 overdue HIGH tasks (Shaun: Checkpoints 1&3, due 19 Jun)
-  - #group-7 silent since 17 Jun (~100h)
-  - Dashboard healthy
-- Heartbeat cycle complete
+# Last Heartbeat
+- **Time:** 2026-06-19 17:28 UTC
+- **Channel:** cron (Rex heartbeat)
+- **Result:** POST /api/heartbeat → 200 OK, Status POST: skipped
+- **Recent file activity:** Routine heartbeat artifacts only (heartbeat-last.md, memory/2026-06-19.md, agent-dashboard logs, monitoring config/state) — no notable changes
+- **Status reported:** Not reported — no notable changes since last check
+- **Group-7:** Last seen 2026-06-17 06:55 UTC (~99h stale)
+- **Outstanding:** 2 HIGH overdue tasks (Shaun)
+- **Breach state:** Clear (last check 16:52 UTC)
+- **Dashboard:** Healthy
