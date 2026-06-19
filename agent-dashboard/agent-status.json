@@ -1,25 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 2026-06-19 07:59 UTC. Online. Recent file activity in last 60 min: daily memory log (2026-06-19), breach state (clean), agent dashboard files, heartbeat tracking log, Google Slides project file. Git auto-backups active. No anomalies detected.",
-    "details": {
-      "recentFileChanges": true,
-      "notableFiles": [
-        "memory/2026-06-19.md",
-        "monitoring/breach_state.json",
-        "agent-dashboard/agent-status.json",
-        "agent-dashboard/activity.log",
-        "heartbeat-last.md",
-        "projects/hannah/google-slides-project.md"
-      ],
-      "breachState": "clean",
-      "lastBreachCheck": "07:59 UTC",
-      "anomalies": "none detected",
-      "uptime": "operational",
-      "dashboardResponse": "ok"
-    },
-    "lastSeen": 1781855995224,
-    "lastSeenHuman": "2026-06-19T07:59:55.224Z"
+    "activity": "Heartbeat check — 2026-06-19 08:27 UTC",
+    "details": "Breach state: clean. No anomalies. Recent routine workspace updates logged.",
+    "lastSeen": 1781857790941,
+    "lastSeenHuman": "2026-06-19T08:29:50.941Z"
   },
   "Group7": {
     "platform": "OpenClaw",
