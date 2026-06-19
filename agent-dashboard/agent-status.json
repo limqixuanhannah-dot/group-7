@@ -1,10 +1,16 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "heartbeat-routine",
-    "details": "",
-    "lastSeen": 1781877596880,
-    "lastSeenHuman": "2026-06-19T13:59:56.880Z"
+    "activity": "Heartbeat cycle at 14:27 UTC — recent file changes",
+    "details": {
+      "breach_state": "clean (last scan 13:52 UTC)",
+      "group7_offline_hours": 93,
+      "group7_last_seen": "2026-06-17 06:55 UTC",
+      "recent_files": "google-slides-project.md, memory/2026-06-19.md, monitoring/breach_state.json, agent-dashboard files",
+      "anomalies": "none detected"
+    },
+    "lastSeen": 1781879389568,
+    "lastSeenHuman": "2026-06-19T14:29:49.568Z"
   },
   "Group7": {
     "platform": "OpenClaw",

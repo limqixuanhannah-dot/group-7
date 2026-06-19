@@ -232,6 +232,12 @@ When using Google Slides, take note of the following security considerations:
 **Sources:** [Aviatrix - UNC6508 INFINITERED Campaign](https://aviatrix.ai/threat-research-center/chinese-hackers-abused-google-workspace-rules-to-steal-research-and-defense-emails-2026) (Jun 2026)
 
 
+### 2026-06-19 14:01 UTC
+- **Gemini June 10 Outage — Root Cause Report Published (June 16, 2026):** Google published the formal incident report for the June 10 Gemini service disruption that affected all Workspace surfaces including Slides. Root cause: extreme read contention caused by an index design issue where a column tracking deployment expirations contained a high volume of rows with similar values, concentrating traffic on a small number of database shards ("hotspotting"). The in-memory cache had a TTL of only 1 minute, requiring frequent database refreshes. The technical trigger was a QPS spike from the frontend that crossed a tipping threshold, overwhelming underlying Spanner infrastructure. The incident resulted in elevated error rates for ~7 hours, with full restoration after ~15 hours. Remediation: indexing improvements, cache TTL extension, and load shedding mechanisms implemented. Relevant context: this outage directly impacted Gemini-powered Slides features (image generation, slide creation, text refinement) during the affected period. 🟡
+
+**Source:** [Google Workspace Status Dashboard - Incident Report](https://www.google.com/appsstatus/dashboard/incidents/CzZUn98mhTcEiCJo27Kv) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** UNCLASSIFIED
 **OWNER:** hannah
