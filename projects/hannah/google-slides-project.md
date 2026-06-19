@@ -248,6 +248,20 @@ When using Google Slides, take note of the following security considerations:
 **Source:** [9to5Google - Google Sues Gemini Scammers](https://9to5google.com/2026/06/12/google-sues-cybercrime-network-that-used-gemini-for-financial-scams) (Jun 2026), [Dataconomy](https://dataconomy.com/2026/06/15/google-sues-china-group-gemini-ai-phishing-scheme/) (Jun 2026)
 
 
+### 2026-06-19 23:01 UTC
+- **🟡 Gemini 2.5 Flash Becomes Default Model Across Workspace (Including Slides):** Google made Gemini 2.5 Flash the default model powering all Gemini consumer products — the Gemini app, Gemini in Search, Gemini in Workspace (Gmail, Docs, Sheets, Slides), and Android system-level assistant. Flash runs at 284 tokens/sec with a 1M token context window at $1.50/$9 per million tokens. This means Google Slides users interacting with Gemini features (Help me create, image generation, slide generation) will now default to the Flash model, which prioritises speed and cost efficiency over peak reasoning capability. The strategy establishes a two-tier approach: Flash for distribution (reaching billions of Android/Chrome users at $4.99/month AI Plus — 75% cheaper than ChatGPT Plus) and Pro for premium deep analytical capabilities. Simultaneously, Google updated Gemini 2.5 Pro with improved reasoning depth, code generation accuracy, and instruction following — serving as the premium tier for paying subscribers and API users. This is a significant shift in how AI features operate within Slides and the broader Workspace ecosystem.
+
+**Source:** [Medium - AI Update June 19, 2026](https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7) (Jun 2026)
+
+- **🟢 Gemini Omni Flash Multimodal Model Rolling Out:** Google began rolling out Gemini Omni Flash — its multimodal model that creates and edits videos from combinations of images, audio, video, and text — to the Gemini app, Google Flow, and YouTube Shorts for AI Plus, Pro, and Ultra subscribers. API access follows in coming weeks. While primarily a video creation model, this extends generative AI capabilities within the Workspace ecosystem and may eventually integrate with Slides-to-video workflows.
+
+**Source:** [Medium - AI Update June 19, 2026](https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7) (Jun 2026)
+
+- **🟢 Workspace Weekly Recap June 19, 2026 — Peripheral Updates:** Several non-Slides-specific Workspace updates published this week include: (1) new discoverable space setting in Google Chat (between private and open); (2) Carrier Link for Google Voice (add carrier phone numbers); (3) AI note-taking in Google Voice (transcription, summarisation, action items sent via Gmail); (4) Gemini in Chrome expanded to more languages and regions (Latin America, Africa, Middle East); (5) custom event colours in Google Calendar (up to 200 colours per event via web, mobile, and API); (6) Google Meet now available on Android Auto; (7) Calendar API improvements for secondary calendar management (transfer API + org filter). These are broadly beneficial for Workspace users and the Calendar DLP feature complements the security posture covered earlier.
+
+**Source:** [Google Workspace Updates - Weekly Recap June 19, 2026](https://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-19-2026.html) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** UNCLASSIFIED
 **OWNER:** hannah

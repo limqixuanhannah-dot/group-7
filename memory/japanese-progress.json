@@ -1,7 +1,7 @@
 {
   "start_date": "2026-06-18",
   "level": "N4",
-  "current_day": 1,
+  "current_day": 2,
   "days": [
     {
       "day": 1,
@@ -41,10 +41,49 @@
       "answered": true,
       "weaknesses": ["sentences not attempted", "vocab not attempted"],
       "strengths": ["listening comprehension"]
+    },
+    {
+      "day": 2,
+      "date": "2026-06-19",
+      "listening": {
+        "dialogue": "駅員：すみません、次の東京行きの電車は何番線ですか。\n田中：東京行きですか。３番線です。１０時に出ます。\n駅員：そうですか。切符はどこで買えますか。\n田中：あちらの自動販売機で買えます。６００円です。\n駅員：ありがとうございます。あ、そうだ。この電車は自由席ですか。\n田中：いいえ、全車指定席ですから、切符を買う時に席も予約してください。",
+        "questions": [
+          {"q": "What train is being asked about?", "options": ["A train to Osaka", "A train to Tokyo", "A local train"], "answer": "A train to Tokyo"},
+          {"q": "Where can the ticket be purchased?", "options": ["At the counter", "At the vending machine over there", "Online"], "answer": "At the vending machine over there"},
+          {"q": "What kind of seats does this train have?", "options": ["Non-reserved only", "All reserved seats", "Both reserved and non-reserved"], "answer": "All reserved seats"}
+        ],
+        "user_answers": [],
+        "correct": [],
+        "score": null
+      },
+      "sentences": [
+        {"jp": "天気がいいから、公園で散歩しませんか。", "romaji": "Tenki ga ii kara, kouen de sanpo shimasen ka.", "en": "The weather is nice, so why don't we take a walk in the park?", "grammar": "〜ませんか is a polite suggestion. 〜から indicates reason."},
+        {"jp": "日本語の勉強を続けるつもりです。", "romaji": "Nihongo no benkyou wo tsuzukeru tsumori desu.", "en": "I intend to continue studying Japanese.", "grammar": "〜つもりです expresses intention (plain verb + tsumori)."},
+        {"jp": "この本を読んだことがありますか。", "romaji": "Kono hon wo yonda koto ga arimasu ka.", "en": "Have you ever read this book?", "grammar": "〜たことがある expresses past experience ('have done before')."}
+      ],
+      "sentences_correct": null,
+      "sentences_score": null,
+      "vocab": [
+        {"word": "旅行", "reading": "りょこう", "meaning": "travel"},
+        {"word": "趣味", "reading": "しゅみ", "meaning": "hobby"},
+        {"word": "洗濯", "reading": "せんたく", "meaning": "laundry"},
+        {"word": "卒業", "reading": "そつぎょう", "meaning": "graduation"},
+        {"word": "質問", "reading": "しつもん", "meaning": "question"},
+        {"word": "返事", "reading": "へんじ", "meaning": "reply"},
+        {"word": "運動", "reading": "うんどう", "meaning": "exercise"},
+        {"word": "散歩", "reading": "さんぽ", "meaning": "walk / stroll"},
+        {"word": "図書館", "reading": "としょかん", "meaning": "library"},
+        {"word": "交番", "reading": "こうばん", "meaning": "police box"}
+      ],
+      "vocab_correct": null,
+      "vocab_score": null,
+      "answered": false,
+      "weaknesses": [],
+      "strengths": []
     }
   ],
   "cumulative_weaknesses": [],
   "cumulative_strengths": ["listening comprehension"],
-  "vocab_seen": ["予定", "経験", "必要", "弾く", "掛ける", "駐車場", "天気予報", "間に合う", "台所", "忘れ物"],
-  "sentences_seen": ["電車が遅れていたので、遅刻しました。", "このアプリの使い方を教えてください。", "漢字を書くのが上手になりたいです。"]
+  "vocab_seen": ["予定", "経験", "必要", "弾く", "掛ける", "駐車場", "天気予報", "間に合う", "台所", "忘れ物", "旅行", "趣味", "洗濯", "卒業", "質問", "返事", "運動", "散歩", "図書館", "交番"],
+  "sentences_seen": ["電車が遅れていたので、遅刻しました。", "このアプリの使い方を教えてください。", "漢字を書くのが上手になりたいです。", "天気がいいから、公園で散歩しませんか。", "日本語の勉強を続けるつもりです。", "この本を読んだことがありますか。"]
 }
