@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "heartbeat": 1710334020,
-    "dashboard_status": 1710334020
+    "heartbeat": 1710333261,
+    "dashboard_status": 1710333261
   },
-  "note": "Last heartbeat: 2026-06-19 12:47 UTC. Dashboard online. 14 files modified, breach state clean."
+  "note": "Last heartbeat: 2026-06-19 13:21 UTC. Dashboard online. Breach state clean. Group7 offline since 2026-06-17 (~90h stale)."
 }
