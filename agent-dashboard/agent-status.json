@@ -1,10 +1,21 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 23:58 UTC. Breach monitor: clean. Routine file rotation only. No anomalies.",
-    "details": "",
-    "lastSeen": 1781827103036,
-    "lastSeenHuman": "2026-06-18T23:58:23.036Z"
+    "activity": "Routine heartbeat cycle — 2026-06-19 00:27 UTC",
+    "details": {
+      "breachMonitor": "clean — 0 known breaches, last check 2026-06-18T23:52 UTC",
+      "recentChanges": [
+        "heartbeat-last.md (routine update)",
+        "agent-dashboard/agent-status.json (state sync)",
+        "agent-dashboard/activity.log (logging)",
+        "monitoring/breach_state.json (clean state)"
+      ],
+      "anomalies": "none detected",
+      "state": "idle — nominal",
+      "note": "Group7 agent stale since 2026-06-17 (~41h)"
+    },
+    "lastSeen": 1781828874052,
+    "lastSeenHuman": "2026-06-19T00:27:54.052Z"
   },
   "Group7": {
     "platform": "OpenClaw",
