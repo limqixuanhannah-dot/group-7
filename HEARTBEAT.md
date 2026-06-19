@@ -8,7 +8,9 @@
 - Dashboard healthy, agent online, all clear
 - Stale Darwin entry still present (last seen 06:55 UTC)
 - Heartbeat + Status POST at 2026-06-18 03:31 UTC — dashboard 200 OK, all nominal
+- Heartbeat + Status POST at 2026-06-19 05:04 UTC — dashboard 200 OK. Recent changes: project67.md, MEMORY.md, monitoring files (breach_state.json, config.json). All nominal.
 - Heartbeat at 2026-06-19 04:48 UTC — 9 cron jobs nominal, all green. No breaches or critical alerts. Checkpoint 1 reminders active (22 Jun + 28 Jun).
+- Heartbeat at 2026-06-19 05:06 UTC — POST /api/heartbeat + /api/status both 200 OK. Recent file changes: project67.md, MEMORY.md, monitoring files. All nominal.
 ## Control UI Embed
 Use `[embed ...]` only in Control UI/webchat sessions for inline rich rendering inside the assistant bubble.
 - Do not use `[embed ...]` for non-web channels.
