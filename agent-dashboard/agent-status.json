@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "idle",
+    "activity": "Heartbeat cycle. 17 workspace files modified in last 24h. Monitoring config active — topics: cyber security, defence. Discord channel route configured. Previous activity logged 2026-06-19 05:31 UTC. No anomalies detected.",
     "details": "",
-    "lastSeen": 1781846925208,
-    "lastSeenHuman": "2026-06-19T05:28:45.208Z"
+    "lastSeen": 1781848796564,
+    "lastSeenHuman": "2026-06-19T05:59:56.564Z"
   },
   "Group7": {
     "platform": "OpenClaw",

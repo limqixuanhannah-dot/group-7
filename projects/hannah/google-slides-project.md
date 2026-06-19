@@ -94,16 +94,6 @@ Google Slides is a free, web-based presentation program that competes with Micro
 
 ---
 
-## Learning Resources
-
-- [Google Workspace Learning Centre](https://support.google.com/a/users/answer/10665800)
-- [Teacher's Tech - Full Google Slides Tutorial](https://www.youtube.com/watch?v=zLsDqVHUzyw) (32 min)
-- [Technology for Teachers - Complete Course](https://www.youtube.com/watch?v=zLsDqVHUzyw) (39 min)
-- [Geeky Gadgets - Google Slides Tutorial 2026](https://www.geeky-gadgets.com/google-slides-tutorial-2026/)
-- [How-To Geek - Beginner's Guide](https://www.howtogeek.com/428140/the-beginners-guide-to-google-slides/)
-
----
-
 ## Cybersecurity Advisory — Google Slides
 
 When using Google Slides, take note of the following security considerations:
