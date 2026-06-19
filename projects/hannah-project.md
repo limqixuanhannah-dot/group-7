@@ -150,6 +150,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 ## Latest Updates
 
+### 2026-06-19 04:01 UTC
+- **Aquarium Market Report 2026 (The Business Research Company):** New market data published — global aquarium market valued at $5.43 billion in 2025, projected to grow to $5.85 billion in 2026 (CAGR 7.8%), reaching $7.8 billion by 2030 (CAGR 7.4%). Growth drivers include smart aquarium technologies, sustainable setups, advanced filtration/lighting investment, themed attractions, and low-maintenance solutions. Key trends: nano/pico aquariums for compact spaces, planted/biotope-style aquariums, aquarium use in interior decor and wellness environments. North America held largest regional share in 2025; Asia-Pacific is fastest-growing region.
+- **Tariff Impacts on Aquarium Equipment Supply Chains:** The report highlights that tariffs on aquarium tanks, filtration systems, lighting equipment, and accessories have significantly increased import costs, particularly affecting North America, Europe, and Asia-Pacific markets reliant on international supply chains. Segments most impacted: acrylic tanks, temperature control systems, and advanced lighting solutions due to dependence on specialized manufacturing. While tariffs raise consumer and commercial costs, they also create opportunities for regional manufacturers to expand local production and reduce import dependency. This is a new market dynamic not previously tracked — directly relevant to project budgeting for aquarium equipment procurement.
+
+**Source:** [ResearchAndMarkets - Aquarium Market Report 2026](https://www.researchandmarkets.com/reports/6171020/aquarium-market-report) (Jan 2026)
+
 ### 2026-06-19 02:01 UTC
 - **Practical Fishkeeping July 2026 Issue (Issue 196) Now Available:** The July 2026 issue features: (1) South American biotope deep-dive — Phil visits three biotopes found in the Rio Jauaperi, and Tai discovers classic tetras living together in the State of Maranhão, providing habitat replication inspiration; (2) White Cloud Mountain minnow nature study — Nathan recounts searching for the natural streams of the White Cloud Mountain minnow (Tanichthys albonubes), a popular coldwater species with declining wild populations; (3) Firefish/Dartfish spotlight — a feature on Nemateleotris dartfish (goby-type reef fish), highly regarded for spectacular colours, hardiness, and peaceful disposition. Other regulars: Tank of the Month (Kieran, win an Aquadip care package), community showcase, and reader contributions.
 
