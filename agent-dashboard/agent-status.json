@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "heartbeat cycle — routine",
+    "platform": "OpenClaw",
+    "activity": "Routine heartbeat check complete. Workspace files unchanged since last check. No anomalies detected.",
     "details": "",
-    "lastSeen": 1781866796635,
-    "lastSeenHuman": "2026-06-19T10:59:56.635Z"
+    "lastSeen": 1781868500494,
+    "lastSeenHuman": "2026-06-19T11:28:20.494Z"
   },
   "Group7": {
     "platform": "OpenClaw",
