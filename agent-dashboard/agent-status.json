@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "idle",
+    "activity": "Routine heartbeat cycle. Active projects: Google Slides research (hannah), Fish biology research (hannah). No alerts.",
     "details": "",
-    "lastSeen": 1781834392223,
-    "lastSeenHuman": "2026-06-19T01:59:52.223Z"
+    "lastSeen": 1781836194209,
+    "lastSeenHuman": "2026-06-19T02:29:54.209Z"
   },
   "Group7": {
     "platform": "OpenClaw",

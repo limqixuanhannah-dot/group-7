@@ -213,6 +213,10 @@ When using Google Slides, take note of the following security considerations:
 
 **Sources:** [CNET - Gemini Down](https://www.cnet.com/news-live/gemini-down-live-updates-google-workspaces-ai-errors/) (Jun 2026), [Rescana - ShinyHunters Vishing Attacks](https://www.rescana.com/post/shinyhunters-vishing-attacks-bypass-mfa-to-breach-okta-microsoft-365-and-google-workspace-saas-pla) (Feb 2026)
 
+### 2026-06-19 02:01 UTC
+- **UNC6508 INFINITERED Campaign — Chinese State-Sponsored Abuse of Google Workspace Content Compliance Rules (Discovered June 15, 2026):** Between September 2023 and November 2025, the China-linked espionage group UNC6508 infiltrated North American medical, academic, and military research networks by compromising externally facing REDCap servers. They deployed custom malware named INFINITERED, which trojanized REDCap system files to harvest login credentials and establish persistent access. With domain administrator rights, UNC6508 abused Google Workspace content compliance rules to silently BCC emails containing specific keywords to attacker-controlled Gmail addresses — effectively exfiltrating sensitive research and defence communications without deploying additional malware or generating unusual network traffic. This demonstrates a dangerous attack class: using legitimate administrative cloud features for stealthy, long-term data exfiltration that bypasses traditional network monitoring. Key mitigations specific to this threat: audit all Workspace content compliance/route rules regularly, monitor for unexpected BCC additions to compliance rules, restrict admin console access to users with verified hardware security keys, and monitor audit logs for changes to Gmail routing and compliance settings.
+
+**Sources:** [Aviatrix - UNC6508 INFINITERED Campaign](https://aviatrix.ai/threat-research-center/chinese-hackers-abused-google-workspace-rules-to-steal-research-and-defense-emails-2026) (Jun 2026)
 
 
 ---
