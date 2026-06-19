@@ -203,6 +203,19 @@ When using Google Slides, take note of the following security considerations:
 
 **Sources:** [CNET - Gemini Down](https://www.cnet.com/news-live/gemini-down-live-updates-google-workspaces-ai-errors/) (Jun 2026), [Rescana - ShinyHunters Vishing Attacks](https://www.rescana.com/post/shinyhunters-vishing-attacks-bypass-mfa-to-breach-okta-microsoft-365-and-google-workspace-saas-pla) (Feb 2026)
 
+### 2026-06-19 10:01 UTC
+- **Veo in Google Vids — Longer Video Clips & Multi-Clip Generation (June 17, 2026):** Google Vids users can now extend existing video clips with Veo for longer, continuous content and generate multiple video clips at once to explore different styles and prompts simultaneously. This directly extends the Slides-to-Vids pipeline already documented — users creating videos from Slides presentations can now generate longer formats and multiple clip variants in a single workflow. Relevant for presentation-to-video workflows where varied output options improve content iteration. 🟡
+
+**Source:** [Google Workspace Updates Blog](https://workspaceupdates.googleblog.com/2026/06/create-longer-veo-videos-and-generate-multiple-at-once-in-Google-Vids.html) (Jun 2026)
+
+- **Lightweight Document Alignment Approvals in Google Drive (June 12, 2026):** Google Drive introduced alignment approvals — a lightweight mechanism allowing teams to request and record document sign-offs without file changes resetting the approval flow. When a document is in a partially approved state, collaborators can continue editing without resetting recorded approver decisions. Relevant as a Workspace collaboration feature complementing Slides review workflows. 🟢
+
+**Source:** [Google Workspace Updates Blog](https://workspaceupdates.googleblog.com/2026/06/request-lightweight-document-alignment-with%20approvals%20in%20Google%20Drive.html) (Jun 2026)
+
+- **Gemini App Admin Controls — Temporary Chats & Conversation Deletion (June 16, 2026):** Administrators can now configure whether users can use temporary chats and delete their conversation history in the Gemini app (gemini.google.com). Both settings are on by default and can be disabled at the domain, OU, or group level. Relevant to the security governance of AI features within the Workspace ecosystem — organisations using Gemini alongside Slides should review these settings as part of their data retention and compliance posture. 🟡
+
+**Source:** [Google Workspace Updates Blog](https://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html) (Jun 2026)
+
 ### 2026-06-19 03:01 UTC
 - **Chrome Zero-Day CVE-2026-11645 — Actively Exploited V8 RCE (Patched June 10, 2026):** Google patched a high-severity zero-day vulnerability in Chrome's V8 JavaScript engine. CVE-2026-11645 is an out-of-bounds read/write flaw enabling remote code execution via crafted HTML pages. The vulnerability was actively exploited in the wild before Google released the fix. Directly relevant to Google Slides users since Slides is accessed primarily through Chrome browser. Mitigations: ensure Chrome is updated to the latest patched version immediately (users on Stable channel should have received the update by June 10); enable automatic updates for Chrome; consider using Chrome Browser Cloud Management for enterprise deployment visibility; maintain separation between browsing and sensitive Workspace sessions where possible. This follows the pattern of zero-days demanding rapid patch cycles — organisations using Slides for sensitive presentations should verify browser patch status.
 
