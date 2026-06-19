@@ -238,6 +238,16 @@ When using Google Slides, take note of the following security considerations:
 **Source:** [Google Workspace Status Dashboard - Incident Report](https://www.google.com/appsstatus/dashboard/incidents/CzZUn98mhTcEiCJo27Kv) (Jun 2026)
 
 
+### 2026-06-19 21:01 UTC
+- **🟠 Google Vertex AI SDK "Pickle in the Middle" Flaw — Cross-Tenant RCE via Bucket Squatting (Disclosed June 16-17, 2026):** Palo Alto Networks Unit 42 discovered a design flaw in the Vertex AI SDK for Python (versions 1.139.0/1.140.0). The SDK generated predictable Cloud Storage bucket names using only the project ID + region. Attackers who knew the target's project ID (often publicly available) could pre-register that bucket name in their own project, causing the victim's SDK to silently upload ML models to the attacker's bucket. When Vertex AI loaded the compromised model via pickle deserialization, malicious code executed inside Google's serving infrastructure, enabling OAuth token theft from the metadata server with broad cross-tenant access. The attack window was ~2.5 seconds. Reported March 5, 2026; initial fix in v1.144.0 (March 31, uuid4 bucket naming); complete fix in v1.148.0 (April 15, bucket ownership verification). This is the second bucket-name vulnerability in Vertex AI this year (following CVE-2026-2473 patched February 2026). Relevance: Vertex AI powers Gemini features embedded in Workspace including Slides; organisations using Vertex AI for ML pipelines should verify they are on SDK v1.148.0+ immediately. 🟠
+
+**Source:** [CSO Online - Vertex AI SDK Bucket Squatting](https://www.csoonline.com/article/4186193/googles-vertex-ai-sdk-could-allow-rce-through-bucket-squatting.html) (Jun 2026), [The Hacker News](https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html) (Jun 2026)
+
+- **🟠 Google Sues Chinese Smishing Network "Outsider Enterprise" for Gemini AI Abuse (June 12, 2026):** Google filed a civil lawsuit against a China-based cybercrime network known as Outsider Enterprise, alleging the group used Gemini to mass-produce phishing websites and send millions of fraudulent text messages. Scale: 9,000+ fake websites, 1M+ malicious URLs impersonating Google, YouTube, USPS, and E-ZPass. In a two-week period in May 2026, 2.5M scam texts were sent to Android users, generating ~55,000 spam complaints. The group operated a "phishing-as-a-service" model using Gemini-generated landing pages with custom code. Google is coordinating with the FBI and major US carriers (AT&T, T-Mobile, Verizon) to dismantle the infrastructure and block texts before they reach customers. Google is simultaneously backing seven bipartisan US bills targeting AI-driven fraud, including the National Strategy for Combatting Scams Act and the STOP Scams Against Seniors Act. Relevance: highlights the dual-use risk of Gemini AI — same technology embedded in Slides can be repurposed for large-scale social engineering. Organisations should reinforce phishing awareness and enable Gemini-specific admin controls. 🟠
+
+**Source:** [9to5Google - Google Sues Gemini Scammers](https://9to5google.com/2026/06/12/google-sues-cybercrime-network-that-used-gemini-for-financial-scams) (Jun 2026), [Dataconomy](https://dataconomy.com/2026/06/15/google-sues-china-group-gemini-ai-phishing-scheme/) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** UNCLASSIFIED
 **OWNER:** hannah

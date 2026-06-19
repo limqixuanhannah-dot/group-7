@@ -1,10 +1,18 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 2026-06-19 20:58 UTC. Routine tracking files only. Breach state clean. No anomalies.",
-    "details": "heartbeat-last.md, agent-status.json, breach_state.json updated within last hour. No user-facing file changes. Group7 stale since June 17.",
-    "lastSeen": 1781902705727,
-    "lastSeenHuman": "2026-06-19T20:58:25.727Z"
+    "activity": {
+      "heartbeat": "200 OK",
+      "notable_changes": [
+        "google-slides-project.md updated 21:01 UTC — 2 new 🟠 advisories added"
+      ],
+      "breach_state": "clean (last scan 20:52 UTC)",
+      "group7_stale": "126h since last activity",
+      "systems": "nominal"
+    },
+    "details": "",
+    "lastSeen": 1781904598083,
+    "lastSeenHuman": "2026-06-19T21:29:58.083Z"
   },
   "Group7": {
     "platform": "OpenClaw",
