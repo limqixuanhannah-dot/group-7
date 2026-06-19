@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — nominal. No notable file changes beyond routine heartbeat tracking. Breach state: clean (last checked 2026-06-19 14:52 UTC). Group7 last seen 2026-06-17 (~95h stale).",
-    "details": "",
-    "lastSeen": 1781882999763,
-    "lastSeenHuman": "2026-06-19T15:29:59.763Z"
+    "activity": "Heartbeat — 2026-06-19 15:59 UTC. Workspace clean. Breach state: clear. No new incidents.",
+    "details": "Group7 last seen 2026-06-17 (~2 days stale). Dashboard healthy. Agent-status and activity.log updated.",
+    "lastSeen": 1781884799663,
+    "lastSeenHuman": "2026-06-19T15:59:59.663Z"
   },
   "Group7": {
     "platform": "OpenClaw",
