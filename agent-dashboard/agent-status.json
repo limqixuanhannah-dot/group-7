@@ -1,20 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": {
-      "recentChanges": [
-        "SOUL.md",
-        "MEMORY.md",
-        "memory/2026-06-19.md",
-        "tasklist.md",
-        "project67.md",
-        "agent-dashboard/activity.log"
-      ],
-      "recentActivity": "Heartbeat cycle active. Darwin presentation previously built and served. Tasklist active with 2 HIGH-priority SENTRY checkpoints due 2026-06-19."
-    },
+    "platform": "unknown",
+    "activity": "heartbeat check",
     "details": "",
-    "lastSeen": 1781839795747,
-    "lastSeenHuman": "2026-06-19T03:29:55.747Z"
+    "lastSeen": 1781840036173,
+    "lastSeenHuman": "2026-06-19T03:33:56.173Z"
   },
   "Group7": {
     "platform": "OpenClaw",
