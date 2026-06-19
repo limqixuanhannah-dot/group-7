@@ -150,6 +150,13 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 ## Latest Updates
 
+### 2026-06-19 18:01 UTC
+- **Bat Rays Use Chemical Signals to Alert of Danger (New Research):** Oregon State University researchers have discovered that frightened bat rays produce a chemical cue to warn other rays of danger — a well-known anti-predator strategy for bony fish that has never been documented in cartilaginous fish (sharks, rays, skates) until now. The study, published in the Journal of Experimental Zoology Part A, found bat rays changed their behaviour when exposed to water from a tank where another ray was frightened by a mock predator. The animals could not see or hear each other, confirming the response was chemically induced. This finding provides insights into elasmobranch communication pathways and may help explain flight responses observed in white sharks when orcas are present. Researchers borrowed the rays from the Oregon Coast Aquarium. Relevant for understanding fish sensory biology and interspecies communication. 🟢
+
+**Source:** [Mirage News - Rays Use Chemical Signals](https://www.miragenews.com/rays-use-chemical-signals-to-alert-of-danger-1693464/) (Jun 2026, original study in Journal of Experimental Zoology Part A)
+
+### 2026-06-19 04:01 UTC
+
 ### 2026-06-19 04:01 UTC
 - **Aquarium Market Report 2026 (The Business Research Company):** New market data published — global aquarium market valued at $5.43 billion in 2025, projected to grow to $5.85 billion in 2026 (CAGR 7.8%), reaching $7.8 billion by 2030 (CAGR 7.4%). Growth drivers include smart aquarium technologies, sustainable setups, advanced filtration/lighting investment, themed attractions, and low-maintenance solutions. Key trends: nano/pico aquariums for compact spaces, planted/biotope-style aquariums, aquarium use in interior decor and wellness environments. North America held largest regional share in 2025; Asia-Pacific is fastest-growing region.
 - **Tariff Impacts on Aquarium Equipment Supply Chains:** The report highlights that tariffs on aquarium tanks, filtration systems, lighting equipment, and accessories have significantly increased import costs, particularly affecting North America, Europe, and Asia-Pacific markets reliant on international supply chains. Segments most impacted: acrylic tanks, temperature control systems, and advanced lighting solutions due to dependence on specialized manufacturing. While tariffs raise consumer and commercial costs, they also create opportunities for regional manufacturers to expand local production and reduce import dependency. This is a new market dynamic not previously tracked — directly relevant to project budgeting for aquarium equipment procurement.
