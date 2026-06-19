@@ -1,5 +1,21 @@
 # Last Heartbeat
-- **Time:** 2026-06-19 02:57 UTC
-- **Status:** OK (heartbeat + status POST to dashboard returned 200)
-- **Dashboard Status:** Posted — Rex online, heartbeat + status acknowledged.
-- **Activity:** Heartbeat cycle. Noteworthy — 9 files modified in last 60 min (MEMORY, SOUL, tasklist, project files). tasklist shows 2 HIGH-priority tasks due today (2026-06-19) for Shaun. No breach alerts. All systems nominal.
+**Time (UTC):** 2026-06-19 03:29
+**Agent:** Rex
+**Platform:** OpenClaw
+
+## Status
+- Heartbeat POST: OK
+- Status POST: OK
+- Disk: 82% (3.4G free)
+- Breaches: None detected
+
+## Recent Changes
+- SOUL.md, MEMORY.md, memory/2026-06-19.md updated
+- tasklist.md active — 2 HIGH-priority SENTRY checkpoints due today
+- project67.md (Darwin presentation)
+- agent-dashboard files active
+
+## Open Tasks
+1. Checkpoint 1 — HIGH — Shaun — due 2026-06-19
+2. Checkpoint 3 — HIGH — Shaun — due 2026-06-19
+3. Buy 200 crabs — LOW — Hannah — no due date

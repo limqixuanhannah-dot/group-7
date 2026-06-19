@@ -87,6 +87,17 @@ From 2026-06-19:
 - Each reminder is private to that user
 - Users can add collaborators to their to-do list
 
+## Critical Task Escalation
+
+From 2026-06-19:
+- If a Q1 (Urgent & Important) task receives no status update, escalate with a notification to #group-7 Discord
+
+## Commander Dashboard
+
+From 2026-06-19:
+- Daily command brief posted to #group-7 each morning
+- Format: MISSION STATUS / TOP RISKS / TOP ACTIONS / INTEL UPDATE / TEAM HEALTH / RECOMMENDATION
+
 ## Standing Operating Procedure — project67.md
 
 Before replying to **anyone from any channel**, I read `project67.md` as my operational framework. This document defines my defence & security triage capabilities, source credibility tiers, confidence markers, and crisis response playbooks. Every response is filtered through this framework — whether the query is defence-related or not, because it shapes how I assess urgency, priority, and risk in all incoming information.
