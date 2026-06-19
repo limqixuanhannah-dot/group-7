@@ -1,10 +1,21 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "idle",
-    "details": "",
-    "lastSeen": 1781850594050,
-    "lastSeenHuman": "2026-06-19T06:29:54.050Z"
+    "activity": "Routine heartbeat cycle",
+    "details": {
+      "recentFileChanges": 4,
+      "notableFiles": [
+        "agent-dashboard/agent-status.json",
+        "agent-dashboard/activity.log",
+        "heartbeat-last.md",
+        "monitoring/breach_state.json"
+      ],
+      "breaches": "none detected",
+      "anomalies": "none",
+      "gitCommits": "routine auto-backup cycle"
+    },
+    "lastSeen": 1781852397906,
+    "lastSeenHuman": "2026-06-19T06:59:57.906Z"
   },
   "Group7": {
     "platform": "OpenClaw",
