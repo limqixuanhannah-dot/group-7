@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "Heartbeat and monitoring cycle — 5 files updated in last 60 min (agent-status.json, memory/2026-06-20.md, heartbeat-last.md, monitoring/config.json, monitoring/breach_state.json). No anomalous activity detected.",
-    "details": "",
-    "lastSeen": 1781987325014,
-    "lastSeenHuman": "2026-06-20T20:28:45.014Z"
+    "platform": "OpenClaw",
+    "activity": "Heartbeat — routine workspace file activity",
+    "details": "Recent changes: daily memory log, dashboard status/activity, breach state, heartbeat marker. No anomalies detected.",
+    "lastSeen": 1781989189533,
+    "lastSeenHuman": "2026-06-20T20:59:49.533Z"
   },
   "Group7": {
     "platform": "OpenClaw",
