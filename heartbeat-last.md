@@ -1,15 +1,13 @@
 # Heartbeat — Last Run
 
-**Timestamp:** 2026-06-20 17:27 UTC
+**Timestamp:** 2026-06-20 17:57 UTC
 **Agent:** Rex
 **Platform:** OpenClaw
 
 **Heartbeat POST /api/heartbeat → 200:** OK
-**Status POST /api/status →** Skipped — routine artifacts only; no notable changes
+**Status POST /api/status:** skipped — routine artifacts only
 
-**Recent files:** heartbeat-last.md, agent-dashboard/*, memory/2026-06-20.md, breach_state.json
+**Recent files (60m):** heartbeat-last.md, memory/2026-06-20.md — all routine heartbeat artifacts
 
-**State:** Breach clean. No anomalies.
-**Breach state:** Clean (0 known breaches, last check 2026-06-20T15:53 UTC)
-**Group7:** Stale (last seen Jun 17 — ~191h)
-**Activity:** All nominal. Heartbeat posted.
+**Breach state:** Clean (last scan ~16:53 UTC)
+**Group7 last seen:** 2026-06-17 (~191h stale)
