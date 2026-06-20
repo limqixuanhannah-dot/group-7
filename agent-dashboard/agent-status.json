@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 2026-06-20 06:29 UTC",
-    "details": "Heartbeat OK. Dashboard online. Recent file changes are routine: heartbeat tracking, daily memory, monitoring state. Previously noted: hannah-project.md (FAO SOFIA fisheries report, Deep-Sea discovery at 06:01 UTC). Breach state: clean. Group7 offline since 2026-06-17 (~137h stale). No new anomalies.",
-    "lastSeen": 1781936999606,
-    "lastSeenHuman": "2026-06-20T06:29:59.606Z"
+    "activity": "Routine heartbeat. No new anomalies. Breach state clean. Project file touches on hannah-project.md, daily memory updated. Group7 offline since 2026-06-17 (~144h stale).",
+    "details": "",
+    "lastSeen": 1781938794425,
+    "lastSeenHuman": "2026-06-20T06:59:54.425Z"
   },
   "Group7": {
     "platform": "OpenClaw",
