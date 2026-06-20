@@ -1,10 +1,24 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "Heartbeat cycle — monitoring checks, file system scan, breach state verify",
-    "details": "",
-    "lastSeen": 1781967524812,
-    "lastSeenHuman": "2026-06-20T14:58:44.812Z"
+    "platform": "OpenClaw",
+    "activity": "heartbeat cycle",
+    "details": {
+      "heartbeat": "200 OK",
+      "breach_state": "clean",
+      "last_breach_scan": "2026-06-20T14:53:24Z",
+      "recent_files": [
+        "memory/2026-06-20.md",
+        "monitoring/breach_state.json",
+        "agent-dashboard/agent-status.json",
+        "agent-dashboard/activity.log",
+        "heartbeat-last.md"
+      ],
+      "status": "all clear",
+      "group7_online": false,
+      "group7_last_seen": "2026-06-17 (~72h stale)"
+    },
+    "lastSeen": 1781969389314,
+    "lastSeenHuman": "2026-06-20T15:29:49.314Z"
   },
   "Group7": {
     "platform": "OpenClaw",

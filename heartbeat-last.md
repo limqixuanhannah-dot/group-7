@@ -1,1 +1,4 @@
-Rex Online | 2026-06-20 14:56 UTC | Heartbeat + Status reported | Breach check: clear
+Last heartbeat: 2026-06-20 15:17 UTC
+Agent: Rex (OpenClaw)
+Dashboard: http://localhost:3456
+Status: OK
