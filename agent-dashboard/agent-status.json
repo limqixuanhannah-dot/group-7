@@ -1,26 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "heartbeat_cycle",
-    "details": {
-      "recent_changes_60m": [
-        "heartbeat-last.md",
-        "agent-dashboard/agent-status.json",
-        "agent-dashboard/activity.log",
-        "memory/2026-06-20.md",
-        "monitoring/breach_state.json",
-        "projects/hannah/google-slides-project.md",
-        "projects/hannah-project.md",
-        "HEARTBEAT.md"
-      ],
-      "breach_state": "clean",
-      "last_breach_scan": "2026-06-20T21:53Z",
-      "group7_dashboard": "stale since 2026-06-17 (~195h offline)",
-      "uptime_status": "nominal",
-      "current_time_utc": "2026-06-20T22:59:00Z"
-    },
-    "lastSeen": 1781996395641,
-    "lastSeenHuman": "2026-06-20T22:59:55.641Z"
+    "platform": "unknown",
+    "activity": "routine heartbeat",
+    "details": "",
+    "lastSeen": 1781998189241,
+    "lastSeenHuman": "2026-06-20T23:29:49.241Z"
   },
   "Group7": {
     "platform": "OpenClaw",

@@ -1,7 +1,7 @@
 {
   "start_date": "2026-06-18",
   "level": "N4",
-  "current_day": 2,
+  "current_day": 3,
   "days": [
     {
       "day": 1,
@@ -80,10 +80,49 @@
       "answered": false,
       "weaknesses": [],
       "strengths": []
+    },
+    {
+      "day": 3,
+      "date": "2026-06-20",
+      "listening": {
+        "dialogue": "店員：いらっしゃいませ。何名様ですか。\n田中：二人です。\n店員：お席はおタバコをお吸いになりますか。\n田中：いいえ、吸いません。禁煙席でお願いします。\n店員：かしこまりました。こちらへどうぞ。\n田中：ありがとう。メニューを見せてください。\n店員：はい、どうぞ。ご注文がお決まりになりましたら、お呼びください。\n（あとで）\n田中：すみません、注文いいですか。\n店員：はい、何になさいますか。\n田中：私は天ぷら定食とビールをお願いします。\n友達：私はうどんとサラダにします。\n店員：かしこまりました。少々お待ちください。",
+        "questions": [
+          {"q": "How many people are dining?", "options": ["One", "Two", "Three", "Four"], "answer": "Two"},
+          {"q": "What did they ask for regarding seating?", "options": ["A table by the window", "A private room", "Non-smoking section", "Counter seats"], "answer": "Non-smoking section"},
+          {"q": "What did Tanaka order?", "options": ["Udon and salad", "Tempura set meal and beer", "Sushi and miso soup", "Ramen and gyoza"], "answer": "Tempura set meal and beer"}
+        ],
+        "user_answers": [],
+        "correct": [],
+        "score": null
+      },
+      "sentences": [
+        {"jp": "週末に友達と映画を見に行く予定です。", "romaji": "Shuumatsu ni tomodachi to eiga wo mi ni iku yotei desu.", "en": "I plan to go see a movie with a friend this weekend.", "grammar": "〜予定です follows a plain verb or noun+の to express a scheduled plan. Similar to 〜つもり but more about schedule than intention."},
+        {"jp": "ここに名前と住所を書いてください。", "romaji": "Koko ni namae to juusho wo kaite kudasai.", "en": "Please write your name and address here.", "grammar": "〜てください is the standard polite request form. と connects nouns (X and Y). に marks the location where something is placed/written."},
+        {"jp": "もっと練習しないと、上手になれませんよ。", "romaji": "Motto renshuu shinai to, jouzu ni naremasen yo.", "en": "If you don't practise more, you won't be able to get good, you know.", "grammar": "〜しないと is a conditional meaning 'if (someone) doesn't do ~'. It's a contraction of 〜しなければ. 〜になれる = potential form of 〜になる. よ adds emphasis/warning."}
+      ],
+      "sentences_correct": null,
+      "sentences_score": null,
+      "vocab": [
+        {"word": "授業", "reading": "じゅぎょう", "meaning": "class / lesson"},
+        {"word": "試験", "reading": "しけん", "meaning": "exam / test"},
+        {"word": "約束", "reading": "やくそく", "meaning": "promise / appointment"},
+        {"word": "住所", "reading": "じゅうしょ", "meaning": "address"},
+        {"word": "招待", "reading": "しょうたい", "meaning": "invitation"},
+        {"word": "貯金", "reading": "ちょきん", "meaning": "savings"},
+        {"word": "翻訳", "reading": "ほんやく", "meaning": "translation"},
+        {"word": "季節", "reading": "きせつ", "meaning": "season"},
+        {"word": "鏡", "reading": "かがみ", "meaning": "mirror"},
+        {"word": "応援", "reading": "おうえん", "meaning": "support / cheer"}
+      ],
+      "vocab_correct": null,
+      "vocab_score": null,
+      "answered": false,
+      "weaknesses": [],
+      "strengths": []
     }
   ],
   "cumulative_weaknesses": [],
   "cumulative_strengths": ["listening comprehension"],
-  "vocab_seen": ["予定", "経験", "必要", "弾く", "掛ける", "駐車場", "天気予報", "間に合う", "台所", "忘れ物", "旅行", "趣味", "洗濯", "卒業", "質問", "返事", "運動", "散歩", "図書館", "交番"],
-  "sentences_seen": ["電車が遅れていたので、遅刻しました。", "このアプリの使い方を教えてください。", "漢字を書くのが上手になりたいです。", "天気がいいから、公園で散歩しませんか。", "日本語の勉強を続けるつもりです。", "この本を読んだことがありますか。"]
+  "vocab_seen": ["予定", "経験", "必要", "弾く", "掛ける", "駐車場", "天気予報", "間に合う", "台所", "忘れ物", "旅行", "趣味", "洗濯", "卒業", "質問", "返事", "運動", "散歩", "図書館", "交番", "授業", "試験", "約束", "住所", "招待", "貯金", "翻訳", "季節", "鏡", "応援"],
+  "sentences_seen": ["電車が遅れていたので、遅刻しました。", "このアプリの使い方を教えてください。", "漢字を書くのが上手になりたいです。", "天気がいいから、公園で散歩しませんか。", "日本語の勉強を続けるつもりです。", "この本を読んだことがありますか。", "週末に友達と映画を見に行く予定です。", "ここに名前と住所を書いてください。", "もっと練習しないと、上手になれませんよ。"]
 }
