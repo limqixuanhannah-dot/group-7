@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat OK — recent file changes in workspace: heartbeat-last.md, daily memory (2026-06-20.md), monitoring/breach_state.json, agent-dashboard status refreshed. No anomalies.",
-    "details": "4 files modified in last 60 min. All expected routine updates.",
-    "lastSeen": 1781945989745,
-    "lastSeenHuman": "2026-06-20T08:59:49.745Z"
+    "activity": "Heartbeat cycle — 09:29 UTC",
+    "details": "",
+    "lastSeen": 1781947795845,
+    "lastSeenHuman": "2026-06-20T09:29:55.845Z"
   },
   "Group7": {
     "platform": "OpenClaw",

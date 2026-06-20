@@ -268,6 +268,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Source:** [Wisconsin DNR - NHFRA 80th Anniversary](https://dnr.wisconsin.gov/newsroom/release/125581) (Jun 2026)
 
 
+### 2026-06-20 09:01 UTC
+- **New Species of Walking Shark Discovered off Papua New Guinea (June 16, 2026):** Marine biologists Dr. Christine Dudgeon (University of the Sunshine Coast) and colleagues identified a new species of walking shark, Hemiscyllium dudgeonae, in the waters of eastern Papua New Guinea's Milne Bay province. Walking sharks comprise ten similar species of carpet sharks that use their four fins to 'walk' across the seafloor. The new species is small (typically 70-80 cm total length), nocturnal, benthic, and found in shallow coastal habitats (coral reefs, seagrass beds, mangroves) at depths less than 10 m. They exhibit extremely restricted home ranges of only a few hundred square meters to a few square kilometers due to limited mobility and benthic lifestyle. The genus is endemic to Australia and New Guinea. Discovery surveys were conducted between 2023 and 2025. This marks only the 11th known walking shark species and expands understanding of elasmobranch biodiversity in the Coral Triangle region. 🟢
+
+**Source:** [Sci.News - Walking Shark](https://www.sci.news/biology/hemiscyllium-dudgeonae-14849.html) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
