@@ -1,10 +1,26 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat OK — no new breaches or issues detected. 7 files touched in last hour, all routine ops. Monitoring idle.",
-    "details": "",
-    "lastSeen": 1781994589015,
-    "lastSeenHuman": "2026-06-20T22:29:49.015Z"
+    "activity": "heartbeat_cycle",
+    "details": {
+      "recent_changes_60m": [
+        "heartbeat-last.md",
+        "agent-dashboard/agent-status.json",
+        "agent-dashboard/activity.log",
+        "memory/2026-06-20.md",
+        "monitoring/breach_state.json",
+        "projects/hannah/google-slides-project.md",
+        "projects/hannah-project.md",
+        "HEARTBEAT.md"
+      ],
+      "breach_state": "clean",
+      "last_breach_scan": "2026-06-20T21:53Z",
+      "group7_dashboard": "stale since 2026-06-17 (~195h offline)",
+      "uptime_status": "nominal",
+      "current_time_utc": "2026-06-20T22:59:00Z"
+    },
+    "lastSeen": 1781996395641,
+    "lastSeenHuman": "2026-06-20T22:59:55.641Z"
   },
   "Group7": {
     "platform": "OpenClaw",
