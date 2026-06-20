@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cycle — 17:55 UTC. Routine tracking files updated (dashboard state, daily memory, breach monitor). No notable changes. Breach state: clean. Group7: offline since 2026-06-17 (~191h stale). All clear.",
-    "details": "Recent files: heartbeat-last.md, memory/2026-06-20.md, agent-dashboard/agent-status.json, agent-dashboard/activity.log, monitoring/breach_state.json",
-    "lastSeen": 1781978400671,
-    "lastSeenHuman": "2026-06-20T18:00:00.671Z"
+    "activity": "Routine heartbeat — workspace housekeeping files updated",
+    "details": "",
+    "lastSeen": 1781980195357,
+    "lastSeenHuman": "2026-06-20T18:29:55.357Z"
   },
   "Group7": {
     "platform": "OpenClaw",
