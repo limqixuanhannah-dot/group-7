@@ -278,6 +278,12 @@ When using Google Slides, take note of the following security considerations:
 **Source:** [Anavem - Android Zero-Day CVE-2025-48595](https://www.anavem.com/en/news/google/google-patches-124-android-flaws-including-active-zero-day) (Jun 2026)
 
 
+### 2026-06-20 22:01 UTC
+- **Chrome 149 Initial Release & Follow-Up Security Update (June 5-12, 2026):** Google's Chrome 149 stable channel release on June 5 addressed 429 vulnerabilities, including a CVSS 9.6-rated sandbox escape. A follow-up targeted update on June 12 patched an additional 28 vulnerabilities, of which approximately 12 were use-after-free memory corruption flaws in the browser's rendering pipeline — a class of bug that enables drive-by code execution with no user interaction beyond visiting a crafted URL. The June 12 update is separate from the previously documented CVE-2026-11645 zero-day (patched June 10), bringing the total Chrome 149 security patches to over 450 vulnerabilities within the first two weeks of release. Five Chrome zero-days have been confirmed exploited in the wild so far in 2026. Direct relevance to Google Slides users: Slides is accessed primarily through Chrome, and unpatched browser vulnerabilities can compromise Workspace sessions. Enterprise environments with delayed update rollouts face extended exposure windows. Recommendations: verify Chrome is on version 149.0.7827.115+ (latest patched), enable automatic updates, and use Chrome Browser Cloud Management for enterprise patch visibility. 🟠
+
+**Source:** [DailySecurityReview - Chrome 149 Patches 28 Flaws](https://dailysecurityreview.com/cyber-security/chrome-149-patches-28-flaws-including-12-use-after-free-bugs) (Jun 2026), [CISA SB26-159](https://www.cisa.gov/news-events/bulletins/sb26-159) (Jun 2026)
+
+
 ### 2026-06-20 12:01 UTC
 - **Google Workspace App Icon Refresh (June 10, 2026):** Google refreshed the visual design of all Workspace app icons — Gmail, Calendar, Chat, Drive, Docs, Slides, Sheets, Meet, Vids, Keep, Forms, Voice, Sites, and Tasks — with a more modern, consistent visual identity. Each app retains its distinct colour and symbol while the suite gains a unified design language. The change is purely cosmetic and does not affect functionality or workflows. Users may notice the updated Slides icon in their browser tabs, pinned taskbar entries, and mobile home screens. 🟢
 
