@@ -1,18 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": {
-      "recent_files": [
-        "memory/2026-06-20.md (updated 11:28 UTC)",
-        "memory/2026-06-19.md (updated 23:59 UTC)",
-        "projects/hannah-project.md (updated 10:02 UTC)",
-        "projects/hannah/google-slides-project.md (updated 09:02 UTC)"
-      ],
-      "notes": "Memory files active today. Project files modified within last 2 hours. No critical alerts."
-    },
+    "activity": "monitoring",
     "details": "",
-    "lastSeen": 1781954995027,
-    "lastSeenHuman": "2026-06-20T11:29:55.027Z"
+    "lastSeen": 1781956684017,
+    "lastSeenHuman": "2026-06-20T11:58:04.017Z"
   },
   "Group7": {
     "platform": "OpenClaw",
