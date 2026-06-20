@@ -243,6 +243,14 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 
 
 ---
+
+### 2026-06-20 02:01 UTC
+- **FAO State of World Fisheries and Aquaculture (SOFIA) 2026 Report Published:** The UN FAO released its flagship fisheries report on June 19, 2026, providing the most current global fisheries sustainability data. Key findings: The share of biologically sustainable fish stocks declined from 64.5% to 62.4% (down 2.1 percentage points from the previous report two years ago). However, by catch volume, 72.6% of global landings originate from biologically sustainable stocks, indicating that larger, more productive stocks tend to be better managed. Global fisheries and aquaculture produced 235 million tonnes of aquatic animals in 2024, with aquatic foods now providing at least one-fifth of animal protein consumption for 3.1 billion people. Global trade in aquatic animal products valued at $184 billion, rivaling the terrestrial meat trade. Just over 91% of assessed tuna stocks classified as biologically sustainable (more than 99% of tuna landings by volume from sustainable stocks) — a continued bright spot attributed to effective tuna Regional Fisheries Management Organisations (RFMOs). Regional disparities persist: all 15 monitored Antarctic stocks are biologically sustainable, while Mediterranean and Black Sea had the lowest proportion (58 of 127 stocks, 45.7%). The report underscores that science-based management systems yield better stock outcomes and that climate adaptation measures must be integrated into fisheries planning. This updates the previous sustainability statistics in this project with the latest UN data. 🟡
+
+**Sources:** [MSC - Five Takeaways from FAO SOFIA 2026](https://www.msc.org/media-centre/news-opinion/news/2026/06/19/five-takeaways-from-the-fao-sofia-report-2026) (Jun 2026)
+
+
+---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
 **ACCESS:** Owner + authorised collaborators only
