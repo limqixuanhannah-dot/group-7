@@ -1,17 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Routine heartbeat — 6 files modified in last 60 min (heartbeat artifacts, daily memory, monitoring state, hannah-project.md FAO SOFIA research from 03:01 UTC). No anomalies. All systems nominal.",
-    "details": {
-      "activeProjects": 2,
-      "breachState": "clean",
-      "lastBreachScan": "2026-06-20T02:52:41Z",
-      "group7Status": "offline since 2026-06-17 (~133h stale)",
-      "anomalies": [],
-      "allClear": true
-    },
-    "lastSeen": 1781926123498,
-    "lastSeenHuman": "2026-06-20T03:28:43.498Z"
+    "activity": "Heartbeat check completed",
+    "details": "",
+    "lastSeen": 1781927925293,
+    "lastSeenHuman": "2026-06-20T03:58:45.293Z"
   },
   "Group7": {
     "platform": "OpenClaw",
