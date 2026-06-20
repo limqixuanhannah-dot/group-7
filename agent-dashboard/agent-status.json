@@ -1,10 +1,17 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "heartbeat-cycle",
-    "details": "No notable changes — routine heartbeat artifacts, daily memory updates, breach state clean. All nominal.",
-    "lastSeen": 1781917195510,
-    "lastSeenHuman": "2026-06-20T00:59:55.510Z"
+    "activity": "Routine heartbeat — no anomalies detected",
+    "details": {
+      "heartbeat_time": "2026-06-20 01:25 UTC",
+      "file_changes": "Routine (heartbeat artifacts, daily memory, breach state)",
+      "breach_state": "clean",
+      "breach_last_scan": "2026-06-20 00:52 UTC",
+      "group7_status": "stale — offline since 2026-06-17 (~131h)",
+      "systems": "nominal"
+    },
+    "lastSeen": 1781918759463,
+    "lastSeenHuman": "2026-06-20T01:25:59.463Z"
   },
   "Group7": {
     "platform": "OpenClaw",
