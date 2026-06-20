@@ -1,7 +1,1 @@
-{
-  "lastChecks": {
-    "heartbeat": 1710333261,
-    "dashboard_status": 1710333261
-  },
-  "note": "Last heartbeat: 2026-06-19 13:21 UTC. Dashboard online. Breach state clean. Group7 offline since 2026-06-17 (~90h stale)."
-}
+{"lastCheck":1781969450000,"lastCheckHuman":"2026-06-20T15:30:50Z","agent":"Rex","heartbeat":true,"breachClean":true}
