@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "unknown",
-    "activity": "Heartbeat cycle",
+    "activity": "Heartbeat cycle — monitoring checks, file system scan, breach state verify",
     "details": "",
-    "lastSeen": 1781965723211,
-    "lastSeenHuman": "2026-06-20T14:28:43.211Z"
+    "lastSeen": 1781967524812,
+    "lastSeenHuman": "2026-06-20T14:58:44.812Z"
   },
   "Group7": {
     "platform": "OpenClaw",
