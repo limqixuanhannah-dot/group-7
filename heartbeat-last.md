@@ -1,2 +1,2 @@
 # Last Heartbeat
-2026-06-20 10:27 UTC (cron) — Heartbeat POST 200. Status POST: skipped — routine artifacts only; no notable changes since 10:09 UTC. Breach state: clean (last scan 08:52 UTC). Group7: offline since 2026-06-17 (~147h stale). All clear.
+2026-06-20 10:59 UTC (cron) — Heartbeat POST 200 (Rex, OpenClaw). Status POST: skipped — routine artifacts only. Recent files: heartbeat markers, agent-status.json, daily memory, breach_state.json — all routine. Breach state: clean. Group7: offline since 2026-06-17 (~148h stale). All clear.
