@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat cron cycle — monitoring project files (hannah-project.md, google-slides-project.md), daily memory logged, breach state clean. Group7 offline since June 17. Git auto-backup active. No anomalies.",
-    "details": "",
-    "lastSeen": 1781960401362,
-    "lastSeenHuman": "2026-06-20T13:00:01.362Z"
+    "activity": "Heartbeat — 2026-06-20 13:27 UTC",
+    "details": "Online. Breach state: clean. Recent files: daily memory, monitoring state, project files. Group7 agent stale since June 17 (~174h). No anomalies.",
+    "lastSeen": 1781962190213,
+    "lastSeenHuman": "2026-06-20T13:29:50.213Z"
   },
   "Group7": {
     "platform": "OpenClaw",
