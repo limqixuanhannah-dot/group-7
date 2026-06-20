@@ -280,6 +280,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Source:** [Mirage News - Rays Use Chemical Signals](https://www.miragenews.com/rays-use-chemical-signals-to-alert-of-danger-1693464/) (Jun 2026)
 
 
+### 2026-06-20 12:01 UTC
+- **50 Years of the Magnuson-Stevens Act — NOAA Celebrates U.S. Fisheries Sustainability Milestone (June 17, 2026):** NOAA Fisheries marked the 50th anniversary of the Magnuson-Stevens Act, the primary U.S. federal law governing marine fisheries management since 1976. The Act has rebuilt 52 fish stocks from overfished status, prevented overfishing across managed species, protected essential fish habitats, and supported sustainable seafood supply and coastal economies. The Act established a transparent, science-based system of eight regional Fishery Management Councils that collaborate with the fishing industry. Under the Act, U.S. fisheries management is recognized as a global model for sustainability. Notably, 72.6% of global landings by volume come from biologically sustainable stocks (consistent with FAO SOFIA 2026 data already recorded in this project), demonstrating that well-managed fisheries achieve better outcomes. The milestone underscores the value of long-term, science-based fisheries policy frameworks. 🟢
+
+**Source:** [NOAA Fisheries - 50 Years MSA](https://www.fisheries.noaa.gov/feature-story/50-years-sustainable-fisheries-management) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah

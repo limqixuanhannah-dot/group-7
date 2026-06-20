@@ -278,6 +278,16 @@ When using Google Slides, take note of the following security considerations:
 **Source:** [Anavem - Android Zero-Day CVE-2025-48595](https://www.anavem.com/en/news/google/google-patches-124-android-flaws-including-active-zero-day) (Jun 2026)
 
 
+### 2026-06-20 12:01 UTC
+- **Google Workspace App Icon Refresh (June 10, 2026):** Google refreshed the visual design of all Workspace app icons — Gmail, Calendar, Chat, Drive, Docs, Slides, Sheets, Meet, Vids, Keep, Forms, Voice, Sites, and Tasks — with a more modern, consistent visual identity. Each app retains its distinct colour and symbol while the suite gains a unified design language. The change is purely cosmetic and does not affect functionality or workflows. Users may notice the updated Slides icon in their browser tabs, pinned taskbar entries, and mobile home screens. 🟢
+
+**Source:** [Outwood Tech Hub - Digital Updates June 2026](https://tech-hub.outwood.com/blog/2026/06/10/digital-updates-june-2026/) (Jun 2026)
+
+- **Google Workspace "AI Expanded Access" Tier Introduced (2026):** Google introduced an optional new subscription tier called AI Expanded Access for Workspace organizations hitting usage limits on advanced Gemini AI features within their base plan. It does not remove any existing features but unlocks higher usage caps for heavy AI users — particularly relevant for organizations extensively using Gemini in Slides for image generation per slide, slide creation from prompts, and other AI-powered features. This tier supplements the inclusion of Gemini AI in Business Standard and above plans (announced January 2025), where the separate $18-$30/user/month Gemini add-on was discontinued. Organizations should review their Workspace plan to determine whether the new tier is applicable based on their AI feature usage patterns. 🟡
+
+**Source:** [Data Pilot - Google Workspace Updates 2026](https://data-pilot.com/blog/google-workspace-updates) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** UNCLASSIFIED
 **OWNER:** hannah
