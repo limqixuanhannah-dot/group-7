@@ -262,6 +262,12 @@ When using Google Slides, take note of the following security considerations:
 **Source:** [Google Workspace Updates - Weekly Recap June 19, 2026](https://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-19-2026.html) (Jun 2026)
 
 
+### 2026-06-20 04:01 UTC
+- **🟠 Google Cloud Threat Horizons H1 2026 Report — Software Vulnerabilities Overtake Credentials as Top Cloud Attack Vector (Published June 16, 2026):** The 13th edition of Google Cloud's Threat Horizons report (produced by Mandiant and the Cloud CISO office) documents a fundamental shift in cloud threat landscape. For the first time since reporting began, software vulnerability exploitation (44.5% of cloud intrusions) has overtaken credential abuse (27.2%) as the most common initial access method. This reflects the expanding attack surface of cloud environments: more publicly reachable managed services, API gateways, container orchestration, and third-party integrations create a broader heterogeneous surface than traditional on-premises infrastructure. The exploitation window has collapsed to 48 hours from disclosure — attackers routinely deploy working exploits within two days, eliminating the operating assumption behind most enterprise patch management cycles. On the positive side, identity compromise still underpins 83% of breaches overall, meaning that even when initial access shifts, identity remains the control plane. Cloud-native tooling and legitimate provider APIs are attackers' primary post-exploitation tools — detection strategies must focus on anomalous API call patterns and unexpected IAM role assumptions rather than novel malware signatures. Direct relevance: Google Slides is accessed via Chrome on Workspace; organisations using Slides for sensitive content should review patch cadence for cloud-facing infrastructure, enforce phishing-resistant MFA (FIDO2/passkeys), monitor for unusual OAuth app authorisations, and audit content compliance rules — all of which the report identifies as high-impact mitigations for the current threat environment.
+
+**Sources:** [Excello Digital - Google Cloud H1 2026 Threat Report Analysis](https://excello.digital/news/2026-06-16-google-cloud-threat-horizons-h1-2026-software-vulnerabilities-overtake-credentials/) (Jun 2026), [Google Cloud - Threat Horizons H1 2026](https://cloud.google.com/security/report/resources/cloud-threat-horizons-report-h1-2026) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** UNCLASSIFIED
 **OWNER:** hannah

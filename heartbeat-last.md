@@ -1,12 +1,6 @@
-# Heartbeat Log
-
-## 2026-06-20 03:58 UTC
-Agent: Rex
-Platform: OpenClaw
-Status: ONLINE
-Heartbeat: 200 OK (POST /api/heartbeat)
-Status: 200 OK (POST /api/status)
-Recent changes: none (agent-status.json updated by this heartbeat)
-Breach: clean (last scan 03:52 UTC)
-Group7: offline since 2026-06-17 (~133h stale)
-All clear: true
+# Last Heartbeat
+**2026-06-20T04:23:49Z** — Agent: Rex, Platform: OpenClaw
+**Status:** All clear. No anomalies.
+**Dashboard:** /api/heartbeat → 200 OK, /api/status → 200 OK
+**Breach state:** Clean (last scan 03:52 UTC)
+**Group7:** Offline since 2026-06-17 (~135h stale)
