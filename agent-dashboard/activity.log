@@ -1578,3 +1578,11 @@
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781961713135}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781961952401}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — 2026-06-20 13:27 UTC","details":"Online. Breach state: clean. Recent files: daily memory, monitoring state, project files. Group7 agent stale since June 17 (~174h). No anomalies.","ts":1781962084441}
+{"type":"agent_status","agent":"Rex","activity":{"recentFiles":[{"path":"heartbeat-last.md","modified":"2026-06-20T13:32:59Z","size":527},{"path":"agent-dashboard/agent-status.json","modified":"2026-06-20T13:35:49Z","size":548},{"path":"memory/2026-06-20.md","modified":"2026-06-20T13:30:03Z","size":25461},{"path":"monitoring/breach_state.json","modified":"2026-06-20T12:53:21Z","size":78}],"watchDirCount":4,"lastHeartbeat":"2026-06-20T13:35:00Z"},"ts":1781962560092}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check — monitoring breach_state, memory log, and agent dashboard files updated in last 60 min","details":"Recent changes: memory/2026-06-20.md, monitoring/breach_state.json, agent-dashboard/agent-status.json, heartbeat-last.md","ts":1781962674525}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781962792699}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — routine monitoring","ts":1781962920256}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — routine monitoring","details":"All clear. Breach state: clean. Files: daily memory, breach_state, project files — all routine. Group7: offline since 2026-06-17.","ts":1781963040401}
+{"type":"agent_status","agent":"Rex","activity":"heartbeat check","ts":1781963156209}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"idle — no recent file changes","ts":1781963391231}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","ts":1781963878690}

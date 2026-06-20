@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat — 2026-06-20 13:27 UTC",
-    "details": "Online. Breach state: clean. Recent files: daily memory, monitoring state, project files. Group7 agent stale since June 17 (~174h). No anomalies.",
-    "lastSeen": 1781962190213,
-    "lastSeenHuman": "2026-06-20T13:29:50.213Z"
+    "activity": "idle",
+    "details": "",
+    "lastSeen": 1781963988881,
+    "lastSeenHuman": "2026-06-20T13:59:48.881Z"
   },
   "Group7": {
     "platform": "OpenClaw",
