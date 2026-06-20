@@ -1,31 +1,31 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": [
-      {
-        "file": "heartbeat-last.md",
-        "changed": "recent"
-      },
-      {
-        "file": "agent-dashboard/agent-status.json",
-        "changed": "recent"
-      },
-      {
-        "file": "agent-dashboard/activity.log",
-        "changed": "recent"
-      },
-      {
-        "file": "memory/2026-06-20.md",
-        "changed": "recent"
-      },
-      {
-        "file": "monitoring/breach_state.json",
-        "changed": "recent"
-      }
-    ],
+    "activity": {
+      "recent_changes": [
+        {
+          "file": "heartbeat-last.md",
+          "type": "state"
+        },
+        {
+          "file": "agent-dashboard/agent-status.json",
+          "type": "dashboard"
+        },
+        {
+          "file": "memory/2026-06-20.md",
+          "type": "daily_log"
+        },
+        {
+          "file": "monitoring/breach_state.json",
+          "type": "monitoring"
+        }
+      ],
+      "last_heartbeat": "2026-06-20T21:59:00Z",
+      "uptime_status": "nominal"
+    },
     "details": "",
-    "lastSeen": 1781990991740,
-    "lastSeenHuman": "2026-06-20T21:29:51.740Z"
+    "lastSeen": 1781992792181,
+    "lastSeenHuman": "2026-06-20T21:59:52.181Z"
   },
   "Group7": {
     "platform": "OpenClaw",
