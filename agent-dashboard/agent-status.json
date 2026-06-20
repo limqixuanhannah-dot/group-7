@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Routine heartbeat cycle",
-    "details": "Recent file changes: daily memory 2026-06-20.md, project hannah-project.md, breach state clean (no new entries), agent dashboard logs updated. Group7 offline since 2026-06-17 (~138h stale). No anomalous activity detected.",
-    "lastSeen": 1781940550550,
-    "lastSeenHuman": "2026-06-20T07:29:10.550Z"
+    "activity": "Recent file changes detected: agent-dashboard status/activity updated, daily memory 2026-06-20, project hannah-project.md, monitoring breach_state.json",
+    "details": "",
+    "lastSeen": 1781942377604,
+    "lastSeenHuman": "2026-06-20T07:59:37.604Z"
   },
   "Group7": {
     "platform": "OpenClaw",
