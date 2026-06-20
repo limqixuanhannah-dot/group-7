@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": "Heartbeat — routine monitoring, no anomalies",
-    "details": "All routine heartbeat artifacts. Breach state clean (last scan 19:53 UTC). No anomalies. Dashboard serving at localhost:3456.",
-    "lastSeen": 1781985601282,
-    "lastSeenHuman": "2026-06-20T20:00:01.282Z"
+    "platform": "unknown",
+    "activity": "Heartbeat and monitoring cycle — 5 files updated in last 60 min (agent-status.json, memory/2026-06-20.md, heartbeat-last.md, monitoring/config.json, monitoring/breach_state.json). No anomalous activity detected.",
+    "details": "",
+    "lastSeen": 1781987325014,
+    "lastSeenHuman": "2026-06-20T20:28:45.014Z"
   },
   "Group7": {
     "platform": "OpenClaw",
