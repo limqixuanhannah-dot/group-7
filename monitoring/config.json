@@ -24,6 +24,6 @@
     "max_age_days": 7,
     "enabled": true
   },
-  "last_breach_check": "2026-06-19T16:52:48.526562Z",
-  "last_news_check": "2026-06-19T16:52:48.526562Z"
+  "last_breach_check": "2026-06-20T01:52:48.768431+00:00",
+  "last_news_check": "2026-06-20T01:52:48.768431+00:00"
 }
