@@ -256,6 +256,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Source:** [FAO Newsroom - SOFIA 2026](https://www.fao.org/newsroom/detail/sofia-2026--global-fisheries-and-aquaculture-production-reaches-new-highs/en) (Jun 2026)
 
 
+### 2026-06-20 06:01 UTC
+- **Deep-Sea Mission Off Brazil Discovers 31 New Marine Species (June 19, 2026):** The Schmidt Ocean Institute's research vessel Falkor (too) documented 31 previously unknown species during an expedition in the tropical South Atlantic Ocean. The finds include: transparent creatures with "glittering" hair, an amphipod crustacean living inside the see-through body of another sea-dweller, a gossamer worm that moves faster than expected, and nine new jellyfish species. Using advanced technologies including ROV SuBastian and a prototype Multiview Macro Camera system, scientists confirmed these as new species within days rather than the typical process that can take decades. The expedition explored the ocean's midwater zone — Earth's largest and least explored habitable ecosystem. This underscores the ongoing rate of marine biodiversity discovery and the importance of ocean conservation, complementing the conservation themes already documented in this project. 🟢
+
+**Source:** [SWNS - Deep-sea mission uncovers 31 new species](https://discover.swns.com/2026/06/deep-sea-mission-uncovers-31-new-species-including-one-living-inside-another/) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
