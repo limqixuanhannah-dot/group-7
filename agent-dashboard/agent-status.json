@@ -1,21 +1,10 @@
 {
   "Rex": {
-    "platform": "OpenClaw",
-    "activity": {
-      "files_changed_last_60m": [
-        "HEARTBEAT.md",
-        "memory/2026-06-20.md",
-        "monitoring/breach_state.json",
-        "agent-dashboard/agent-status.json",
-        "agent-dashboard/activity.log",
-        "heartbeat-last.md"
-      ],
-      "timestamp": "2026-06-20T18:57:00Z",
-      "note": "Routine heartbeat with recent file updates"
-    },
+    "platform": "unknown",
+    "activity": "Routine heartbeat — no anomalies detected",
     "details": "",
-    "lastSeen": 1781981996057,
-    "lastSeenHuman": "2026-06-20T18:59:56.057Z"
+    "lastSeen": 1781983796147,
+    "lastSeenHuman": "2026-06-20T19:29:56.147Z"
   },
   "Group7": {
     "platform": "OpenClaw",
