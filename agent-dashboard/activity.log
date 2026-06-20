@@ -1586,3 +1586,10 @@
 {"type":"agent_status","agent":"Rex","activity":"heartbeat check","ts":1781963156209}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"idle — no recent file changes","ts":1781963391231}
 {"type":"agent_status","agent":"Rex","platform":"OpenClaw","ts":1781963878690}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"monitoring","details":"Routine heartbeat — no notable file changes. All nominal.","ts":1781964300746}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"heartbeat","ts":1781964768156}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"monitoring","details":"Routine heartbeat — file activity detected (dashboard, memory, breach state). All nominal.","ts":1781965016545}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — routine maintenance files updated (dashboard, memory, breach state). No anomalies.","details":"Breach state clean. Memory log active. All nominal.","ts":1781965133193}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat — routine maintenance files updated (dashboard, memory, breach state). No anomalies.","details":{"breach_state":"clean","group7_status":"offline since June 17 (~177h stale)","recent_files":["heartbeat-last.md","memory/2026-06-20.md","breach_state.json","agent-status.json","activity.log"]},"ts":1781965252393}
+{"type":"agent_status","agent":"Rex","platform":"OpenClaw","activity":"Heartbeat check — recent file activity detected (heartbeat-last.md, agent-status.json, memory/2026-06-20.md)","ts":1781965486843}
+{"type":"agent_status","agent":"Rex","activity":"Heartbeat cycle","ts":1781965607236}
