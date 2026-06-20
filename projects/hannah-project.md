@@ -250,6 +250,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Sources:** [MSC - Five Takeaways from FAO SOFIA 2026](https://www.msc.org/media-centre/news-opinion/news/2026/06/19/five-takeaways-from-the-fao-sofia-report-2026) (Jun 2026)
 
 
+### 2026-06-20 03:01 UTC
+- **+Additional FAO SOFIA 2026 Report Details (Published June 16, 2026, launched at 11th Our Ocean Conference, Mombasa, Kenya):** The FAO newsroom release provides supplementary statistics beyond the MSC analysis already recorded. Key additional findings: Aquaculture aquatic animal production topped 100 million tonnes for the first time in 2024, reaching 103 million tonnes — now providing 53% of total aquatic animal production (59% of aquatic animal food output). Including algae, total aquaculture output was 141 million tonnes valued at $391 billion. Since the late 1980s, nearly all growth in aquatic production has come from aquaculture, as wild fisheries have plateaued. Capture fisheries output reached 92 million tonnes in 2024 (80 million tonnes from marine fisheries). Tuna catches reached a record 9.3 million tonnes in 2024. Anchoveta catches rebounded 109% year-on-year to over 5.0 million tonnes (from 2.4 million tonnes in 2023). Inland fisheries reached a record 12.3 million tonnes in 2024. Global per capita aquatic animal food availability averaged 21.1 kg in 2023, rising to an estimated 21.3 kg in 2024. The sector now supports over 600 million livelihoods worldwide. Regional disparity: Asia provides 26.3 kg per person, while Africa only 9.1 kg. Under high emissions scenarios, exploitable fish biomass is projected to decline by over 10% by 2050 in several regions. FAO projects total aquatic animal production will reach 214 million tonnes by 2034. Export value of aquatic products rose over 23-fold between 1976 and 2024 (nearly 6-fold in real terms), with over one-third of production traded internationally. Over 89% of aquatic animal production goes to human consumption, supplying at least one-fifth of animal protein for 3.1 billion people. These statistics flesh out the previously recorded sustainability percentages with comprehensive production and trade data. 🟡
+
+**Source:** [FAO Newsroom - SOFIA 2026](https://www.fao.org/newsroom/detail/sofia-2026--global-fisheries-and-aquaculture-production-reaches-new-highs/en) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
