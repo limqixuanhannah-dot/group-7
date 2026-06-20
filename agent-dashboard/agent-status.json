@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "Routine heartbeat — no anomalies detected",
-    "details": "",
-    "lastSeen": 1781983796147,
-    "lastSeenHuman": "2026-06-20T19:29:56.147Z"
+    "platform": "OpenClaw",
+    "activity": "Heartbeat — routine monitoring, no anomalies",
+    "details": "All routine heartbeat artifacts. Breach state clean (last scan 19:53 UTC). No anomalies. Dashboard serving at localhost:3456.",
+    "lastSeen": 1781985601282,
+    "lastSeenHuman": "2026-06-20T20:00:01.282Z"
   },
   "Group7": {
     "platform": "OpenClaw",
