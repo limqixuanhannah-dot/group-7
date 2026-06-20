@@ -262,6 +262,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Source:** [SWNS - Deep-sea mission uncovers 31 new species](https://discover.swns.com/2026/06/deep-sea-mission-uncovers-31-new-species-including-one-living-inside-another/) (Jun 2026)
 
 
+### 2026-06-20 07:01 UTC
+- **Northern Highland Fishery Research Area Celebrates 80 Years (June 20, 2026):** The Wisconsin Department of Natural Resources celebrates the 80th anniversary of the Northern Highland Fishery Research Area (NHFRA), one of the longest-running fisheries research projects in the world. Located in Vilas County across five Northwoods lakes (Escanaba, Nebish, Pallette, Spruce, Mystery), the NHFRA has maintained a mandatory angler creel survey on all lakes since 1946 — creating an 80-year dataset of every angler who has fished the lakes and every fish legally harvested. Current research includes: studying how submerged tree habitat ("fish sticks") affects fish populations, testing forward-facing sonar impacts on harvest and angler behavior, simulating seasonal ice coverage shifts to predict climate change effects on lake ecosystems, evaluating water level fluctuations on walleye habitat and spawning, and investigating ecosystem adaptation in lakes with declining vs. stable walleye populations. 🟢
+
+**Source:** [Wisconsin DNR - NHFRA 80th Anniversary](https://dnr.wisconsin.gov/newsroom/release/125581) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
