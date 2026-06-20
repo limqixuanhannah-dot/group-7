@@ -1,10 +1,31 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat — routine workspace file activity",
-    "details": "Recent changes: daily memory log, dashboard status/activity, breach state, heartbeat marker. No anomalies detected.",
-    "lastSeen": 1781989189533,
-    "lastSeenHuman": "2026-06-20T20:59:49.533Z"
+    "activity": [
+      {
+        "file": "heartbeat-last.md",
+        "changed": "recent"
+      },
+      {
+        "file": "agent-dashboard/agent-status.json",
+        "changed": "recent"
+      },
+      {
+        "file": "agent-dashboard/activity.log",
+        "changed": "recent"
+      },
+      {
+        "file": "memory/2026-06-20.md",
+        "changed": "recent"
+      },
+      {
+        "file": "monitoring/breach_state.json",
+        "changed": "recent"
+      }
+    ],
+    "details": "",
+    "lastSeen": 1781990991740,
+    "lastSeenHuman": "2026-06-20T21:29:51.740Z"
   },
   "Group7": {
     "platform": "OpenClaw",
