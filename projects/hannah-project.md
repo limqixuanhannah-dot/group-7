@@ -274,6 +274,12 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **Source:** [Sci.News - Walking Shark](https://www.sci.news/biology/hemiscyllium-dudgeonae-14849.html) (Jun 2026)
 
 
+### 2026-06-20 10:01 UTC
+- **Rays Use Chemical Signals to Alert of Danger (June 17, 2026):** Oregon State University researchers published a study in the Journal of Experimental Zoology demonstrating that frightened bat rays produce a chemical cue to warn other rays of danger. This anti-predator strategy has been well-documented in bony fish but had never been observed in cartilaginous fish (elasmobranchs — rays, sharks, skates) until now. The experiment placed blood-starved bat rays in separate, visually and acoustically isolated tanks. When one tank received water flow from a tank containing a frightened ray, the rays' behaviour changed — confirming a chemical disturbance cue was passed between tanks. The rays were borrowed from the Oregon Coast Aquarium in Newport. Lead author Joshua Bowman (OSU Big Fish Lab, now at the Cooperative Institute for Marine Ecosystem and Resources Studies) undertook the study as a first step toward understanding flight response in white sharks, which are known to flee when orcas are present — suggesting chemical signals may play a role in shark predator avoidance as well. This research expands understanding of complex communication in elasmobranchs and opens new avenues for studying chemical signalling in sharks. 🟢
+
+**Source:** [Mirage News - Rays Use Chemical Signals](https://www.miragenews.com/rays-use-chemical-signals-to-alert-of-danger-1693464/) (Jun 2026)
+
+
 ---
 **CLASSIFICATION:** RESTRICTED
 **OWNER:** hannah
