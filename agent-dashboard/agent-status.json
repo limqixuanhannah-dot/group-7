@@ -1,10 +1,24 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "routine heartbeat",
-    "details": "",
-    "lastSeen": 1781998189241,
-    "lastSeenHuman": "2026-06-20T23:29:49.241Z"
+    "platform": "OpenClaw",
+    "activity": "Routine heartbeat — no notable file changes beyond standard housekeeping",
+    "details": {
+      "heartbeat": "ok",
+      "recent_files_60m": [
+        "heartbeat state",
+        "dashboard logs",
+        "daily memory log",
+        "monitoring state",
+        "japanese progress tracker"
+      ],
+      "breach_state": "clean",
+      "last_breach_scan": "2026-06-20 21:53 UTC",
+      "group7_dashboard": "stale since 2026-06-17",
+      "uptime": "nominal",
+      "timestamp": "2026-06-20 23:58 UTC"
+    },
+    "lastSeen": 1781999893419,
+    "lastSeenHuman": "2026-06-20T23:58:13.419Z"
   },
   "Group7": {
     "platform": "OpenClaw",
