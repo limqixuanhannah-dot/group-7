@@ -1,10 +1,10 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Online. Recent workspace changes detected.",
+    "activity": "Heartbeat check — recent file activity: memory log, breach state, project files updated. No anomalies.",
     "details": "",
-    "lastSeen": 1782001791757,
-    "lastSeenHuman": "2026-06-21T00:29:51.757Z"
+    "lastSeen": 1782003595186,
+    "lastSeenHuman": "2026-06-21T00:59:55.186Z"
   },
   "Group7": {
     "platform": "OpenClaw",
