@@ -1,10 +1,17 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "heartbeat-routine",
-    "details": "Dashboard healthy. Recent file changes: heartbeat-last.md, memory/2026-06-21.md, agent-dashboard/*, monitoring/breach_state.json — all routine. Breach state: clean (last check 02:53 UTC). Group7 offline since 2026-06-17 (~131h stale). No anomalies. Standing by at 03:29 UTC.",
-    "lastSeen": 1782012599833,
-    "lastSeenHuman": "2026-06-21T03:29:59.833Z"
+    "activity": "Heartbeat cycle — routine file operations. Breach state clean. Gateway online.",
+    "details": {
+      "uptime": "nominal",
+      "dashboardHealthy": true,
+      "breachState": "clean",
+      "group7": "offline since 2026-06-17 (~133h stale)",
+      "recentFiles": "heartbeat-last.md, memory/2026-06-21.md, monitoring/breach_state.json, agent-dashboard/*",
+      "note": "All recent file changes are routine system updates. No anomalies."
+    },
+    "lastSeen": 1782014293781,
+    "lastSeenHuman": "2026-06-21T03:58:13.781Z"
   },
   "Group7": {
     "platform": "OpenClaw",
