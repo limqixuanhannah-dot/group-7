@@ -299,3 +299,8 @@ When using Google Slides, take note of the following security considerations:
 **OWNER:** hannah
 **ACCESS:** Owner + authorised collaborators only
 ---
+
+### 2026-06-21 00:01 UTC
+- **Google June 2026 Scams Advisory — New Phishing Tactics Targeting Workspace Users (Published June 8, 2026):** Google's Trust & Safety teams published a detailed advisory on evolving scam tactics. Key threats directly relevant to Google Workspace users include: (1) Adversary-in-the-Middle (AITM) attacks — phishing that mirrors legitimate login flows to capture session cookies, bypassing MFA entirely; (2) Calendar Phishing — fake renewal notices added directly to Google Calendar invites as a bypass technique; (3) Cloud Document Reputation Bypass — scammers abuse "invisible pages" in cloud documents (including Slides/Docs) to host malicious instructions and phishing landing pages that evade standard web filters; (4) ClickFix Campaign — malware distributed via fake browser update lures hosted on Google Sites, used as a trusted domain to avoid detection. Google is actively pursuing litigation against threat actors and deploying DBSC (already documented) as a countermeasure. Total global fraud losses estimated at nearly $580 billion for 2025, with approximately one in five adults falling victim to scams. 🟡
+
+**Source:** [Google Blog - Fraud and Scams Advisory June 2026](https://blog.google/innovation-and-ai/technology/safety-security/fraud-scams-advisory-june-2026/) (Jun 2026)

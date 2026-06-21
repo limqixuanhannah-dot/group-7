@@ -301,3 +301,8 @@ Saltwater options: Clownfish, Blue Hippo Tang, Yellow Tang — more expensive se
 **OWNER:** hannah
 **ACCESS:** Owner + authorised collaborators only
 ---
+
+### 2026-06-21 00:01 UTC
+- **World Aquaculture, Fisheries & Marine Science Summit 2026 (June 26-28, Bali, Indonesia):** Upcoming global conference bringing together researchers, industry leaders, and policymakers on aquaculture, marine conservation, and sustainable fisheries. Key topic tracks include BlueTech & Smart AI Aquaculture (AI-driven farming systems, IoT monitoring, precision feeding), climate adaptation, marine biotechnology, and food security policy. The event is hosted at one of the world's richest marine biodiversity hotspots. Registration and abstract submission are open. Organisations or individuals involved in aquaculture or marine science may find this relevant for networking and research exposure. 🟢
+
+**Source:** [World Aquaculture Summit 2026](https://aquafisheriessummit.com/) (Jun 2026)
