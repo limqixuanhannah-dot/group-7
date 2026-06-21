@@ -1,10 +1,10 @@
 {
   "Rex": {
-    "platform": "unknown",
-    "activity": "Routine heartbeat. No anomalies. Breach state clean.",
-    "details": "",
-    "lastSeen": 1782010795736,
-    "lastSeenHuman": "2026-06-21T02:59:55.736Z"
+    "platform": "OpenClaw",
+    "activity": "heartbeat-routine",
+    "details": "Dashboard healthy. Recent file changes: heartbeat-last.md, memory/2026-06-21.md, agent-dashboard/*, monitoring/breach_state.json — all routine. Breach state: clean (last check 02:53 UTC). Group7 offline since 2026-06-17 (~131h stale). No anomalies. Standing by at 03:29 UTC.",
+    "lastSeen": 1782012599833,
+    "lastSeenHuman": "2026-06-21T03:29:59.833Z"
   },
   "Group7": {
     "platform": "OpenClaw",
