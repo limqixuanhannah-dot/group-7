@@ -1,10 +1,16 @@
 {
   "Rex": {
     "platform": "OpenClaw",
-    "activity": "Heartbeat check — recent file activity: memory log, breach state, project files updated. No anomalies.",
-    "details": "",
-    "lastSeen": 1782003595186,
-    "lastSeenHuman": "2026-06-21T00:59:55.186Z"
+    "activity": "heartbeat + recent file changes",
+    "details": {
+      "files": "6 files modified in last 60m: heartbeat tracking, dashboard logs, daily memory, breach monitoring state, google-slides-project.md",
+      "anomalies": "none",
+      "note": "routine workspace activity — project file updated, breach monitoring clean",
+      "group7_status": "offline since Jun 17",
+      "dashboard": "healthy"
+    },
+    "lastSeen": 1782005400527,
+    "lastSeenHuman": "2026-06-21T01:30:00.527Z"
   },
   "Group7": {
     "platform": "OpenClaw",
